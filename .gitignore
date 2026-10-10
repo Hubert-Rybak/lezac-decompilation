@@ -1,0 +1,15 @@
+/original/
+/.venv/
+/node_modules/
+/build/
+/.env
+*.log
+__pycache__/
+.pytest_cache/
+*.pyc
+*.so
+*.o
+/analysis/rea/snapshot.json
+/analysis/rea/session/
+/analysis/rea/overview.json
+/local-config.sh
