@@ -1,0 +1,5 @@
+; 0x19fa6 FUN_1920_0da6
+0x19fa6: XOR AX, AX
+0x19fa8: MOV BX, AX
+0x19faa: MOV DX, AX
+0x19fac: RET

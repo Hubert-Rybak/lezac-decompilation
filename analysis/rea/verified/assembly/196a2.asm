@@ -1,0 +1,4 @@
+; 0x196a2 FUN_1920_04a2
+0x196a2: XOR AX, AX
+0x196a4: XCHG word ptr [0x1afc], AX
+0x196a8: RETF

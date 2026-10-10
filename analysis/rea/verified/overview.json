@@ -1,0 +1,135 @@
+{
+  "evidence_id": "ev_2cfd97cad7a8a03daa3efde627c20d72b3609f240a6fe9125e28d809741bc75c",
+  "subject": {
+    "name": "LEZAC.EXE",
+    "digest": {
+      "sha256": "7579255148c2cb540b26f70dc8181c50b218b6808d8fa5208c832391bafa53ec"
+    },
+    "format": "dos-mz",
+    "architecture": "x86",
+    "local_path": "/opt/data/lezac-decompilation/original/game/LEZAC.EXE"
+  },
+  "provider": {
+    "id": "rea-workflow",
+    "name": "REA composed investigation workflow",
+    "version": "1"
+  },
+  "analysis_profile": {
+    "provider": {
+      "id": "rea-workflow",
+      "name": "REA composed investigation workflow",
+      "version": "1"
+    },
+    "parameters": {
+      "upstream_analysis_profile": {
+        "provider": {
+          "id": "ghidra",
+          "name": "Ghidra",
+          "version": "12.1.4"
+        },
+        "parameters": {
+          "target_kind": "executable",
+          "target_format": "dos-mz",
+          "architecture": "x86",
+          "available_architectures": [
+            "x86"
+          ],
+          "import_mode": "ephemeral-source-immutable",
+          "annotation_policy": "atomic-function-entry-metadata-v1",
+          "load_image_observations": "source-mappings-entry-context-v2",
+          "function_body_evidence": "complete-inclusive-ranges-v1",
+          "function_references": "complete-body-and-entry-reference-manager-v2",
+          "location_resolution": "explicit-address-exact-entry-symbol-first-v3",
+          "instruction_flow_evidence": "decoded-return-pcode-v1",
+          "process_launch": "inspected-jvm-launch-support-v1",
+          "load_image_evidence": "independent-mz-mapping-relocations-v1",
+          "jump_table_evidence": "typed-case-default-blocks-v1",
+          "decompiler_jump_loads": true,
+          "loader": "MzLoader",
+          "language_id": "x86:LE:16:Real Mode",
+          "compiler_spec_id": "default",
+          "load_segment": "0x1000",
+          "address_coordinates": "linear-byte-offset",
+          "analyzer_preset": "ghidra-default"
+        },
+        "digest": "894e458d232de9bdeb2a5d661cd2b4791ee9e10f88d297423fc0c7553a7a66d8"
+      },
+      "workflow_revision": 2
+    },
+    "digest": "8aecc44347caf7012f3357eb96d1b8e2fa130f1e5dc3242a2ba1d964d0eb73d7"
+  },
+  "predicate_type": "rea.analysis",
+  "operation": "binary_overview",
+  "parameters": {},
+  "raw_result": null,
+  "normalized_result": {
+    "document": "target-7579255148c2.EXE",
+    "segments": [
+      {
+        "name": "CODE_0",
+        "start": "0x10000",
+        "end": "0x182d0",
+        "length": 33488
+      },
+      {
+        "name": "CODE_1",
+        "start": "0x182d0",
+        "end": "0x183f0",
+        "length": 288
+      },
+      {
+        "name": "CODE_2",
+        "start": "0x183f0",
+        "end": "0x184a0",
+        "length": 176
+      },
+      {
+        "name": "CODE_3",
+        "start": "0x184a0",
+        "end": "0x18ac0",
+        "length": 1568
+      },
+      {
+        "name": "CODE_4",
+        "start": "0x18ac0",
+        "end": "0x19200",
+        "length": 1856
+      },
+      {
+        "name": "CODE_5",
+        "start": "0x19200",
+        "end": "0x1aa20",
+        "length": 6176
+      },
+      {
+        "name": "CODE_6",
+        "start": "0x1aa20",
+        "end": "0x1c530",
+        "length": 6928
+      },
+      {
+        "name": "DATA",
+        "start": "0x1c530",
+        "end": "0x2b110",
+        "length": 60384
+      },
+      {
+        "name": "HEADER",
+        "start": "HEADER:0x0",
+        "end": "HEADER:0x770",
+        "length": 1904
+      }
+    ],
+    "segment_count": 9,
+    "procedure_count": 215,
+    "string_count": 27
+  },
+  "confidence": "derived",
+  "authority": "shipped-artifact",
+  "environment": null,
+  "limitations": [
+    "Derived by an REA composed workflow."
+  ],
+  "locations": [],
+  "evidence_links": []
+}

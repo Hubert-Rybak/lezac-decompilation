@@ -1,0 +1,557 @@
+{
+  "evidence_id": "ev_5bf403ec0c8a18bf82ed1dc4bd94d9950f41a6f10141e338e35d38d0279cb414",
+  "subject": {
+    "name": "LEZAC.EXE",
+    "digest": {
+      "sha256": "7579255148c2cb540b26f70dc8181c50b218b6808d8fa5208c832391bafa53ec"
+    },
+    "format": "dos-mz",
+    "architecture": "x86",
+    "local_path": "/opt/data/lezac-decompilation/original/game/LEZAC.EXE"
+  },
+  "provider": {
+    "id": "ghidra",
+    "name": "Ghidra",
+    "version": "12.1.4"
+  },
+  "analysis_profile": {
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "parameters": {
+      "target_kind": "executable",
+      "target_format": "dos-mz",
+      "architecture": "x86",
+      "available_architectures": [
+        "x86"
+      ],
+      "import_mode": "ephemeral-source-immutable",
+      "annotation_policy": "atomic-function-entry-metadata-v1",
+      "load_image_observations": "source-mappings-entry-context-v2",
+      "function_body_evidence": "complete-inclusive-ranges-v1",
+      "function_references": "complete-body-and-entry-reference-manager-v2",
+      "location_resolution": "explicit-address-exact-entry-symbol-first-v3",
+      "instruction_flow_evidence": "decoded-return-pcode-v1",
+      "process_launch": "inspected-jvm-launch-support-v1",
+      "load_image_evidence": "independent-mz-mapping-relocations-v1",
+      "jump_table_evidence": "typed-case-default-blocks-v1",
+      "decompiler_jump_loads": true,
+      "loader": "MzLoader",
+      "language_id": "x86:LE:16:Real Mode",
+      "compiler_spec_id": "default",
+      "load_segment": "0x1000",
+      "address_coordinates": "linear-byte-offset",
+      "analyzer_preset": "ghidra-default"
+    },
+    "digest": "894e458d232de9bdeb2a5d661cd2b4791ee9e10f88d297423fc0c7553a7a66d8"
+  },
+  "predicate_type": "rea.analysis",
+  "operation": "list_strings",
+  "parameters": {},
+  "raw_result": [
+    {
+      "address": "0x193f1",
+      "value": "!#$456789:;<=>?uRuntime error ",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 31
+      }
+    },
+    {
+      "address": "0x1aaab",
+      "value": "larax e zaco versione 1:0 shareware\\ \\se questo gioco vi diverte\\e decidete di tenerlo\\siete pregati di\\registrare la vostra copia\\inviando un contributo a\\:\\stefano zanobi v:gramsci 47\\00015 monterotondo roma\\ \\con un contributo minimo di\\lire 20000",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 253
+      }
+    },
+    {
+      "address": "0x1abab",
+      "value": "riceverete la versione aggiornata\\del gioco:\\*\\le prossime versioni conterranno\\piu? livelli di gioco>\\grafica digitalizzata>\\nuove armi e nuovi gadgets per\\placare ogni brama di distruzione>\\nuovi mostri= nuovi guardiani e\\altro ancora>",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 241
+      }
+    },
+    {
+      "address": "0x1acaa",
+      "value": "Xper chiarimenti o suggerimenti\\contattare l?autore\\ \\supportate il software artigianale>",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 90
+      }
+    },
+    {
+      "address": "0x1adab",
+      "value": "tasti\\ \\          gioc:1          gioc:2\\ \\sinistra;    z           frecce\\destra  ;    x              =  \\scendi  ;    c              =  \\salta   ;    m              =  \\",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 173
+      }
+    },
+    {
+      "address": "0x1aeab",
+      "value": "fuoco   ;    n              0  \\esc abbandona la partita\\ \\per cambiare bomba;\\premi sinistra e destra insieme:\\e=r; regola la larghezza dello\\schermo= con uno schermo solo:\\s; disattiva o attiva lo sfondo:\\il tasto scendi attiva\\le piattaforme speciali:",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 255
+      }
+    },
+    {
+      "address": "0x1afab",
+      "value": "*\\per procedere nel gioco dovete\\raccogliere bonus e= soprattutto=\\far saltare in aria ogni cosa;\\il riquadro centrale vi indica\\il numero minimo di bonus da\\raccogliere e la percentuale delle\\costruzioni da distruggere per\\completare il quadro:",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 249
+      }
+    },
+    {
+      "address": "0x1b0ab",
+      "value": "avete tre vite a disposizione\\quando ne perdete una\\potete decidere\\se continuare premendo fire o\\se riiniziare quel livello da capo\\attendendo qualche secondo:\\non potrete rientrare in gioco se\\non ci sono piu?abbastanza bonus\\per terminare il livello:",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 254
+      }
+    },
+    {
+      "address": "0x1b1ab",
+      "value": "premi 1 per un giocatore:\\premi 2 per due giocatori:\\i; informazioni:\\z; istruzioni:\\r; vedi records:\\l; english:\\esc per uscire:",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 133
+      }
+    },
+    {
+      "address": "0x1b2ab",
+      "value": "preparati per il livello ",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 29
+      }
+    },
+    {
+      "address": "0x1b3ab",
+      "value": "punteggio finale",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 17
+      }
+    },
+    {
+      "address": "0x1b4aa",
+      "value": "\tgiocatore",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 14
+      }
+    },
+    {
+      "address": "0x1b5ab",
+      "value": "bonus distruzione; ",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 21
+      }
+    },
+    {
+      "address": "0x1b6ab",
+      "value": "livello completato",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 21
+      }
+    },
+    {
+      "address": "0x1b7ab",
+      "value": "larax e zaco 1:0 shareware version\\ \\if you enjoy this game\\and you are willing to keep it\\please; register your copy\\sending a donation to\\:\\stefano zanobi v:gramsci 47\\00015 monterotondo roma\\italy\\ \\for donations of at least\\12 dollars\\",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 241
+      }
+    },
+    {
+      "address": "0x1b8ab",
+      "value": "i will send you an upgraded version\\of the game:\\*\\next versions will contain\\many funny playing levels>\\digital graphics>\\new destructive weapons\\and gadgets>\\new monsters= new guardians\\and much more:::",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 205
+      }
+    },
+    {
+      "address": "0x1b9aa",
+      "value": "Mif you have any suggestion\\contact the author:\\ \\support handmade software >>",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 82
+      }
+    },
+    {
+      "address": "0x1baab",
+      "value": "keys\\ \\         player1        player2\\ \\left    ;    z           arrows\\right   ;    x              =  \\down    ;    c              =  \\jump    ;    m              =  \\",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 173
+      }
+    },
+    {
+      "address": "0x1bbab",
+      "value": "fire    ;    n              0  \\esc quits game\\ \\press left and right keys together;\\to change your weapon:\\e=r; set playing screen width=\\in one player game:\\s; toggles background:\\press down on special platforms\\or telepods to activate them:",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 245
+      }
+    },
+    {
+      "address": "0x1bcab",
+      "value": "*\\you must collect bonuses and\\destroy buildings to proceed:\\the central window will tell\\you the number of bonus to\\collect and the percentage\\of buildings you must destroy\\to complete the level:",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 197
+      }
+    },
+    {
+      "address": "0x1bdab",
+      "value": "you will start with three lives=\\when you loose one= remember\\that you can decide\\to continue= by pressing fire or\\to restart that level from start=\\waiting a few seconds:\\you can not reenter a level if\\there are not enough bonuses\\to complete it:",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 249
+      }
+    },
+    {
+      "address": "0x1beaa",
+      "value": "~press 1 for one player game:\\press 2 for two players game:\\i; infos:\\z; instructions:\\r; show records:\\l; italiano:\\esc exits:",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 130
+      }
+    },
+    {
+      "address": "0x1bfab",
+      "value": "now entering level ",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 21
+      }
+    },
+    {
+      "address": "0x1c0ab",
+      "value": "final score",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 13
+      }
+    },
+    {
+      "address": "0x1c1ab",
+      "value": "player",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 9
+      }
+    },
+    {
+      "address": "0x1c2ab",
+      "value": "destruction bonus; ",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 21
+      }
+    },
+    {
+      "address": "0x1c3ab",
+      "value": "level completed",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 17
+      }
+    }
+  ],
+  "normalized_result": [
+    {
+      "address": "0x193f1",
+      "value": "!#$456789:;<=>?uRuntime error ",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 31
+      }
+    },
+    {
+      "address": "0x1aaab",
+      "value": "larax e zaco versione 1:0 shareware\\ \\se questo gioco vi diverte\\e decidete di tenerlo\\siete pregati di\\registrare la vostra copia\\inviando un contributo a\\:\\stefano zanobi v:gramsci 47\\00015 monterotondo roma\\ \\con un contributo minimo di\\lire 20000",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 253
+      }
+    },
+    {
+      "address": "0x1abab",
+      "value": "riceverete la versione aggiornata\\del gioco:\\*\\le prossime versioni conterranno\\piu? livelli di gioco>\\grafica digitalizzata>\\nuove armi e nuovi gadgets per\\placare ogni brama di distruzione>\\nuovi mostri= nuovi guardiani e\\altro ancora>",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 241
+      }
+    },
+    {
+      "address": "0x1acaa",
+      "value": "Xper chiarimenti o suggerimenti\\contattare l?autore\\ \\supportate il software artigianale>",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 90
+      }
+    },
+    {
+      "address": "0x1adab",
+      "value": "tasti\\ \\          gioc:1          gioc:2\\ \\sinistra;    z           frecce\\destra  ;    x              =  \\scendi  ;    c              =  \\salta   ;    m              =  \\",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 173
+      }
+    },
+    {
+      "address": "0x1aeab",
+      "value": "fuoco   ;    n              0  \\esc abbandona la partita\\ \\per cambiare bomba;\\premi sinistra e destra insieme:\\e=r; regola la larghezza dello\\schermo= con uno schermo solo:\\s; disattiva o attiva lo sfondo:\\il tasto scendi attiva\\le piattaforme speciali:",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 255
+      }
+    },
+    {
+      "address": "0x1afab",
+      "value": "*\\per procedere nel gioco dovete\\raccogliere bonus e= soprattutto=\\far saltare in aria ogni cosa;\\il riquadro centrale vi indica\\il numero minimo di bonus da\\raccogliere e la percentuale delle\\costruzioni da distruggere per\\completare il quadro:",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 249
+      }
+    },
+    {
+      "address": "0x1b0ab",
+      "value": "avete tre vite a disposizione\\quando ne perdete una\\potete decidere\\se continuare premendo fire o\\se riiniziare quel livello da capo\\attendendo qualche secondo:\\non potrete rientrare in gioco se\\non ci sono piu?abbastanza bonus\\per terminare il livello:",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 254
+      }
+    },
+    {
+      "address": "0x1b1ab",
+      "value": "premi 1 per un giocatore:\\premi 2 per due giocatori:\\i; informazioni:\\z; istruzioni:\\r; vedi records:\\l; english:\\esc per uscire:",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 133
+      }
+    },
+    {
+      "address": "0x1b2ab",
+      "value": "preparati per il livello ",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 29
+      }
+    },
+    {
+      "address": "0x1b3ab",
+      "value": "punteggio finale",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 17
+      }
+    },
+    {
+      "address": "0x1b4aa",
+      "value": "\tgiocatore",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 14
+      }
+    },
+    {
+      "address": "0x1b5ab",
+      "value": "bonus distruzione; ",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 21
+      }
+    },
+    {
+      "address": "0x1b6ab",
+      "value": "livello completato",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 21
+      }
+    },
+    {
+      "address": "0x1b7ab",
+      "value": "larax e zaco 1:0 shareware version\\ \\if you enjoy this game\\and you are willing to keep it\\please; register your copy\\sending a donation to\\:\\stefano zanobi v:gramsci 47\\00015 monterotondo roma\\italy\\ \\for donations of at least\\12 dollars\\",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 241
+      }
+    },
+    {
+      "address": "0x1b8ab",
+      "value": "i will send you an upgraded version\\of the game:\\*\\next versions will contain\\many funny playing levels>\\digital graphics>\\new destructive weapons\\and gadgets>\\new monsters= new guardians\\and much more:::",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 205
+      }
+    },
+    {
+      "address": "0x1b9aa",
+      "value": "Mif you have any suggestion\\contact the author:\\ \\support handmade software >>",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 82
+      }
+    },
+    {
+      "address": "0x1baab",
+      "value": "keys\\ \\         player1        player2\\ \\left    ;    z           arrows\\right   ;    x              =  \\down    ;    c              =  \\jump    ;    m              =  \\",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 173
+      }
+    },
+    {
+      "address": "0x1bbab",
+      "value": "fire    ;    n              0  \\esc quits game\\ \\press left and right keys together;\\to change your weapon:\\e=r; set playing screen width=\\in one player game:\\s; toggles background:\\press down on special platforms\\or telepods to activate them:",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 245
+      }
+    },
+    {
+      "address": "0x1bcab",
+      "value": "*\\you must collect bonuses and\\destroy buildings to proceed:\\the central window will tell\\you the number of bonus to\\collect and the percentage\\of buildings you must destroy\\to complete the level:",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 197
+      }
+    },
+    {
+      "address": "0x1bdab",
+      "value": "you will start with three lives=\\when you loose one= remember\\that you can decide\\to continue= by pressing fire or\\to restart that level from start=\\waiting a few seconds:\\you can not reenter a level if\\there are not enough bonuses\\to complete it:",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 249
+      }
+    },
+    {
+      "address": "0x1beaa",
+      "value": "~press 1 for one player game:\\press 2 for two players game:\\i; infos:\\z; instructions:\\r; show records:\\l; italiano:\\esc exits:",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 130
+      }
+    },
+    {
+      "address": "0x1bfab",
+      "value": "now entering level ",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 21
+      }
+    },
+    {
+      "address": "0x1c0ab",
+      "value": "final score",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 13
+      }
+    },
+    {
+      "address": "0x1c1ab",
+      "value": "player",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 9
+      }
+    },
+    {
+      "address": "0x1c2ab",
+      "value": "destruction bonus; ",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 21
+      }
+    },
+    {
+      "address": "0x1c3ab",
+      "value": "level completed",
+      "string": {
+        "encoding": "US-ASCII",
+        "termination": "present_or_not_required",
+        "byte_length": 17
+      }
+    }
+  ],
+  "confidence": "observed",
+  "authority": "shipped-artifact",
+  "environment": null,
+  "limitations": [
+    "The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.",
+    "The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.",
+    "Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.",
+    "Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.",
+    "Only Ghidra-defined string Data is observed; charset is reported, while a non-missing terminator cannot distinguish a present terminator from a fixed or Pascal layout.",
+    "DOS MZ uses 16-bit x86 real mode with the Ghidra load segment 0x1000. Returned addresses are linear byte coordinates; they do not identify a unique segment:offset alias.",
+    "Static DOS analysis does not emulate BIOS, DOS interrupts, device ports, or self-modifying unpacking code. Packed targets require a separately identified unpacked artifact for original-program analysis; appended overlays are not the initialized load module."
+  ],
+  "locations": [],
+  "evidence_links": []
+}

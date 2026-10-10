@@ -1,0 +1,112 @@
+{
+  "target": {
+    "title": "Larax & Zaco",
+    "alias": "Lezac",
+    "version": "1.0 shareware",
+    "author": "Stefano Zanobi / Zanobi Software",
+    "release_date_in_bundled_english_doc": "1996-04-23",
+    "rights_notice": "Original materials remain the property of their respective owners; not relicensed by this repository."
+  },
+  "archive": {
+    "url": "https://archive.org/download/LaraxZaco_1020/lezac.zip",
+    "metadata_url": "https://archive.org/metadata/LaraxZaco_1020",
+    "size": 82988,
+    "sha256": "242c4eb1515db5b97946b7cdb5ccbf679d3d1218a7a25302abd90db08d24acb3",
+    "upstream_sha1_verified": "f94d1029a136c9327a16bf0959574bd982d0a27b"
+  },
+  "files": [
+    {
+      "name": "BOMOMIMK.SPR",
+      "size": 20168,
+      "sha256": "08dfd0e59ba191c52af2529bdfa140fd15a57829f0c6c13bbb78e156769ac0d1"
+    },
+    {
+      "name": "BOMPAL.PAL",
+      "size": 768,
+      "sha256": "f2559164074ca529ba6c275a9831b11c6da9e6317f09b3d9228c299d6f8f8319"
+    },
+    {
+      "name": "CARO.CAR",
+      "size": 8450,
+      "sha256": "949cce4db6071d6675a291c978d725c6e4ee1730b2c7a428bc1c8a8185cbd8d8"
+    },
+    {
+      "name": "ENGLISH.DOC",
+      "size": 3522,
+      "sha256": "e2fd2f2521b0277f2fca0c8f2a265408412542932bb6e977bf1ab3d0aabdfed9"
+    },
+    {
+      "name": "FILE_ID.DIZ",
+      "size": 483,
+      "sha256": "3edad84fcd1777ea883763b005c6c8bcaf55b8204edc10a4d01335b979ed0f7c"
+    },
+    {
+      "name": "FONTS.SPR",
+      "size": 5425,
+      "sha256": "f65aa9bbba2a66ee69f1b279a32c448e36012feb53441fbbb8e64e31bee87a0e"
+    },
+    {
+      "name": "GRAN.MST",
+      "size": 399,
+      "sha256": "3f0cf17706d557ca863d6e39bfa6641fba777a88815ba3f0a22e5ac89e0e39e2"
+    },
+    {
+      "name": "ITALIANO.DOC",
+      "size": 4392,
+      "sha256": "5ea7481d3179e60b6f1229aa114dc4b47c95f7c1200c7888ad5c259f161317c1"
+    },
+    {
+      "name": "LEZAC.EXE",
+      "size": 52384,
+      "sha256": "7579255148c2cb540b26f70dc8181c50b218b6808d8fa5208c832391bafa53ec"
+    },
+    {
+      "name": "LIVELS.SCH",
+      "size": 41047,
+      "sha256": "d8b553871014108515d6af05b0853de8ccc22e4d3e44d63533ba1167fdc8c7b2"
+    },
+    {
+      "name": "PROEFS.SON",
+      "size": 782,
+      "sha256": "b5bc702a27ac85554cc76a62fced07567921b07d5c16f2027a62fbc956df701d"
+    },
+    {
+      "name": "PROVA.SPR",
+      "size": 21250,
+      "sha256": "d6d6b634f8613251f6e82e9a15c5c68e2be437892bfa25c53eb4bcd9094188b7"
+    },
+    {
+      "name": "RECS.DAT",
+      "size": 92,
+      "sha256": "fbc54d16834666dfd45915ffc0181ad54c635e0b19f59ca2c1aa77984a011a95"
+    },
+    {
+      "name": "SFONLEF.ZBG",
+      "size": 34292,
+      "sha256": "b1b7cc03122510318c1a3670f151712406e9e3fa60aabd8fb558320766c3835c"
+    }
+  ],
+  "mz": {
+    "header_bytes": 1904,
+    "file_bytes": 52384,
+    "module_bytes": 50480,
+    "relocation_count": 468,
+    "relative_cs": 0,
+    "ip": 30595,
+    "relative_ss": 5905,
+    "sp": 16384,
+    "analysis_load_segment": 4096,
+    "analysis_entry": "0x17783"
+  },
+  "toolchain": {
+    "rea_npm": "6.3.0",
+    "rea_repository": "https://github.com/morluto/rea",
+    "rea_inspected_main_commit": "60fbb2f06eedcd1f5170226a5118e956a6fc9dd0",
+    "note": "Analysis used the pinned npm release, not the inspected main checkout.",
+    "ghidra": "12.1.4",
+    "ghidra_archive_sha256": "ddac49f903da9d5bac833e5cc79395098b9c33cfd3279be5f31bd00387d2d4db",
+    "jdk": "Temurin 21.0.12.1+1",
+    "jdk_archive_sha256": "ce79869e1307ed8ee1e2baa86a412b1eb5b75d10a01006d788a6f968bcfaee94",
+    "node": "26.7.0"
+  }
+}

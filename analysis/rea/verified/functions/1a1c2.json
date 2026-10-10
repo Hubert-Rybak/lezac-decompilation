@@ -1,0 +1,4715 @@
+{
+  "evidence_id": "ev_c23d1471cebae0066af48911592d943c4cc7f817a145b2da981016007b8a524e",
+  "subject": {
+    "name": "LEZAC.EXE",
+    "digest": {
+      "sha256": "7579255148c2cb540b26f70dc8181c50b218b6808d8fa5208c832391bafa53ec"
+    },
+    "format": "dos-mz",
+    "architecture": "x86",
+    "local_path": "/opt/data/lezac-decompilation/original/game/LEZAC.EXE"
+  },
+  "provider": {
+    "id": "ghidra",
+    "name": "Ghidra",
+    "version": "12.1.4"
+  },
+  "analysis_profile": {
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "parameters": {
+      "target_kind": "executable",
+      "target_format": "dos-mz",
+      "architecture": "x86",
+      "available_architectures": [
+        "x86"
+      ],
+      "import_mode": "ephemeral-source-immutable",
+      "annotation_policy": "atomic-function-entry-metadata-v1",
+      "load_image_observations": "source-mappings-entry-context-v2",
+      "function_body_evidence": "complete-inclusive-ranges-v1",
+      "function_references": "complete-body-and-entry-reference-manager-v2",
+      "location_resolution": "explicit-address-exact-entry-symbol-first-v3",
+      "instruction_flow_evidence": "decoded-return-pcode-v1",
+      "process_launch": "inspected-jvm-launch-support-v1",
+      "load_image_evidence": "independent-mz-mapping-relocations-v1",
+      "jump_table_evidence": "typed-case-default-blocks-v1",
+      "decompiler_jump_loads": true,
+      "loader": "MzLoader",
+      "language_id": "x86:LE:16:Real Mode",
+      "compiler_spec_id": "default",
+      "load_segment": "0x1000",
+      "address_coordinates": "linear-byte-offset",
+      "analyzer_preset": "ghidra-default"
+    },
+    "digest": "894e458d232de9bdeb2a5d661cd2b4791ee9e10f88d297423fc0c7553a7a66d8"
+  },
+  "predicate_type": "rea.analysis",
+  "operation": "analyze_function",
+  "parameters": {
+    "procedure": "0x1a1c2"
+  },
+  "raw_result": {
+    "procedure": {
+      "address": "0x1a1c2",
+      "name": "FUN_1920_0fc2",
+      "classification": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null,
+        "provenance": "ghidra-function-manager"
+      },
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x1a1c2",
+            "end": "0x1a220"
+          }
+        ],
+        "total_bytes": 95,
+        "span_bytes": 95,
+        "non_contiguous": false,
+        "contains_entry": true
+      },
+      "signature": "undefined __cdecl16far FUN_1920_0fc2()",
+      "locals": [
+        {
+          "description": "undefined1 local_4 @ Stack[-0x4]:1",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined2 local_6 @ Stack[-0x6]:2",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined2 local_8 @ Stack[-0x8]:2",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined2 local_a @ Stack[-0xa]:2",
+          "provenance": "ghidra-function-database"
+        }
+      ]
+    },
+    "pseudocode": "\nuint __cdecl16far FUN_1920_0fc2(void)\n\n{\n  char cVar1;\n  byte bVar2;\n  uint in_AX;\n  uint uVar3;\n  uint in_DX;\n  undefined2 in_BX;\n  undefined2 uVar4;\n  undefined4 uVar5;\n  \n  cVar1 = (char)in_AX;\n  if (cVar1 != '\\0') {\n    if ((in_DX & 0x8000) != 0) {\n      uVar3 = FUN_1920_00e2();\n      return uVar3;\n    }\n    do {\n      uVar4 = in_BX;\n      FUN_1920_0f53();\n      uVar5 = FUN_1920_0f35();\n      in_AX = (uint)(byte)((char)uVar5 - 1);\n      bVar2 = FUN_1920_0be1(in_AX,uVar4,(int)((ulong)uVar5 >> 0x10));\n    } while ((byte)(((char)(cVar1 + -0x80) >> 1) + 0x6cU) <= bVar2);\n  }\n  return in_AX;\n}\n\n",
+    "assembly": [
+      "0x1a1c2: PUSH BP",
+      "0x1a1c3: MOV BP, SP",
+      "0x1a1c5: SUB SP, 0x8",
+      "0x1a1c8: MOV CX, AX",
+      "0x1a1ca: MOV SI, BX",
+      "0x1a1cc: MOV DI, DX",
+      "0x1a1ce: OR AL, AL",
+      "0x1a1d0: JZ 0x1000:a20e",
+      "0x1a1d2: TEST DH, 0x80",
+      "0x1a1d5: JNZ 0x1000:a218",
+      "0x1a1d7: MOV word ptr [BP + -0x8], AX",
+      "0x1a1da: MOV word ptr [BP + -0x6], BX",
+      "0x1a1dd: MOV word ptr [BP + -0x4], DX",
+      "0x1a1e0: ADD CL, 0x80",
+      "0x1a1e3: SAR CL, 0x1",
+      "0x1a1e5: ADD CL, 0x80",
+      "0x1a1e8: MOV AL, CL",
+      "0x1a1ea: SUB AL, 0x14",
+      "0x1a1ec: MOV byte ptr [BP + -0x2], AL",
+      "0x1a1ef: MOV AX, word ptr [BP + -0x8]",
+      "0x1a1f2: MOV BX, word ptr [BP + -0x6]",
+      "0x1a1f5: MOV DX, word ptr [BP + -0x4]",
+      "0x1a1f8: CALL 0x1000:a153",
+      "0x1a1fb: CALL 0x1000:a135",
+      "0x1a1fe: DEC AL",
+      "0x1a200: PUSH DX",
+      "0x1a201: PUSH BX",
+      "0x1a202: PUSH AX",
+      "0x1a203: CALL 0x1000:9de1",
+      "0x1a206: CMP AL, byte ptr [BP + -0x2]",
+      "0x1a209: POP CX",
+      "0x1a20a: POP SI",
+      "0x1a20b: POP DI",
+      "0x1a20c: JNC 0x1000:a1ef",
+      "0x1a20e: MOV AX, CX",
+      "0x1a210: MOV BX, SI",
+      "0x1a212: MOV DX, DI",
+      "0x1a214: MOV SP, BP",
+      "0x1a216: POP BP",
+      "0x1a217: RETF",
+      "0x1a218: MOV SP, BP",
+      "0x1a21a: POP BP",
+      "0x1a21b: MOV AX, 0xcf",
+      "0x1a21e: JMP 0x1000:92e2"
+    ],
+    "comments": [],
+    "callers": [
+      {
+        "address": "0x1346b",
+        "name": "FUN_1000_346b",
+        "classification": {
+          "external": false,
+          "thunk": false,
+          "thunk_target": null,
+          "provenance": "ghidra-function-manager"
+        },
+        "body": {
+          "available": true,
+          "provenance": "ghidra-function-body-address-set",
+          "ranges": [
+            {
+              "start": "0x1346b",
+              "end": "0x13586"
+            }
+          ],
+          "total_bytes": 284,
+          "span_bytes": 284,
+          "non_contiguous": false,
+          "contains_entry": true
+        }
+      }
+    ],
+    "callees": [
+      {
+        "address": "0x192e2",
+        "name": "FUN_1920_00e2",
+        "classification": {
+          "external": false,
+          "thunk": false,
+          "thunk_target": null,
+          "provenance": "ghidra-function-manager"
+        },
+        "body": {
+          "available": true,
+          "provenance": "ghidra-function-body-address-set",
+          "ranges": [
+            {
+              "start": "0x192e2",
+              "end": "0x192e5"
+            }
+          ],
+          "total_bytes": 4,
+          "span_bytes": 4,
+          "non_contiguous": false,
+          "contains_entry": true
+        }
+      },
+      {
+        "address": "0x19de1",
+        "name": "FUN_1920_0be1",
+        "classification": {
+          "external": false,
+          "thunk": false,
+          "thunk_target": null,
+          "provenance": "ghidra-function-manager"
+        },
+        "body": {
+          "available": true,
+          "provenance": "ghidra-function-body-address-set",
+          "ranges": [
+            {
+              "start": "0x19de1",
+              "end": "0x19de4"
+            }
+          ],
+          "total_bytes": 4,
+          "span_bytes": 4,
+          "non_contiguous": false,
+          "contains_entry": true
+        }
+      },
+      {
+        "address": "0x1a135",
+        "name": "FUN_1920_0f35",
+        "classification": {
+          "external": false,
+          "thunk": false,
+          "thunk_target": null,
+          "provenance": "ghidra-function-manager"
+        },
+        "body": {
+          "available": true,
+          "provenance": "ghidra-function-body-address-set",
+          "ranges": [
+            {
+              "start": "0x1a135",
+              "end": "0x1a13e"
+            }
+          ],
+          "total_bytes": 10,
+          "span_bytes": 10,
+          "non_contiguous": false,
+          "contains_entry": true
+        }
+      },
+      {
+        "address": "0x1a153",
+        "name": "FUN_1920_0f53",
+        "classification": {
+          "external": false,
+          "thunk": false,
+          "thunk_target": null,
+          "provenance": "ghidra-function-manager"
+        },
+        "body": {
+          "available": true,
+          "provenance": "ghidra-function-body-address-set",
+          "ranges": [
+            {
+              "start": "0x1a153",
+              "end": "0x1a15c"
+            }
+          ],
+          "total_bytes": 10,
+          "span_bytes": 10,
+          "non_contiguous": false,
+          "contains_entry": true
+        }
+      }
+    ],
+    "incoming_references": [
+      {
+        "source_address": "0x13519",
+        "target_address": "0x1a1c2",
+        "source_procedure": {
+          "address": "0x1346b",
+          "name": "FUN_1000_346b",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1346b",
+                "end": "0x13586"
+              }
+            ],
+            "total_bytes": 284,
+            "span_bytes": 284,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "target_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "kind": {
+          "available": true,
+          "provenance": "ghidra-reference-manager",
+          "type": "UNCONDITIONAL_CALL",
+          "flow": true,
+          "call": true,
+          "jump": false,
+          "data": false,
+          "read": false,
+          "write": false,
+          "indirect": false,
+          "computed": false,
+          "conditional": false,
+          "terminal": false,
+          "primary": true,
+          "operand_index": 0,
+          "external": false
+        }
+      }
+    ],
+    "outgoing_references": [
+      {
+        "source_address": "0x1a1d0",
+        "target_address": "0x1a20e",
+        "source_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "target_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "kind": {
+          "available": true,
+          "provenance": "ghidra-reference-manager",
+          "type": "CONDITIONAL_JUMP",
+          "flow": true,
+          "call": false,
+          "jump": true,
+          "data": false,
+          "read": false,
+          "write": false,
+          "indirect": false,
+          "computed": false,
+          "conditional": true,
+          "terminal": false,
+          "primary": true,
+          "operand_index": 0,
+          "external": false
+        }
+      },
+      {
+        "source_address": "0x1a1d5",
+        "target_address": "0x1a218",
+        "source_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "target_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "kind": {
+          "available": true,
+          "provenance": "ghidra-reference-manager",
+          "type": "CONDITIONAL_JUMP",
+          "flow": true,
+          "call": false,
+          "jump": true,
+          "data": false,
+          "read": false,
+          "write": false,
+          "indirect": false,
+          "computed": false,
+          "conditional": true,
+          "terminal": false,
+          "primary": true,
+          "operand_index": 0,
+          "external": false
+        }
+      },
+      {
+        "source_address": "0x1a1d7",
+        "target_address": "stack:0xfffffffffffffff6",
+        "source_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "target_procedure": null,
+        "kind": {
+          "available": true,
+          "provenance": "ghidra-reference-manager",
+          "type": "DATA",
+          "flow": false,
+          "call": false,
+          "jump": false,
+          "data": true,
+          "read": false,
+          "write": false,
+          "indirect": false,
+          "computed": false,
+          "conditional": false,
+          "terminal": false,
+          "primary": true,
+          "operand_index": 0,
+          "external": false
+        }
+      },
+      {
+        "source_address": "0x1a1da",
+        "target_address": "stack:0xfffffffffffffff8",
+        "source_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "target_procedure": null,
+        "kind": {
+          "available": true,
+          "provenance": "ghidra-reference-manager",
+          "type": "DATA",
+          "flow": false,
+          "call": false,
+          "jump": false,
+          "data": true,
+          "read": false,
+          "write": false,
+          "indirect": false,
+          "computed": false,
+          "conditional": false,
+          "terminal": false,
+          "primary": true,
+          "operand_index": 0,
+          "external": false
+        }
+      },
+      {
+        "source_address": "0x1a1dd",
+        "target_address": "stack:0xfffffffffffffffa",
+        "source_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "target_procedure": null,
+        "kind": {
+          "available": true,
+          "provenance": "ghidra-reference-manager",
+          "type": "DATA",
+          "flow": false,
+          "call": false,
+          "jump": false,
+          "data": true,
+          "read": false,
+          "write": false,
+          "indirect": false,
+          "computed": false,
+          "conditional": false,
+          "terminal": false,
+          "primary": true,
+          "operand_index": 0,
+          "external": false
+        }
+      },
+      {
+        "source_address": "0x1a1ec",
+        "target_address": "stack:0xfffffffffffffffc",
+        "source_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "target_procedure": null,
+        "kind": {
+          "available": true,
+          "provenance": "ghidra-reference-manager",
+          "type": "DATA",
+          "flow": false,
+          "call": false,
+          "jump": false,
+          "data": true,
+          "read": false,
+          "write": false,
+          "indirect": false,
+          "computed": false,
+          "conditional": false,
+          "terminal": false,
+          "primary": true,
+          "operand_index": 0,
+          "external": false
+        }
+      },
+      {
+        "source_address": "0x1a1ef",
+        "target_address": "stack:0xfffffffffffffff6",
+        "source_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "target_procedure": null,
+        "kind": {
+          "available": true,
+          "provenance": "ghidra-reference-manager",
+          "type": "DATA",
+          "flow": false,
+          "call": false,
+          "jump": false,
+          "data": true,
+          "read": false,
+          "write": false,
+          "indirect": false,
+          "computed": false,
+          "conditional": false,
+          "terminal": false,
+          "primary": true,
+          "operand_index": 1,
+          "external": false
+        }
+      },
+      {
+        "source_address": "0x1a1f2",
+        "target_address": "stack:0xfffffffffffffff8",
+        "source_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "target_procedure": null,
+        "kind": {
+          "available": true,
+          "provenance": "ghidra-reference-manager",
+          "type": "DATA",
+          "flow": false,
+          "call": false,
+          "jump": false,
+          "data": true,
+          "read": false,
+          "write": false,
+          "indirect": false,
+          "computed": false,
+          "conditional": false,
+          "terminal": false,
+          "primary": true,
+          "operand_index": 1,
+          "external": false
+        }
+      },
+      {
+        "source_address": "0x1a1f5",
+        "target_address": "stack:0xfffffffffffffffa",
+        "source_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "target_procedure": null,
+        "kind": {
+          "available": true,
+          "provenance": "ghidra-reference-manager",
+          "type": "DATA",
+          "flow": false,
+          "call": false,
+          "jump": false,
+          "data": true,
+          "read": false,
+          "write": false,
+          "indirect": false,
+          "computed": false,
+          "conditional": false,
+          "terminal": false,
+          "primary": true,
+          "operand_index": 1,
+          "external": false
+        }
+      },
+      {
+        "source_address": "0x1a1f8",
+        "target_address": "0x1a153",
+        "source_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "target_procedure": {
+          "address": "0x1a153",
+          "name": "FUN_1920_0f53",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a153",
+                "end": "0x1a15c"
+              }
+            ],
+            "total_bytes": 10,
+            "span_bytes": 10,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "kind": {
+          "available": true,
+          "provenance": "ghidra-reference-manager",
+          "type": "UNCONDITIONAL_CALL",
+          "flow": true,
+          "call": true,
+          "jump": false,
+          "data": false,
+          "read": false,
+          "write": false,
+          "indirect": false,
+          "computed": false,
+          "conditional": false,
+          "terminal": false,
+          "primary": true,
+          "operand_index": 0,
+          "external": false
+        }
+      },
+      {
+        "source_address": "0x1a1fb",
+        "target_address": "0x1a135",
+        "source_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "target_procedure": {
+          "address": "0x1a135",
+          "name": "FUN_1920_0f35",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a135",
+                "end": "0x1a13e"
+              }
+            ],
+            "total_bytes": 10,
+            "span_bytes": 10,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "kind": {
+          "available": true,
+          "provenance": "ghidra-reference-manager",
+          "type": "UNCONDITIONAL_CALL",
+          "flow": true,
+          "call": true,
+          "jump": false,
+          "data": false,
+          "read": false,
+          "write": false,
+          "indirect": false,
+          "computed": false,
+          "conditional": false,
+          "terminal": false,
+          "primary": true,
+          "operand_index": 0,
+          "external": false
+        }
+      },
+      {
+        "source_address": "0x1a203",
+        "target_address": "0x19de1",
+        "source_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "target_procedure": {
+          "address": "0x19de1",
+          "name": "FUN_1920_0be1",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x19de1",
+                "end": "0x19de4"
+              }
+            ],
+            "total_bytes": 4,
+            "span_bytes": 4,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "kind": {
+          "available": true,
+          "provenance": "ghidra-reference-manager",
+          "type": "UNCONDITIONAL_CALL",
+          "flow": true,
+          "call": true,
+          "jump": false,
+          "data": false,
+          "read": false,
+          "write": false,
+          "indirect": false,
+          "computed": false,
+          "conditional": false,
+          "terminal": false,
+          "primary": true,
+          "operand_index": 0,
+          "external": false
+        }
+      },
+      {
+        "source_address": "0x1a206",
+        "target_address": "stack:0xfffffffffffffffc",
+        "source_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "target_procedure": null,
+        "kind": {
+          "available": true,
+          "provenance": "ghidra-reference-manager",
+          "type": "DATA",
+          "flow": false,
+          "call": false,
+          "jump": false,
+          "data": true,
+          "read": false,
+          "write": false,
+          "indirect": false,
+          "computed": false,
+          "conditional": false,
+          "terminal": false,
+          "primary": true,
+          "operand_index": 1,
+          "external": false
+        }
+      },
+      {
+        "source_address": "0x1a20c",
+        "target_address": "0x1a1ef",
+        "source_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "target_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "kind": {
+          "available": true,
+          "provenance": "ghidra-reference-manager",
+          "type": "CONDITIONAL_JUMP",
+          "flow": true,
+          "call": false,
+          "jump": true,
+          "data": false,
+          "read": false,
+          "write": false,
+          "indirect": false,
+          "computed": false,
+          "conditional": true,
+          "terminal": false,
+          "primary": true,
+          "operand_index": 0,
+          "external": false
+        }
+      },
+      {
+        "source_address": "0x1a21e",
+        "target_address": "0x192e2",
+        "source_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "target_procedure": {
+          "address": "0x192e2",
+          "name": "FUN_1920_00e2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x192e2",
+                "end": "0x192e5"
+              }
+            ],
+            "total_bytes": 4,
+            "span_bytes": 4,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "kind": {
+          "available": true,
+          "provenance": "ghidra-reference-manager",
+          "type": "UNCONDITIONAL_CALL",
+          "flow": true,
+          "call": true,
+          "jump": false,
+          "data": false,
+          "read": false,
+          "write": false,
+          "indirect": false,
+          "computed": false,
+          "conditional": false,
+          "terminal": false,
+          "primary": true,
+          "operand_index": 0,
+          "external": false
+        }
+      }
+    ],
+    "referenced_strings": [],
+    "referenced_names": [
+      {
+        "address": "0x192e2",
+        "value": "FUN_1920_00e2",
+        "source_address": "0x1a21e"
+      },
+      {
+        "address": "0x19de1",
+        "value": "FUN_1920_0be1",
+        "source_address": "0x1a203"
+      },
+      {
+        "address": "0x1a135",
+        "value": "FUN_1920_0f35",
+        "source_address": "0x1a1fb"
+      },
+      {
+        "address": "0x1a153",
+        "value": "FUN_1920_0f53",
+        "source_address": "0x1a1f8"
+      },
+      {
+        "address": "0x1a1ef",
+        "value": "LAB_1920_0fef",
+        "source_address": "0x1a20c"
+      },
+      {
+        "address": "0x1a20e",
+        "value": "LAB_1920_100e",
+        "source_address": "0x1a1d0"
+      },
+      {
+        "address": "0x1a218",
+        "value": "LAB_1920_1018",
+        "source_address": "0x1a1d5"
+      }
+    ],
+    "basic_blocks": [
+      {
+        "start": "0x1a1c2",
+        "end": "0x1a1d2",
+        "successors": [
+          "0x1a1d2",
+          "0x1a20e"
+        ]
+      },
+      {
+        "start": "0x1a1d2",
+        "end": "0x1a1d7",
+        "successors": [
+          "0x1a1d7",
+          "0x1a218"
+        ]
+      },
+      {
+        "start": "0x1a1d7",
+        "end": "0x1a1ef",
+        "successors": [
+          "0x1a1ef"
+        ]
+      },
+      {
+        "start": "0x1a1ef",
+        "end": "0x1a20e",
+        "successors": [
+          "0x1a1ef",
+          "0x1a20e"
+        ]
+      },
+      {
+        "start": "0x1a20e",
+        "end": "0x1a218",
+        "successors": []
+      },
+      {
+        "start": "0x1a218",
+        "end": "0x1a221",
+        "successors": []
+      }
+    ],
+    "native_api": {
+      "available": true,
+      "provenance": "ghidra-high-function",
+      "signature_source": "default",
+      "calling_convention": "__cdecl16far",
+      "return_type": {
+        "role": "return",
+        "ordinal": null,
+        "name": null,
+        "data_type": "uint",
+        "size_bytes": 2,
+        "storage": "AX:2",
+        "confidence": "low",
+        "evidence": [
+          {
+            "kind": "signature-source",
+            "source": "ghidra-function-manager",
+            "detail": "Function signature source is default."
+          },
+          {
+            "kind": "decompiler-type",
+            "source": "ghidra-high-function",
+            "detail": "HighFunction recovered data type uint."
+          }
+        ],
+        "decompiler_artifacts": [
+          "recovered-signature",
+          "register-or-stack-storage"
+        ]
+      },
+      "parameters": [],
+      "jump_tables": [],
+      "pseudocode": {
+        "classification": "decompiler-generated-non-source",
+        "compilable": false
+      },
+      "decompiler_artifacts": [
+        "recovered-signature",
+        "register-and-stack-variables",
+        "compiler-generated-control-flow",
+        "pointer-arithmetic",
+        "pseudocode"
+      ],
+      "limitations": [
+        "Types and calling conventions are Ghidra decompiler observations, not source declarations.",
+        "Register variables, compiler-generated blocks, and pointer arithmetic remain decompiler artifacts.",
+        "Pseudocode is neither original source nor guaranteed to compile."
+      ]
+    },
+    "native_value_flow": {
+      "available": true,
+      "provenance": "ghidra-high-pcode",
+      "operations": [
+        {
+          "id": "0x1a1ce#21",
+          "address": "0x1a1ce",
+          "sequence": 21,
+          "opcode": "INT_NOTEQUAL",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "register",
+              "size_bytes": 1,
+              "location": "register:0x0",
+              "constant_hex": null
+            },
+            {
+              "kind": "constant",
+              "size_bytes": 1,
+              "location": null,
+              "constant_hex": "0"
+            }
+          ],
+          "output": {
+            "kind": "register",
+            "size_bytes": 1,
+            "location": "register:0x206",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1ce#268",
+          "address": "0x1a1ce",
+          "sequence": 268,
+          "opcode": "SUBPIECE",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "register",
+              "size_bytes": 2,
+              "location": "register:0x0",
+              "constant_hex": null
+            },
+            {
+              "kind": "constant",
+              "size_bytes": 4,
+              "location": null,
+              "constant_hex": "0"
+            }
+          ],
+          "output": {
+            "kind": "register",
+            "size_bytes": 1,
+            "location": "register:0x0",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1d0#26",
+          "address": "0x1a1d0",
+          "sequence": 26,
+          "opcode": "CBRANCH",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "address",
+              "size_bytes": 1,
+              "location": "0x1a20e",
+              "constant_hex": null
+            },
+            {
+              "kind": "register",
+              "size_bytes": 1,
+              "location": "register:0x206",
+              "constant_hex": null
+            }
+          ],
+          "output": null
+        },
+        {
+          "id": "0x1a1d2#31",
+          "address": "0x1a1d2",
+          "sequence": 31,
+          "opcode": "INT_NOTEQUAL",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "unique",
+              "size_bytes": 2,
+              "location": "unique:0x10000020",
+              "constant_hex": null
+            },
+            {
+              "kind": "constant",
+              "size_bytes": 2,
+              "location": null,
+              "constant_hex": "0"
+            }
+          ],
+          "output": {
+            "kind": "register",
+            "size_bytes": 1,
+            "location": "register:0x206",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1d2#392",
+          "address": "0x1a1d2",
+          "sequence": 392,
+          "opcode": "INT_AND",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "register",
+              "size_bytes": 2,
+              "location": "register:0x8",
+              "constant_hex": null
+            },
+            {
+              "kind": "constant",
+              "size_bytes": 2,
+              "location": null,
+              "constant_hex": "8000"
+            }
+          ],
+          "output": {
+            "kind": "unique",
+            "size_bytes": 2,
+            "location": "unique:0x10000020",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1d5#37",
+          "address": "0x1a1d5",
+          "sequence": 37,
+          "opcode": "CBRANCH",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "address",
+              "size_bytes": 1,
+              "location": "0x1a218",
+              "constant_hex": null
+            },
+            {
+              "kind": "register",
+              "size_bytes": 1,
+              "location": "register:0x206",
+              "constant_hex": null
+            }
+          ],
+          "output": null
+        },
+        {
+          "id": "0x1a1e0#52",
+          "address": "0x1a1e0",
+          "sequence": 52,
+          "opcode": "INT_ADD",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "register",
+              "size_bytes": 1,
+              "location": "register:0x0",
+              "constant_hex": null
+            },
+            {
+              "kind": "constant",
+              "size_bytes": 1,
+              "location": null,
+              "constant_hex": "80"
+            }
+          ],
+          "output": {
+            "kind": "register",
+            "size_bytes": 1,
+            "location": "register:0x4",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1e3#61",
+          "address": "0x1a1e3",
+          "sequence": 61,
+          "opcode": "INT_SRIGHT",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "unique",
+              "size_bytes": 1,
+              "location": "unique:0x10000037",
+              "constant_hex": null
+            },
+            {
+              "kind": "constant",
+              "size_bytes": 4,
+              "location": null,
+              "constant_hex": "1"
+            }
+          ],
+          "output": {
+            "kind": "register",
+            "size_bytes": 1,
+            "location": "register:0x4",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1e3#466",
+          "address": "0x1a1e3",
+          "sequence": 466,
+          "opcode": "CAST",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "register",
+              "size_bytes": 1,
+              "location": "register:0x4",
+              "constant_hex": null
+            }
+          ],
+          "output": {
+            "kind": "unique",
+            "size_bytes": 1,
+            "location": "unique:0x10000037",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1ea#80",
+          "address": "0x1a1ea",
+          "sequence": 80,
+          "opcode": "INT_ADD",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "register",
+              "size_bytes": 1,
+              "location": "register:0x4",
+              "constant_hex": null
+            },
+            {
+              "kind": "constant",
+              "size_bytes": 1,
+              "location": null,
+              "constant_hex": "6c"
+            }
+          ],
+          "output": {
+            "kind": "register",
+            "size_bytes": 1,
+            "location": "register:0x0",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1f8#107",
+          "address": "0x1a1f8",
+          "sequence": 107,
+          "opcode": "CALL",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "address",
+              "size_bytes": 8,
+              "location": "0x1a153",
+              "constant_hex": null
+            }
+          ],
+          "output": null
+        },
+        {
+          "id": "0x1a1f8#340",
+          "address": "0x1a1f8",
+          "sequence": 340,
+          "opcode": "INDIRECT",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "unique",
+              "size_bytes": 2,
+              "location": "unique:0x10000035",
+              "constant_hex": null
+            },
+            {
+              "kind": "constant",
+              "size_bytes": 4,
+              "location": null,
+              "constant_hex": "6b"
+            }
+          ],
+          "output": {
+            "kind": "register",
+            "size_bytes": 2,
+            "location": "register:0xc",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1f8#465",
+          "address": "0x1a1f8",
+          "sequence": 465,
+          "opcode": "COPY",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "register",
+              "size_bytes": 2,
+              "location": "register:0xc",
+              "constant_hex": null
+            }
+          ],
+          "output": {
+            "kind": "unique",
+            "size_bytes": 2,
+            "location": "unique:0x10000035",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1fb#112",
+          "address": "0x1a1fb",
+          "sequence": 112,
+          "opcode": "CALL",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "address",
+              "size_bytes": 8,
+              "location": "0x1a135",
+              "constant_hex": null
+            }
+          ],
+          "output": {
+            "kind": "other",
+            "size_bytes": 4,
+            "location": "VARIABLE:0x0",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1fb#341",
+          "address": "0x1a1fb",
+          "sequence": 341,
+          "opcode": "INDIRECT",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "register",
+              "size_bytes": 2,
+              "location": "register:0xc",
+              "constant_hex": null
+            },
+            {
+              "kind": "constant",
+              "size_bytes": 4,
+              "location": null,
+              "constant_hex": "70"
+            }
+          ],
+          "output": {
+            "kind": "register",
+            "size_bytes": 2,
+            "location": "register:0xc",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1fb#463",
+          "address": "0x1a1fb",
+          "sequence": 463,
+          "opcode": "SUBPIECE",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "unique",
+              "size_bytes": 4,
+              "location": "unique:0x10000031",
+              "constant_hex": null
+            },
+            {
+              "kind": "constant",
+              "size_bytes": 4,
+              "location": null,
+              "constant_hex": "0"
+            }
+          ],
+          "output": {
+            "kind": "register",
+            "size_bytes": 2,
+            "location": "register:0x8",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1fb#464",
+          "address": "0x1a1fb",
+          "sequence": 464,
+          "opcode": "INT_RIGHT",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "unique",
+              "size_bytes": 4,
+              "location": "unique:0x10000038",
+              "constant_hex": null
+            },
+            {
+              "kind": "constant",
+              "size_bytes": 4,
+              "location": null,
+              "constant_hex": "10"
+            }
+          ],
+          "output": {
+            "kind": "unique",
+            "size_bytes": 4,
+            "location": "unique:0x10000031",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1fb#467",
+          "address": "0x1a1fb",
+          "sequence": 467,
+          "opcode": "CAST",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "other",
+              "size_bytes": 4,
+              "location": "VARIABLE:0x0",
+              "constant_hex": null
+            }
+          ],
+          "output": {
+            "kind": "unique",
+            "size_bytes": 4,
+            "location": "unique:0x10000038",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1fe#114",
+          "address": "0x1a1fe",
+          "sequence": 114,
+          "opcode": "INT_SUB",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "register",
+              "size_bytes": 1,
+              "location": "register:0x0",
+              "constant_hex": null
+            },
+            {
+              "kind": "constant",
+              "size_bytes": 1,
+              "location": null,
+              "constant_hex": "1"
+            }
+          ],
+          "output": {
+            "kind": "register",
+            "size_bytes": 1,
+            "location": "register:0x0",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1fe#281",
+          "address": "0x1a1fe",
+          "sequence": 281,
+          "opcode": "SUBPIECE",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "other",
+              "size_bytes": 4,
+              "location": "VARIABLE:0x0",
+              "constant_hex": null
+            },
+            {
+              "kind": "constant",
+              "size_bytes": 4,
+              "location": null,
+              "constant_hex": "0"
+            }
+          ],
+          "output": {
+            "kind": "register",
+            "size_bytes": 1,
+            "location": "register:0x0",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1fe#295",
+          "address": "0x1a1fe",
+          "sequence": 295,
+          "opcode": "INT_ZEXT",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "unique",
+              "size_bytes": 1,
+              "location": "unique:0x1000003c",
+              "constant_hex": null
+            }
+          ],
+          "output": {
+            "kind": "register",
+            "size_bytes": 2,
+            "location": "register:0x0",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1fe#468",
+          "address": "0x1a1fe",
+          "sequence": 468,
+          "opcode": "CAST",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "register",
+              "size_bytes": 1,
+              "location": "register:0x0",
+              "constant_hex": null
+            }
+          ],
+          "output": {
+            "kind": "unique",
+            "size_bytes": 1,
+            "location": "unique:0x1000003c",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a203#137",
+          "address": "0x1a203",
+          "sequence": 137,
+          "opcode": "CALL",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "address",
+              "size_bytes": 8,
+              "location": "0x19de1",
+              "constant_hex": null
+            },
+            {
+              "kind": "register",
+              "size_bytes": 2,
+              "location": "register:0x0",
+              "constant_hex": null
+            },
+            {
+              "kind": "register",
+              "size_bytes": 2,
+              "location": "register:0xc",
+              "constant_hex": null
+            },
+            {
+              "kind": "register",
+              "size_bytes": 2,
+              "location": "register:0x8",
+              "constant_hex": null
+            }
+          ],
+          "output": {
+            "kind": "register",
+            "size_bytes": 1,
+            "location": "register:0x0",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a203#416",
+          "address": "0x1a203",
+          "sequence": 416,
+          "opcode": "INDIRECT",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "register",
+              "size_bytes": 2,
+              "location": "register:0x0",
+              "constant_hex": null
+            },
+            {
+              "kind": "constant",
+              "size_bytes": 4,
+              "location": null,
+              "constant_hex": "89"
+            }
+          ],
+          "output": {
+            "kind": "other",
+            "size_bytes": 2,
+            "location": "stack:0xfffffffffffffff0",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a206#142",
+          "address": "0x1a206",
+          "sequence": 142,
+          "opcode": "INT_LESSEQUAL",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "unique",
+              "size_bytes": 1,
+              "location": "unique:0x1000003d",
+              "constant_hex": null
+            },
+            {
+              "kind": "register",
+              "size_bytes": 1,
+              "location": "register:0x0",
+              "constant_hex": null
+            }
+          ],
+          "output": {
+            "kind": "register",
+            "size_bytes": 1,
+            "location": "register:0x200",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a206#469",
+          "address": "0x1a206",
+          "sequence": 469,
+          "opcode": "CAST",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "register",
+              "size_bytes": 1,
+              "location": "register:0x0",
+              "constant_hex": null
+            }
+          ],
+          "output": {
+            "kind": "unique",
+            "size_bytes": 1,
+            "location": "unique:0x1000003d",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a20c#167",
+          "address": "0x1a20c",
+          "sequence": 167,
+          "opcode": "CBRANCH",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "address",
+              "size_bytes": 1,
+              "location": "0x1a1ef",
+              "constant_hex": null
+            },
+            {
+              "kind": "register",
+              "size_bytes": 1,
+              "location": "register:0x200",
+              "constant_hex": null
+            }
+          ],
+          "output": null
+        },
+        {
+          "id": "0x1a20e#168",
+          "address": "0x1a20e",
+          "sequence": 168,
+          "opcode": "COPY",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "register",
+              "size_bytes": 2,
+              "location": "register:0x4",
+              "constant_hex": null
+            }
+          ],
+          "output": {
+            "kind": "register",
+            "size_bytes": 2,
+            "location": "register:0x0",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a20e#330",
+          "address": "0x1a20e",
+          "sequence": 330,
+          "opcode": "MULTIEQUAL",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "register",
+              "size_bytes": 2,
+              "location": "register:0x0",
+              "constant_hex": null
+            },
+            {
+              "kind": "other",
+              "size_bytes": 2,
+              "location": "stack:0xfffffffffffffff0",
+              "constant_hex": null
+            }
+          ],
+          "output": {
+            "kind": "register",
+            "size_bytes": 2,
+            "location": "register:0x4",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a217#184",
+          "address": "0x1a217",
+          "sequence": 184,
+          "opcode": "RETURN",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "constant",
+              "size_bytes": 4,
+              "location": null,
+              "constant_hex": "0"
+            },
+            {
+              "kind": "register",
+              "size_bytes": 2,
+              "location": "register:0x0",
+              "constant_hex": null
+            }
+          ],
+          "output": null
+        },
+        {
+          "id": "0x1a21e#192",
+          "address": "0x1a21e",
+          "sequence": 192,
+          "opcode": "CALL",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "address",
+              "size_bytes": 8,
+              "location": "0x192e2",
+              "constant_hex": null
+            }
+          ],
+          "output": {
+            "kind": "register",
+            "size_bytes": 2,
+            "location": "register:0x0",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a21e#193",
+          "address": "0x1a21e",
+          "sequence": 193,
+          "opcode": "RETURN",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "constant",
+              "size_bytes": 8,
+              "location": null,
+              "constant_hex": "0"
+            },
+            {
+              "kind": "register",
+              "size_bytes": 2,
+              "location": "register:0x0",
+              "constant_hex": null
+            }
+          ],
+          "output": null
+        }
+      ],
+      "def_use": [
+        {
+          "definition": "0x1a1ce#268",
+          "use": "0x1a1ce#21",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a1ce#21",
+          "use": "0x1a1d0#26",
+          "input_index": 1
+        },
+        {
+          "definition": "0x1a1d2#392",
+          "use": "0x1a1d2#31",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a1d2#31",
+          "use": "0x1a1d5#37",
+          "input_index": 1
+        },
+        {
+          "definition": "0x1a1ce#268",
+          "use": "0x1a1e0#52",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a1e3#466",
+          "use": "0x1a1e3#61",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a1e0#52",
+          "use": "0x1a1e3#466",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a1e3#61",
+          "use": "0x1a1ea#80",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a1f8#465",
+          "use": "0x1a1f8#340",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a1f8#340",
+          "use": "0x1a1fb#341",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a1fb#464",
+          "use": "0x1a1fb#463",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a1fb#467",
+          "use": "0x1a1fb#464",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a1fb#112",
+          "use": "0x1a1fb#467",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a1fe#281",
+          "use": "0x1a1fe#114",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a1fb#112",
+          "use": "0x1a1fe#281",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a1fe#468",
+          "use": "0x1a1fe#295",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a1fe#114",
+          "use": "0x1a1fe#468",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a1fe#295",
+          "use": "0x1a203#137",
+          "input_index": 1
+        },
+        {
+          "definition": "0x1a1fb#341",
+          "use": "0x1a203#137",
+          "input_index": 2
+        },
+        {
+          "definition": "0x1a1fb#463",
+          "use": "0x1a203#137",
+          "input_index": 3
+        },
+        {
+          "definition": "0x1a1fe#295",
+          "use": "0x1a203#416",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a206#469",
+          "use": "0x1a206#142",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a203#137",
+          "use": "0x1a206#142",
+          "input_index": 1
+        },
+        {
+          "definition": "0x1a1ea#80",
+          "use": "0x1a206#469",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a206#142",
+          "use": "0x1a20c#167",
+          "input_index": 1
+        },
+        {
+          "definition": "0x1a20e#330",
+          "use": "0x1a20e#168",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a203#416",
+          "use": "0x1a20e#330",
+          "input_index": 1
+        },
+        {
+          "definition": "0x1a20e#168",
+          "use": "0x1a217#184",
+          "input_index": 1
+        },
+        {
+          "definition": "0x1a21e#192",
+          "use": "0x1a21e#193",
+          "input_index": 1
+        }
+      ],
+      "parameters": [],
+      "parameter_uses": [],
+      "effects": [
+        {
+          "operation": "0x1a1d0#26",
+          "kind": "conditional_branch",
+          "operand_input": null,
+          "value_input": 1
+        },
+        {
+          "operation": "0x1a1d5#37",
+          "kind": "conditional_branch",
+          "operand_input": null,
+          "value_input": 1
+        },
+        {
+          "operation": "0x1a1f8#107",
+          "kind": "direct_call",
+          "operand_input": 0,
+          "value_input": null
+        },
+        {
+          "operation": "0x1a1fb#112",
+          "kind": "direct_call",
+          "operand_input": 0,
+          "value_input": null
+        },
+        {
+          "operation": "0x1a203#137",
+          "kind": "direct_call",
+          "operand_input": 0,
+          "value_input": null
+        },
+        {
+          "operation": "0x1a20c#167",
+          "kind": "conditional_branch",
+          "operand_input": null,
+          "value_input": 1
+        },
+        {
+          "operation": "0x1a21e#192",
+          "kind": "direct_call",
+          "operand_input": 0,
+          "value_input": null
+        }
+      ],
+      "truncated": false,
+      "omitted_operations_lower_bound": 0,
+      "known_omitted_inputs": 0,
+      "known_omitted_edges": 0,
+      "limitations": [
+        "High p-code is decompiler-derived, not original source or runtime behavior. is_dead preserves the Java AST flag; decoded block members can retain that flag, so block_membership separately reports actual syntax-tree membership.",
+        "Def-use links do not cross function boundaries and may omit memory aliasing, call side effects, or unresolved indirect flow.",
+        "Memory read/write effects include stack and temporary memory operations; they do not identify persistent state or business meaning.",
+        "Operation, input, and def-use limits can truncate large functions; inspect truncation, omitted lower bounds, and known omitted counts before drawing conclusions.",
+        "Known omitted-edge counts cover links omitted from retained operations; omitted operations may contain additional uncounted links."
+      ]
+    },
+    "limitations": [
+      "Unresolved computed or indirect flows without target addresses are not represented as reference edges.",
+      "Thunk and external classifications are Ghidra FunctionManager observations; they do not resolve targetless calls.",
+      "Pseudocode and assembly are Ghidra-specific representations, not original source or Hopper-equivalent text.",
+      "Synthetic Ghidra entry-point references without actionable memory sources are omitted."
+    ]
+  },
+  "normalized_result": {
+    "procedure": {
+      "address": "0x1a1c2",
+      "name": "FUN_1920_0fc2",
+      "classification": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null,
+        "provenance": "ghidra-function-manager"
+      },
+      "body": {
+        "available": true,
+        "provenance": "ghidra-function-body-address-set",
+        "ranges": [
+          {
+            "start": "0x1a1c2",
+            "end": "0x1a220"
+          }
+        ],
+        "total_bytes": 95,
+        "span_bytes": 95,
+        "non_contiguous": false,
+        "contains_entry": true
+      },
+      "signature": "undefined __cdecl16far FUN_1920_0fc2()",
+      "locals": [
+        {
+          "description": "undefined1 local_4 @ Stack[-0x4]:1",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined2 local_6 @ Stack[-0x6]:2",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined2 local_8 @ Stack[-0x8]:2",
+          "provenance": "ghidra-function-database"
+        },
+        {
+          "description": "undefined2 local_a @ Stack[-0xa]:2",
+          "provenance": "ghidra-function-database"
+        }
+      ]
+    },
+    "pseudocode": "\nuint __cdecl16far FUN_1920_0fc2(void)\n\n{\n  char cVar1;\n  byte bVar2;\n  uint in_AX;\n  uint uVar3;\n  uint in_DX;\n  undefined2 in_BX;\n  undefined2 uVar4;\n  undefined4 uVar5;\n  \n  cVar1 = (char)in_AX;\n  if (cVar1 != '\\0') {\n    if ((in_DX & 0x8000) != 0) {\n      uVar3 = FUN_1920_00e2();\n      return uVar3;\n    }\n    do {\n      uVar4 = in_BX;\n      FUN_1920_0f53();\n      uVar5 = FUN_1920_0f35();\n      in_AX = (uint)(byte)((char)uVar5 - 1);\n      bVar2 = FUN_1920_0be1(in_AX,uVar4,(int)((ulong)uVar5 >> 0x10));\n    } while ((byte)(((char)(cVar1 + -0x80) >> 1) + 0x6cU) <= bVar2);\n  }\n  return in_AX;\n}\n\n",
+    "assembly": [
+      "0x1a1c2: PUSH BP",
+      "0x1a1c3: MOV BP, SP",
+      "0x1a1c5: SUB SP, 0x8",
+      "0x1a1c8: MOV CX, AX",
+      "0x1a1ca: MOV SI, BX",
+      "0x1a1cc: MOV DI, DX",
+      "0x1a1ce: OR AL, AL",
+      "0x1a1d0: JZ 0x1000:a20e",
+      "0x1a1d2: TEST DH, 0x80",
+      "0x1a1d5: JNZ 0x1000:a218",
+      "0x1a1d7: MOV word ptr [BP + -0x8], AX",
+      "0x1a1da: MOV word ptr [BP + -0x6], BX",
+      "0x1a1dd: MOV word ptr [BP + -0x4], DX",
+      "0x1a1e0: ADD CL, 0x80",
+      "0x1a1e3: SAR CL, 0x1",
+      "0x1a1e5: ADD CL, 0x80",
+      "0x1a1e8: MOV AL, CL",
+      "0x1a1ea: SUB AL, 0x14",
+      "0x1a1ec: MOV byte ptr [BP + -0x2], AL",
+      "0x1a1ef: MOV AX, word ptr [BP + -0x8]",
+      "0x1a1f2: MOV BX, word ptr [BP + -0x6]",
+      "0x1a1f5: MOV DX, word ptr [BP + -0x4]",
+      "0x1a1f8: CALL 0x1000:a153",
+      "0x1a1fb: CALL 0x1000:a135",
+      "0x1a1fe: DEC AL",
+      "0x1a200: PUSH DX",
+      "0x1a201: PUSH BX",
+      "0x1a202: PUSH AX",
+      "0x1a203: CALL 0x1000:9de1",
+      "0x1a206: CMP AL, byte ptr [BP + -0x2]",
+      "0x1a209: POP CX",
+      "0x1a20a: POP SI",
+      "0x1a20b: POP DI",
+      "0x1a20c: JNC 0x1000:a1ef",
+      "0x1a20e: MOV AX, CX",
+      "0x1a210: MOV BX, SI",
+      "0x1a212: MOV DX, DI",
+      "0x1a214: MOV SP, BP",
+      "0x1a216: POP BP",
+      "0x1a217: RETF",
+      "0x1a218: MOV SP, BP",
+      "0x1a21a: POP BP",
+      "0x1a21b: MOV AX, 0xcf",
+      "0x1a21e: JMP 0x1000:92e2"
+    ],
+    "comments": [],
+    "callers": [
+      {
+        "address": "0x1346b",
+        "name": "FUN_1000_346b",
+        "classification": {
+          "external": false,
+          "thunk": false,
+          "thunk_target": null,
+          "provenance": "ghidra-function-manager"
+        },
+        "body": {
+          "available": true,
+          "provenance": "ghidra-function-body-address-set",
+          "ranges": [
+            {
+              "start": "0x1346b",
+              "end": "0x13586"
+            }
+          ],
+          "total_bytes": 284,
+          "span_bytes": 284,
+          "non_contiguous": false,
+          "contains_entry": true
+        }
+      }
+    ],
+    "callees": [
+      {
+        "address": "0x192e2",
+        "name": "FUN_1920_00e2",
+        "classification": {
+          "external": false,
+          "thunk": false,
+          "thunk_target": null,
+          "provenance": "ghidra-function-manager"
+        },
+        "body": {
+          "available": true,
+          "provenance": "ghidra-function-body-address-set",
+          "ranges": [
+            {
+              "start": "0x192e2",
+              "end": "0x192e5"
+            }
+          ],
+          "total_bytes": 4,
+          "span_bytes": 4,
+          "non_contiguous": false,
+          "contains_entry": true
+        }
+      },
+      {
+        "address": "0x19de1",
+        "name": "FUN_1920_0be1",
+        "classification": {
+          "external": false,
+          "thunk": false,
+          "thunk_target": null,
+          "provenance": "ghidra-function-manager"
+        },
+        "body": {
+          "available": true,
+          "provenance": "ghidra-function-body-address-set",
+          "ranges": [
+            {
+              "start": "0x19de1",
+              "end": "0x19de4"
+            }
+          ],
+          "total_bytes": 4,
+          "span_bytes": 4,
+          "non_contiguous": false,
+          "contains_entry": true
+        }
+      },
+      {
+        "address": "0x1a135",
+        "name": "FUN_1920_0f35",
+        "classification": {
+          "external": false,
+          "thunk": false,
+          "thunk_target": null,
+          "provenance": "ghidra-function-manager"
+        },
+        "body": {
+          "available": true,
+          "provenance": "ghidra-function-body-address-set",
+          "ranges": [
+            {
+              "start": "0x1a135",
+              "end": "0x1a13e"
+            }
+          ],
+          "total_bytes": 10,
+          "span_bytes": 10,
+          "non_contiguous": false,
+          "contains_entry": true
+        }
+      },
+      {
+        "address": "0x1a153",
+        "name": "FUN_1920_0f53",
+        "classification": {
+          "external": false,
+          "thunk": false,
+          "thunk_target": null,
+          "provenance": "ghidra-function-manager"
+        },
+        "body": {
+          "available": true,
+          "provenance": "ghidra-function-body-address-set",
+          "ranges": [
+            {
+              "start": "0x1a153",
+              "end": "0x1a15c"
+            }
+          ],
+          "total_bytes": 10,
+          "span_bytes": 10,
+          "non_contiguous": false,
+          "contains_entry": true
+        }
+      }
+    ],
+    "incoming_references": [
+      {
+        "source_address": "0x13519",
+        "target_address": "0x1a1c2",
+        "source_procedure": {
+          "address": "0x1346b",
+          "name": "FUN_1000_346b",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1346b",
+                "end": "0x13586"
+              }
+            ],
+            "total_bytes": 284,
+            "span_bytes": 284,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "target_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "kind": {
+          "available": true,
+          "provenance": "ghidra-reference-manager",
+          "type": "UNCONDITIONAL_CALL",
+          "flow": true,
+          "call": true,
+          "jump": false,
+          "data": false,
+          "read": false,
+          "write": false,
+          "indirect": false,
+          "computed": false,
+          "conditional": false,
+          "terminal": false,
+          "primary": true,
+          "operand_index": 0,
+          "external": false
+        }
+      }
+    ],
+    "outgoing_references": [
+      {
+        "source_address": "0x1a1d0",
+        "target_address": "0x1a20e",
+        "source_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "target_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "kind": {
+          "available": true,
+          "provenance": "ghidra-reference-manager",
+          "type": "CONDITIONAL_JUMP",
+          "flow": true,
+          "call": false,
+          "jump": true,
+          "data": false,
+          "read": false,
+          "write": false,
+          "indirect": false,
+          "computed": false,
+          "conditional": true,
+          "terminal": false,
+          "primary": true,
+          "operand_index": 0,
+          "external": false
+        }
+      },
+      {
+        "source_address": "0x1a1d5",
+        "target_address": "0x1a218",
+        "source_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "target_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "kind": {
+          "available": true,
+          "provenance": "ghidra-reference-manager",
+          "type": "CONDITIONAL_JUMP",
+          "flow": true,
+          "call": false,
+          "jump": true,
+          "data": false,
+          "read": false,
+          "write": false,
+          "indirect": false,
+          "computed": false,
+          "conditional": true,
+          "terminal": false,
+          "primary": true,
+          "operand_index": 0,
+          "external": false
+        }
+      },
+      {
+        "source_address": "0x1a1d7",
+        "target_address": "stack:0xfffffffffffffff6",
+        "source_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "target_procedure": null,
+        "kind": {
+          "available": true,
+          "provenance": "ghidra-reference-manager",
+          "type": "DATA",
+          "flow": false,
+          "call": false,
+          "jump": false,
+          "data": true,
+          "read": false,
+          "write": false,
+          "indirect": false,
+          "computed": false,
+          "conditional": false,
+          "terminal": false,
+          "primary": true,
+          "operand_index": 0,
+          "external": false
+        }
+      },
+      {
+        "source_address": "0x1a1da",
+        "target_address": "stack:0xfffffffffffffff8",
+        "source_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "target_procedure": null,
+        "kind": {
+          "available": true,
+          "provenance": "ghidra-reference-manager",
+          "type": "DATA",
+          "flow": false,
+          "call": false,
+          "jump": false,
+          "data": true,
+          "read": false,
+          "write": false,
+          "indirect": false,
+          "computed": false,
+          "conditional": false,
+          "terminal": false,
+          "primary": true,
+          "operand_index": 0,
+          "external": false
+        }
+      },
+      {
+        "source_address": "0x1a1dd",
+        "target_address": "stack:0xfffffffffffffffa",
+        "source_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "target_procedure": null,
+        "kind": {
+          "available": true,
+          "provenance": "ghidra-reference-manager",
+          "type": "DATA",
+          "flow": false,
+          "call": false,
+          "jump": false,
+          "data": true,
+          "read": false,
+          "write": false,
+          "indirect": false,
+          "computed": false,
+          "conditional": false,
+          "terminal": false,
+          "primary": true,
+          "operand_index": 0,
+          "external": false
+        }
+      },
+      {
+        "source_address": "0x1a1ec",
+        "target_address": "stack:0xfffffffffffffffc",
+        "source_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "target_procedure": null,
+        "kind": {
+          "available": true,
+          "provenance": "ghidra-reference-manager",
+          "type": "DATA",
+          "flow": false,
+          "call": false,
+          "jump": false,
+          "data": true,
+          "read": false,
+          "write": false,
+          "indirect": false,
+          "computed": false,
+          "conditional": false,
+          "terminal": false,
+          "primary": true,
+          "operand_index": 0,
+          "external": false
+        }
+      },
+      {
+        "source_address": "0x1a1ef",
+        "target_address": "stack:0xfffffffffffffff6",
+        "source_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "target_procedure": null,
+        "kind": {
+          "available": true,
+          "provenance": "ghidra-reference-manager",
+          "type": "DATA",
+          "flow": false,
+          "call": false,
+          "jump": false,
+          "data": true,
+          "read": false,
+          "write": false,
+          "indirect": false,
+          "computed": false,
+          "conditional": false,
+          "terminal": false,
+          "primary": true,
+          "operand_index": 1,
+          "external": false
+        }
+      },
+      {
+        "source_address": "0x1a1f2",
+        "target_address": "stack:0xfffffffffffffff8",
+        "source_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "target_procedure": null,
+        "kind": {
+          "available": true,
+          "provenance": "ghidra-reference-manager",
+          "type": "DATA",
+          "flow": false,
+          "call": false,
+          "jump": false,
+          "data": true,
+          "read": false,
+          "write": false,
+          "indirect": false,
+          "computed": false,
+          "conditional": false,
+          "terminal": false,
+          "primary": true,
+          "operand_index": 1,
+          "external": false
+        }
+      },
+      {
+        "source_address": "0x1a1f5",
+        "target_address": "stack:0xfffffffffffffffa",
+        "source_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "target_procedure": null,
+        "kind": {
+          "available": true,
+          "provenance": "ghidra-reference-manager",
+          "type": "DATA",
+          "flow": false,
+          "call": false,
+          "jump": false,
+          "data": true,
+          "read": false,
+          "write": false,
+          "indirect": false,
+          "computed": false,
+          "conditional": false,
+          "terminal": false,
+          "primary": true,
+          "operand_index": 1,
+          "external": false
+        }
+      },
+      {
+        "source_address": "0x1a1f8",
+        "target_address": "0x1a153",
+        "source_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "target_procedure": {
+          "address": "0x1a153",
+          "name": "FUN_1920_0f53",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a153",
+                "end": "0x1a15c"
+              }
+            ],
+            "total_bytes": 10,
+            "span_bytes": 10,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "kind": {
+          "available": true,
+          "provenance": "ghidra-reference-manager",
+          "type": "UNCONDITIONAL_CALL",
+          "flow": true,
+          "call": true,
+          "jump": false,
+          "data": false,
+          "read": false,
+          "write": false,
+          "indirect": false,
+          "computed": false,
+          "conditional": false,
+          "terminal": false,
+          "primary": true,
+          "operand_index": 0,
+          "external": false
+        }
+      },
+      {
+        "source_address": "0x1a1fb",
+        "target_address": "0x1a135",
+        "source_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "target_procedure": {
+          "address": "0x1a135",
+          "name": "FUN_1920_0f35",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a135",
+                "end": "0x1a13e"
+              }
+            ],
+            "total_bytes": 10,
+            "span_bytes": 10,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "kind": {
+          "available": true,
+          "provenance": "ghidra-reference-manager",
+          "type": "UNCONDITIONAL_CALL",
+          "flow": true,
+          "call": true,
+          "jump": false,
+          "data": false,
+          "read": false,
+          "write": false,
+          "indirect": false,
+          "computed": false,
+          "conditional": false,
+          "terminal": false,
+          "primary": true,
+          "operand_index": 0,
+          "external": false
+        }
+      },
+      {
+        "source_address": "0x1a203",
+        "target_address": "0x19de1",
+        "source_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "target_procedure": {
+          "address": "0x19de1",
+          "name": "FUN_1920_0be1",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x19de1",
+                "end": "0x19de4"
+              }
+            ],
+            "total_bytes": 4,
+            "span_bytes": 4,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "kind": {
+          "available": true,
+          "provenance": "ghidra-reference-manager",
+          "type": "UNCONDITIONAL_CALL",
+          "flow": true,
+          "call": true,
+          "jump": false,
+          "data": false,
+          "read": false,
+          "write": false,
+          "indirect": false,
+          "computed": false,
+          "conditional": false,
+          "terminal": false,
+          "primary": true,
+          "operand_index": 0,
+          "external": false
+        }
+      },
+      {
+        "source_address": "0x1a206",
+        "target_address": "stack:0xfffffffffffffffc",
+        "source_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "target_procedure": null,
+        "kind": {
+          "available": true,
+          "provenance": "ghidra-reference-manager",
+          "type": "DATA",
+          "flow": false,
+          "call": false,
+          "jump": false,
+          "data": true,
+          "read": false,
+          "write": false,
+          "indirect": false,
+          "computed": false,
+          "conditional": false,
+          "terminal": false,
+          "primary": true,
+          "operand_index": 1,
+          "external": false
+        }
+      },
+      {
+        "source_address": "0x1a20c",
+        "target_address": "0x1a1ef",
+        "source_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "target_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "kind": {
+          "available": true,
+          "provenance": "ghidra-reference-manager",
+          "type": "CONDITIONAL_JUMP",
+          "flow": true,
+          "call": false,
+          "jump": true,
+          "data": false,
+          "read": false,
+          "write": false,
+          "indirect": false,
+          "computed": false,
+          "conditional": true,
+          "terminal": false,
+          "primary": true,
+          "operand_index": 0,
+          "external": false
+        }
+      },
+      {
+        "source_address": "0x1a21e",
+        "target_address": "0x192e2",
+        "source_procedure": {
+          "address": "0x1a1c2",
+          "name": "FUN_1920_0fc2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x1a1c2",
+                "end": "0x1a220"
+              }
+            ],
+            "total_bytes": 95,
+            "span_bytes": 95,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "target_procedure": {
+          "address": "0x192e2",
+          "name": "FUN_1920_00e2",
+          "classification": {
+            "external": false,
+            "thunk": false,
+            "thunk_target": null,
+            "provenance": "ghidra-function-manager"
+          },
+          "body": {
+            "available": true,
+            "provenance": "ghidra-function-body-address-set",
+            "ranges": [
+              {
+                "start": "0x192e2",
+                "end": "0x192e5"
+              }
+            ],
+            "total_bytes": 4,
+            "span_bytes": 4,
+            "non_contiguous": false,
+            "contains_entry": true
+          }
+        },
+        "kind": {
+          "available": true,
+          "provenance": "ghidra-reference-manager",
+          "type": "UNCONDITIONAL_CALL",
+          "flow": true,
+          "call": true,
+          "jump": false,
+          "data": false,
+          "read": false,
+          "write": false,
+          "indirect": false,
+          "computed": false,
+          "conditional": false,
+          "terminal": false,
+          "primary": true,
+          "operand_index": 0,
+          "external": false
+        }
+      }
+    ],
+    "referenced_strings": [],
+    "referenced_names": [
+      {
+        "address": "0x192e2",
+        "value": "FUN_1920_00e2",
+        "source_address": "0x1a21e"
+      },
+      {
+        "address": "0x19de1",
+        "value": "FUN_1920_0be1",
+        "source_address": "0x1a203"
+      },
+      {
+        "address": "0x1a135",
+        "value": "FUN_1920_0f35",
+        "source_address": "0x1a1fb"
+      },
+      {
+        "address": "0x1a153",
+        "value": "FUN_1920_0f53",
+        "source_address": "0x1a1f8"
+      },
+      {
+        "address": "0x1a1ef",
+        "value": "LAB_1920_0fef",
+        "source_address": "0x1a20c"
+      },
+      {
+        "address": "0x1a20e",
+        "value": "LAB_1920_100e",
+        "source_address": "0x1a1d0"
+      },
+      {
+        "address": "0x1a218",
+        "value": "LAB_1920_1018",
+        "source_address": "0x1a1d5"
+      }
+    ],
+    "basic_blocks": [
+      {
+        "start": "0x1a1c2",
+        "end": "0x1a1d2",
+        "successors": [
+          "0x1a1d2",
+          "0x1a20e"
+        ]
+      },
+      {
+        "start": "0x1a1d2",
+        "end": "0x1a1d7",
+        "successors": [
+          "0x1a1d7",
+          "0x1a218"
+        ]
+      },
+      {
+        "start": "0x1a1d7",
+        "end": "0x1a1ef",
+        "successors": [
+          "0x1a1ef"
+        ]
+      },
+      {
+        "start": "0x1a1ef",
+        "end": "0x1a20e",
+        "successors": [
+          "0x1a1ef",
+          "0x1a20e"
+        ]
+      },
+      {
+        "start": "0x1a20e",
+        "end": "0x1a218",
+        "successors": []
+      },
+      {
+        "start": "0x1a218",
+        "end": "0x1a221",
+        "successors": []
+      }
+    ],
+    "native_api": {
+      "available": true,
+      "provenance": "ghidra-high-function",
+      "signature_source": "default",
+      "calling_convention": "__cdecl16far",
+      "return_type": {
+        "ordinal": null,
+        "name": null,
+        "data_type": "uint",
+        "size_bytes": 2,
+        "storage": "AX:2",
+        "confidence": "low",
+        "evidence": [
+          {
+            "kind": "signature-source",
+            "source": "ghidra-function-manager",
+            "detail": "Function signature source is default."
+          },
+          {
+            "kind": "decompiler-type",
+            "source": "ghidra-high-function",
+            "detail": "HighFunction recovered data type uint."
+          }
+        ],
+        "decompiler_artifacts": [
+          "recovered-signature",
+          "register-or-stack-storage"
+        ],
+        "role": "return"
+      },
+      "parameters": [],
+      "jump_tables": [],
+      "pseudocode": {
+        "classification": "decompiler-generated-non-source",
+        "compilable": false
+      },
+      "decompiler_artifacts": [
+        "recovered-signature",
+        "register-and-stack-variables",
+        "compiler-generated-control-flow",
+        "pointer-arithmetic",
+        "pseudocode"
+      ],
+      "limitations": [
+        "Types and calling conventions are Ghidra decompiler observations, not source declarations.",
+        "Register variables, compiler-generated blocks, and pointer arithmetic remain decompiler artifacts.",
+        "Pseudocode is neither original source nor guaranteed to compile."
+      ]
+    },
+    "native_value_flow": {
+      "available": true,
+      "provenance": "ghidra-high-pcode",
+      "operations": [
+        {
+          "id": "0x1a1ce#21",
+          "address": "0x1a1ce",
+          "sequence": 21,
+          "opcode": "INT_NOTEQUAL",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "register",
+              "size_bytes": 1,
+              "location": "register:0x0",
+              "constant_hex": null
+            },
+            {
+              "kind": "constant",
+              "size_bytes": 1,
+              "location": null,
+              "constant_hex": "0"
+            }
+          ],
+          "output": {
+            "kind": "register",
+            "size_bytes": 1,
+            "location": "register:0x206",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1ce#268",
+          "address": "0x1a1ce",
+          "sequence": 268,
+          "opcode": "SUBPIECE",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "register",
+              "size_bytes": 2,
+              "location": "register:0x0",
+              "constant_hex": null
+            },
+            {
+              "kind": "constant",
+              "size_bytes": 4,
+              "location": null,
+              "constant_hex": "0"
+            }
+          ],
+          "output": {
+            "kind": "register",
+            "size_bytes": 1,
+            "location": "register:0x0",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1d0#26",
+          "address": "0x1a1d0",
+          "sequence": 26,
+          "opcode": "CBRANCH",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "address",
+              "size_bytes": 1,
+              "location": "0x1a20e",
+              "constant_hex": null
+            },
+            {
+              "kind": "register",
+              "size_bytes": 1,
+              "location": "register:0x206",
+              "constant_hex": null
+            }
+          ],
+          "output": null
+        },
+        {
+          "id": "0x1a1d2#31",
+          "address": "0x1a1d2",
+          "sequence": 31,
+          "opcode": "INT_NOTEQUAL",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "unique",
+              "size_bytes": 2,
+              "location": "unique:0x10000020",
+              "constant_hex": null
+            },
+            {
+              "kind": "constant",
+              "size_bytes": 2,
+              "location": null,
+              "constant_hex": "0"
+            }
+          ],
+          "output": {
+            "kind": "register",
+            "size_bytes": 1,
+            "location": "register:0x206",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1d2#392",
+          "address": "0x1a1d2",
+          "sequence": 392,
+          "opcode": "INT_AND",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "register",
+              "size_bytes": 2,
+              "location": "register:0x8",
+              "constant_hex": null
+            },
+            {
+              "kind": "constant",
+              "size_bytes": 2,
+              "location": null,
+              "constant_hex": "8000"
+            }
+          ],
+          "output": {
+            "kind": "unique",
+            "size_bytes": 2,
+            "location": "unique:0x10000020",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1d5#37",
+          "address": "0x1a1d5",
+          "sequence": 37,
+          "opcode": "CBRANCH",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "address",
+              "size_bytes": 1,
+              "location": "0x1a218",
+              "constant_hex": null
+            },
+            {
+              "kind": "register",
+              "size_bytes": 1,
+              "location": "register:0x206",
+              "constant_hex": null
+            }
+          ],
+          "output": null
+        },
+        {
+          "id": "0x1a1e0#52",
+          "address": "0x1a1e0",
+          "sequence": 52,
+          "opcode": "INT_ADD",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "register",
+              "size_bytes": 1,
+              "location": "register:0x0",
+              "constant_hex": null
+            },
+            {
+              "kind": "constant",
+              "size_bytes": 1,
+              "location": null,
+              "constant_hex": "80"
+            }
+          ],
+          "output": {
+            "kind": "register",
+            "size_bytes": 1,
+            "location": "register:0x4",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1e3#61",
+          "address": "0x1a1e3",
+          "sequence": 61,
+          "opcode": "INT_SRIGHT",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "unique",
+              "size_bytes": 1,
+              "location": "unique:0x10000037",
+              "constant_hex": null
+            },
+            {
+              "kind": "constant",
+              "size_bytes": 4,
+              "location": null,
+              "constant_hex": "1"
+            }
+          ],
+          "output": {
+            "kind": "register",
+            "size_bytes": 1,
+            "location": "register:0x4",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1e3#466",
+          "address": "0x1a1e3",
+          "sequence": 466,
+          "opcode": "CAST",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "register",
+              "size_bytes": 1,
+              "location": "register:0x4",
+              "constant_hex": null
+            }
+          ],
+          "output": {
+            "kind": "unique",
+            "size_bytes": 1,
+            "location": "unique:0x10000037",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1ea#80",
+          "address": "0x1a1ea",
+          "sequence": 80,
+          "opcode": "INT_ADD",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "register",
+              "size_bytes": 1,
+              "location": "register:0x4",
+              "constant_hex": null
+            },
+            {
+              "kind": "constant",
+              "size_bytes": 1,
+              "location": null,
+              "constant_hex": "6c"
+            }
+          ],
+          "output": {
+            "kind": "register",
+            "size_bytes": 1,
+            "location": "register:0x0",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1f8#107",
+          "address": "0x1a1f8",
+          "sequence": 107,
+          "opcode": "CALL",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "address",
+              "size_bytes": 8,
+              "location": "0x1a153",
+              "constant_hex": null
+            }
+          ],
+          "output": null
+        },
+        {
+          "id": "0x1a1f8#340",
+          "address": "0x1a1f8",
+          "sequence": 340,
+          "opcode": "INDIRECT",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "unique",
+              "size_bytes": 2,
+              "location": "unique:0x10000035",
+              "constant_hex": null
+            },
+            {
+              "kind": "constant",
+              "size_bytes": 4,
+              "location": null,
+              "constant_hex": "6b"
+            }
+          ],
+          "output": {
+            "kind": "register",
+            "size_bytes": 2,
+            "location": "register:0xc",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1f8#465",
+          "address": "0x1a1f8",
+          "sequence": 465,
+          "opcode": "COPY",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "register",
+              "size_bytes": 2,
+              "location": "register:0xc",
+              "constant_hex": null
+            }
+          ],
+          "output": {
+            "kind": "unique",
+            "size_bytes": 2,
+            "location": "unique:0x10000035",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1fb#112",
+          "address": "0x1a1fb",
+          "sequence": 112,
+          "opcode": "CALL",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "address",
+              "size_bytes": 8,
+              "location": "0x1a135",
+              "constant_hex": null
+            }
+          ],
+          "output": {
+            "kind": "other",
+            "size_bytes": 4,
+            "location": "VARIABLE:0x0",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1fb#341",
+          "address": "0x1a1fb",
+          "sequence": 341,
+          "opcode": "INDIRECT",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "register",
+              "size_bytes": 2,
+              "location": "register:0xc",
+              "constant_hex": null
+            },
+            {
+              "kind": "constant",
+              "size_bytes": 4,
+              "location": null,
+              "constant_hex": "70"
+            }
+          ],
+          "output": {
+            "kind": "register",
+            "size_bytes": 2,
+            "location": "register:0xc",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1fb#463",
+          "address": "0x1a1fb",
+          "sequence": 463,
+          "opcode": "SUBPIECE",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "unique",
+              "size_bytes": 4,
+              "location": "unique:0x10000031",
+              "constant_hex": null
+            },
+            {
+              "kind": "constant",
+              "size_bytes": 4,
+              "location": null,
+              "constant_hex": "0"
+            }
+          ],
+          "output": {
+            "kind": "register",
+            "size_bytes": 2,
+            "location": "register:0x8",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1fb#464",
+          "address": "0x1a1fb",
+          "sequence": 464,
+          "opcode": "INT_RIGHT",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "unique",
+              "size_bytes": 4,
+              "location": "unique:0x10000038",
+              "constant_hex": null
+            },
+            {
+              "kind": "constant",
+              "size_bytes": 4,
+              "location": null,
+              "constant_hex": "10"
+            }
+          ],
+          "output": {
+            "kind": "unique",
+            "size_bytes": 4,
+            "location": "unique:0x10000031",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1fb#467",
+          "address": "0x1a1fb",
+          "sequence": 467,
+          "opcode": "CAST",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "other",
+              "size_bytes": 4,
+              "location": "VARIABLE:0x0",
+              "constant_hex": null
+            }
+          ],
+          "output": {
+            "kind": "unique",
+            "size_bytes": 4,
+            "location": "unique:0x10000038",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1fe#114",
+          "address": "0x1a1fe",
+          "sequence": 114,
+          "opcode": "INT_SUB",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "register",
+              "size_bytes": 1,
+              "location": "register:0x0",
+              "constant_hex": null
+            },
+            {
+              "kind": "constant",
+              "size_bytes": 1,
+              "location": null,
+              "constant_hex": "1"
+            }
+          ],
+          "output": {
+            "kind": "register",
+            "size_bytes": 1,
+            "location": "register:0x0",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1fe#281",
+          "address": "0x1a1fe",
+          "sequence": 281,
+          "opcode": "SUBPIECE",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "other",
+              "size_bytes": 4,
+              "location": "VARIABLE:0x0",
+              "constant_hex": null
+            },
+            {
+              "kind": "constant",
+              "size_bytes": 4,
+              "location": null,
+              "constant_hex": "0"
+            }
+          ],
+          "output": {
+            "kind": "register",
+            "size_bytes": 1,
+            "location": "register:0x0",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1fe#295",
+          "address": "0x1a1fe",
+          "sequence": 295,
+          "opcode": "INT_ZEXT",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "unique",
+              "size_bytes": 1,
+              "location": "unique:0x1000003c",
+              "constant_hex": null
+            }
+          ],
+          "output": {
+            "kind": "register",
+            "size_bytes": 2,
+            "location": "register:0x0",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a1fe#468",
+          "address": "0x1a1fe",
+          "sequence": 468,
+          "opcode": "CAST",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "register",
+              "size_bytes": 1,
+              "location": "register:0x0",
+              "constant_hex": null
+            }
+          ],
+          "output": {
+            "kind": "unique",
+            "size_bytes": 1,
+            "location": "unique:0x1000003c",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a203#137",
+          "address": "0x1a203",
+          "sequence": 137,
+          "opcode": "CALL",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "address",
+              "size_bytes": 8,
+              "location": "0x19de1",
+              "constant_hex": null
+            },
+            {
+              "kind": "register",
+              "size_bytes": 2,
+              "location": "register:0x0",
+              "constant_hex": null
+            },
+            {
+              "kind": "register",
+              "size_bytes": 2,
+              "location": "register:0xc",
+              "constant_hex": null
+            },
+            {
+              "kind": "register",
+              "size_bytes": 2,
+              "location": "register:0x8",
+              "constant_hex": null
+            }
+          ],
+          "output": {
+            "kind": "register",
+            "size_bytes": 1,
+            "location": "register:0x0",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a203#416",
+          "address": "0x1a203",
+          "sequence": 416,
+          "opcode": "INDIRECT",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "register",
+              "size_bytes": 2,
+              "location": "register:0x0",
+              "constant_hex": null
+            },
+            {
+              "kind": "constant",
+              "size_bytes": 4,
+              "location": null,
+              "constant_hex": "89"
+            }
+          ],
+          "output": {
+            "kind": "other",
+            "size_bytes": 2,
+            "location": "stack:0xfffffffffffffff0",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a206#142",
+          "address": "0x1a206",
+          "sequence": 142,
+          "opcode": "INT_LESSEQUAL",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "unique",
+              "size_bytes": 1,
+              "location": "unique:0x1000003d",
+              "constant_hex": null
+            },
+            {
+              "kind": "register",
+              "size_bytes": 1,
+              "location": "register:0x0",
+              "constant_hex": null
+            }
+          ],
+          "output": {
+            "kind": "register",
+            "size_bytes": 1,
+            "location": "register:0x200",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a206#469",
+          "address": "0x1a206",
+          "sequence": 469,
+          "opcode": "CAST",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "register",
+              "size_bytes": 1,
+              "location": "register:0x0",
+              "constant_hex": null
+            }
+          ],
+          "output": {
+            "kind": "unique",
+            "size_bytes": 1,
+            "location": "unique:0x1000003d",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a20c#167",
+          "address": "0x1a20c",
+          "sequence": 167,
+          "opcode": "CBRANCH",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "address",
+              "size_bytes": 1,
+              "location": "0x1a1ef",
+              "constant_hex": null
+            },
+            {
+              "kind": "register",
+              "size_bytes": 1,
+              "location": "register:0x200",
+              "constant_hex": null
+            }
+          ],
+          "output": null
+        },
+        {
+          "id": "0x1a20e#168",
+          "address": "0x1a20e",
+          "sequence": 168,
+          "opcode": "COPY",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "register",
+              "size_bytes": 2,
+              "location": "register:0x4",
+              "constant_hex": null
+            }
+          ],
+          "output": {
+            "kind": "register",
+            "size_bytes": 2,
+            "location": "register:0x0",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a20e#330",
+          "address": "0x1a20e",
+          "sequence": 330,
+          "opcode": "MULTIEQUAL",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "register",
+              "size_bytes": 2,
+              "location": "register:0x0",
+              "constant_hex": null
+            },
+            {
+              "kind": "other",
+              "size_bytes": 2,
+              "location": "stack:0xfffffffffffffff0",
+              "constant_hex": null
+            }
+          ],
+          "output": {
+            "kind": "register",
+            "size_bytes": 2,
+            "location": "register:0x4",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a217#184",
+          "address": "0x1a217",
+          "sequence": 184,
+          "opcode": "RETURN",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "constant",
+              "size_bytes": 4,
+              "location": null,
+              "constant_hex": "0"
+            },
+            {
+              "kind": "register",
+              "size_bytes": 2,
+              "location": "register:0x0",
+              "constant_hex": null
+            }
+          ],
+          "output": null
+        },
+        {
+          "id": "0x1a21e#192",
+          "address": "0x1a21e",
+          "sequence": 192,
+          "opcode": "CALL",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "address",
+              "size_bytes": 8,
+              "location": "0x192e2",
+              "constant_hex": null
+            }
+          ],
+          "output": {
+            "kind": "register",
+            "size_bytes": 2,
+            "location": "register:0x0",
+            "constant_hex": null
+          }
+        },
+        {
+          "id": "0x1a21e#193",
+          "address": "0x1a21e",
+          "sequence": 193,
+          "opcode": "RETURN",
+          "is_dead": true,
+          "block_membership": "member",
+          "inputs": [
+            {
+              "kind": "constant",
+              "size_bytes": 8,
+              "location": null,
+              "constant_hex": "0"
+            },
+            {
+              "kind": "register",
+              "size_bytes": 2,
+              "location": "register:0x0",
+              "constant_hex": null
+            }
+          ],
+          "output": null
+        }
+      ],
+      "def_use": [
+        {
+          "definition": "0x1a1ce#268",
+          "use": "0x1a1ce#21",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a1ce#21",
+          "use": "0x1a1d0#26",
+          "input_index": 1
+        },
+        {
+          "definition": "0x1a1d2#392",
+          "use": "0x1a1d2#31",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a1d2#31",
+          "use": "0x1a1d5#37",
+          "input_index": 1
+        },
+        {
+          "definition": "0x1a1ce#268",
+          "use": "0x1a1e0#52",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a1e3#466",
+          "use": "0x1a1e3#61",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a1e0#52",
+          "use": "0x1a1e3#466",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a1e3#61",
+          "use": "0x1a1ea#80",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a1f8#465",
+          "use": "0x1a1f8#340",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a1f8#340",
+          "use": "0x1a1fb#341",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a1fb#464",
+          "use": "0x1a1fb#463",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a1fb#467",
+          "use": "0x1a1fb#464",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a1fb#112",
+          "use": "0x1a1fb#467",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a1fe#281",
+          "use": "0x1a1fe#114",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a1fb#112",
+          "use": "0x1a1fe#281",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a1fe#468",
+          "use": "0x1a1fe#295",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a1fe#114",
+          "use": "0x1a1fe#468",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a1fe#295",
+          "use": "0x1a203#137",
+          "input_index": 1
+        },
+        {
+          "definition": "0x1a1fb#341",
+          "use": "0x1a203#137",
+          "input_index": 2
+        },
+        {
+          "definition": "0x1a1fb#463",
+          "use": "0x1a203#137",
+          "input_index": 3
+        },
+        {
+          "definition": "0x1a1fe#295",
+          "use": "0x1a203#416",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a206#469",
+          "use": "0x1a206#142",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a203#137",
+          "use": "0x1a206#142",
+          "input_index": 1
+        },
+        {
+          "definition": "0x1a1ea#80",
+          "use": "0x1a206#469",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a206#142",
+          "use": "0x1a20c#167",
+          "input_index": 1
+        },
+        {
+          "definition": "0x1a20e#330",
+          "use": "0x1a20e#168",
+          "input_index": 0
+        },
+        {
+          "definition": "0x1a203#416",
+          "use": "0x1a20e#330",
+          "input_index": 1
+        },
+        {
+          "definition": "0x1a20e#168",
+          "use": "0x1a217#184",
+          "input_index": 1
+        },
+        {
+          "definition": "0x1a21e#192",
+          "use": "0x1a21e#193",
+          "input_index": 1
+        }
+      ],
+      "effects": [
+        {
+          "operation": "0x1a1d0#26",
+          "kind": "conditional_branch",
+          "operand_input": null,
+          "value_input": 1
+        },
+        {
+          "operation": "0x1a1d5#37",
+          "kind": "conditional_branch",
+          "operand_input": null,
+          "value_input": 1
+        },
+        {
+          "operation": "0x1a1f8#107",
+          "kind": "direct_call",
+          "operand_input": 0,
+          "value_input": null
+        },
+        {
+          "operation": "0x1a1fb#112",
+          "kind": "direct_call",
+          "operand_input": 0,
+          "value_input": null
+        },
+        {
+          "operation": "0x1a203#137",
+          "kind": "direct_call",
+          "operand_input": 0,
+          "value_input": null
+        },
+        {
+          "operation": "0x1a20c#167",
+          "kind": "conditional_branch",
+          "operand_input": null,
+          "value_input": 1
+        },
+        {
+          "operation": "0x1a21e#192",
+          "kind": "direct_call",
+          "operand_input": 0,
+          "value_input": null
+        }
+      ],
+      "parameters": [],
+      "parameter_uses": [],
+      "truncated": false,
+      "omitted_operations_lower_bound": 0,
+      "known_omitted_inputs": 0,
+      "known_omitted_edges": 0,
+      "limitations": [
+        "High p-code is decompiler-derived, not original source or runtime behavior. is_dead preserves the Java AST flag; decoded block members can retain that flag, so block_membership separately reports actual syntax-tree membership.",
+        "Def-use links do not cross function boundaries and may omit memory aliasing, call side effects, or unresolved indirect flow.",
+        "Memory read/write effects include stack and temporary memory operations; they do not identify persistent state or business meaning.",
+        "Operation, input, and def-use limits can truncate large functions; inspect truncation, omitted lower bounds, and known omitted counts before drawing conclusions.",
+        "Known omitted-edge counts cover links omitted from retained operations; omitted operations may contain additional uncounted links."
+      ]
+    },
+    "limitations": [
+      "Unresolved computed or indirect flows without target addresses are not represented as reference edges.",
+      "Thunk and external classifications are Ghidra FunctionManager observations; they do not resolve targetless calls.",
+      "Pseudocode and assembly are Ghidra-specific representations, not original source or Hopper-equivalent text.",
+      "Synthetic Ghidra entry-point references without actionable memory sources are omitted."
+    ]
+  },
+  "confidence": "observed",
+  "authority": "shipped-artifact",
+  "environment": null,
+  "limitations": [
+    "The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.",
+    "The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.",
+    "Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.",
+    "Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.",
+    "References cover the complete Ghidra function-body AddressSet and exact entry. Dossier incoming edges omit sources owned by that function; procedure_references also retains those internal edges.",
+    "The dossier combines Ghidra FunctionManager, Listing, ReferenceManager, BasicBlockModel, and decompiler observations; provider-specific pseudocode and assembly are not cross-provider text invariants.",
+    "Resolved reference metadata identifies computed, indirect, external, call, jump, and data edges; unresolved targetless flows remain unknown, and function classifications distinguish thunks and externals.",
+    "Synthetic Ghidra entry-point references without actionable memory sources are omitted.",
+    "The Java bridge serializes one function request per Program and lets each decompilation run until it completes or the caller cancels.",
+    "DOS MZ uses 16-bit x86 real mode with the Ghidra load segment 0x1000. Returned addresses are linear byte coordinates; they do not identify a unique segment:offset alias.",
+    "Static DOS analysis does not emulate BIOS, DOS interrupts, device ports, or self-modifying unpacking code. Packed targets require a separately identified unpacked artifact for original-program analysis; appended overlays are not the initialized load module."
+  ],
+  "locations": [],
+  "evidence_links": []
+}

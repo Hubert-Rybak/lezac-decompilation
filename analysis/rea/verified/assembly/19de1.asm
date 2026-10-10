@@ -1,0 +1,2 @@
+; 0x19de1 FUN_1920_0be1
+0x19de1: XOR DI, 0x8000
