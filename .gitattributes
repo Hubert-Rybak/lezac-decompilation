@@ -1,0 +1,6 @@
+analysis/rea/verified/** linguist-generated=true
+analysis/functions.csv linguist-generated=true whitespace=cr-at-eol
+analysis/coverage.json linguist-generated=true
+# Preserve literal upstream pseudocode, including its whitespace.
+analysis/rea/verified/pseudocode/*.c -whitespace
+analysis/rea/verified/assembly/*.asm -whitespace

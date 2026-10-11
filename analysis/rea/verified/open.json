@@ -1,0 +1,9 @@
+{
+  "result": {
+    "path": "/opt/data/lezac-decompilation/original/game/LEZAC.EXE",
+    "format": "dos-mz",
+    "kind": "executable",
+    "sha256": "7579255148c2cb540b26f70dc8181c50b218b6808d8fa5208c832391bafa53ec",
+    "architecture": "x86"
+  }
+}

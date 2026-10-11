@@ -1,0 +1,3941 @@
+{
+  "evidence_id": "ev_135e8bc98eb8829d192b3707ae992b71edb2fd97fe307150116bc97f0e1347b7",
+  "subject": {
+    "name": "LEZAC.EXE",
+    "digest": {
+      "sha256": "7579255148c2cb540b26f70dc8181c50b218b6808d8fa5208c832391bafa53ec"
+    },
+    "format": "dos-mz",
+    "architecture": "x86",
+    "local_path": "/opt/data/lezac-decompilation/original/game/LEZAC.EXE"
+  },
+  "provider": {
+    "id": "ghidra",
+    "name": "Ghidra",
+    "version": "12.1.4"
+  },
+  "analysis_profile": {
+    "provider": {
+      "id": "ghidra",
+      "name": "Ghidra",
+      "version": "12.1.4"
+    },
+    "parameters": {
+      "target_kind": "executable",
+      "target_format": "dos-mz",
+      "architecture": "x86",
+      "available_architectures": [
+        "x86"
+      ],
+      "import_mode": "ephemeral-source-immutable",
+      "annotation_policy": "atomic-function-entry-metadata-v1",
+      "load_image_observations": "source-mappings-entry-context-v2",
+      "function_body_evidence": "complete-inclusive-ranges-v1",
+      "function_references": "complete-body-and-entry-reference-manager-v2",
+      "location_resolution": "explicit-address-exact-entry-symbol-first-v3",
+      "instruction_flow_evidence": "decoded-return-pcode-v1",
+      "process_launch": "inspected-jvm-launch-support-v1",
+      "load_image_evidence": "independent-mz-mapping-relocations-v1",
+      "jump_table_evidence": "typed-case-default-blocks-v1",
+      "decompiler_jump_loads": true,
+      "loader": "MzLoader",
+      "language_id": "x86:LE:16:Real Mode",
+      "compiler_spec_id": "default",
+      "load_segment": "0x1000",
+      "address_coordinates": "linear-byte-offset",
+      "analyzer_preset": "ghidra-default"
+    },
+    "digest": "894e458d232de9bdeb2a5d661cd2b4791ee9e10f88d297423fc0c7553a7a66d8"
+  },
+  "predicate_type": "rea.analysis",
+  "operation": "list_procedures",
+  "parameters": {},
+  "raw_result": [
+    {
+      "address": "0x10000",
+      "value": "FUN_1000_0000",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x100a3",
+      "value": "FUN_1000_00a3",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x10139",
+      "value": "FUN_1000_0139",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x101fc",
+      "value": "FUN_1000_01fc",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x102d1",
+      "value": "FUN_1000_02d1",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1030b",
+      "value": "FUN_1000_030b",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x10495",
+      "value": "FUN_1000_0495",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1056b",
+      "value": "FUN_1000_056b",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x10630",
+      "value": "FUN_1000_0630",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x106ab",
+      "value": "FUN_1000_06ab",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x10709",
+      "value": "FUN_1000_0709",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1079d",
+      "value": "FUN_1000_079d",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x107c5",
+      "value": "FUN_1000_07c5",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x107fa",
+      "value": "FUN_1000_07fa",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x10838",
+      "value": "FUN_1000_0838",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x108a5",
+      "value": "FUN_1000_08a5",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x10c33",
+      "value": "FUN_1000_0c33",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x10faa",
+      "value": "FUN_1000_0faa",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x11156",
+      "value": "FUN_1000_1156",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x11174",
+      "value": "FUN_1000_1174",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x111b0",
+      "value": "FUN_1000_11b0",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x11239",
+      "value": "FUN_1000_1239",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x11287",
+      "value": "FUN_1000_1287",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x112db",
+      "value": "FUN_1000_12db",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1136e",
+      "value": "FUN_1000_136e",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1146a",
+      "value": "FUN_1000_146a",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1165a",
+      "value": "FUN_1000_165a",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x116ca",
+      "value": "FUN_1000_16ca",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x11845",
+      "value": "FUN_1000_1845",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x11b14",
+      "value": "FUN_1000_1b14",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x11d61",
+      "value": "FUN_1000_1d61",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x12079",
+      "value": "FUN_1000_2079",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x120ac",
+      "value": "FUN_1000_20ac",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1216c",
+      "value": "FUN_1000_216c",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x12226",
+      "value": "FUN_1000_2226",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x12361",
+      "value": "FUN_1000_2361",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1247f",
+      "value": "FUN_1000_247f",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x12597",
+      "value": "FUN_1000_2597",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x126e8",
+      "value": "FUN_1000_26e8",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x12959",
+      "value": "FUN_1000_2959",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x129db",
+      "value": "FUN_1000_29db",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x12a41",
+      "value": "FUN_1000_2a41",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x12adc",
+      "value": "FUN_1000_2adc",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x12e8d",
+      "value": "FUN_1000_2e8d",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x12efd",
+      "value": "FUN_1000_2efd",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x12f9f",
+      "value": "FUN_1000_2f9f",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x130a3",
+      "value": "FUN_1000_30a3",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1313d",
+      "value": "FUN_1000_313d",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x13184",
+      "value": "FUN_1000_3184",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1326e",
+      "value": "FUN_1000_326e",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x13358",
+      "value": "FUN_1000_3358",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1346b",
+      "value": "FUN_1000_346b",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x13587",
+      "value": "FUN_1000_3587",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1370e",
+      "value": "FUN_1000_370e",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x13a56",
+      "value": "FUN_1000_3a56",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x13a7e",
+      "value": "FUN_1000_3a7e",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x13b18",
+      "value": "FUN_1000_3b18",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x13bb2",
+      "value": "FUN_1000_3bb2",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x13d46",
+      "value": "FUN_1000_3d46",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x13eda",
+      "value": "FUN_1000_3eda",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x13f27",
+      "value": "FUN_1000_3f27",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x13fa6",
+      "value": "FUN_1000_3fa6",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1414a",
+      "value": "FUN_1000_414a",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1432a",
+      "value": "FUN_1000_432a",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1452a",
+      "value": "FUN_1000_452a",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1458d",
+      "value": "FUN_1000_458d",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x145fa",
+      "value": "FUN_1000_45fa",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x14d3c",
+      "value": "FUN_1000_4d3c",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x14dd3",
+      "value": "FUN_1000_4dd3",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x14e48",
+      "value": "FUN_1000_4e48",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x14ee7",
+      "value": "FUN_1000_4ee7",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x14fda",
+      "value": "FUN_1000_4fda",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1508b",
+      "value": "FUN_1000_508b",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x15102",
+      "value": "FUN_1000_5102",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1568a",
+      "value": "FUN_1000_568a",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x156b6",
+      "value": "FUN_1000_56b6",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x15715",
+      "value": "FUN_1000_5715",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x15740",
+      "value": "FUN_1000_5740",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x15872",
+      "value": "FUN_1000_5872",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x15999",
+      "value": "FUN_1000_5999",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x15a75",
+      "value": "FUN_1000_5a75",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x15afd",
+      "value": "FUN_1000_5afd",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x15b86",
+      "value": "FUN_1000_5b86",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x15bcc",
+      "value": "FUN_1000_5bcc",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x15cb0",
+      "value": "FUN_1000_5cb0",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x16053",
+      "value": "FUN_1000_6053",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x17783",
+      "value": "entry",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x182d0",
+      "value": "FUN_182d_0000",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x183e1",
+      "value": "FUN_182d_0111",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x183f0",
+      "value": "FUN_183f_0000",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1842e",
+      "value": "FUN_183f_003e",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x18448",
+      "value": "FUN_183f_0058",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1846b",
+      "value": "FUN_183f_007b",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x18483",
+      "value": "FUN_183f_0093",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x184a0",
+      "value": "FUN_184a_0000",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x184ce",
+      "value": "FUN_184a_002e",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x18537",
+      "value": "FUN_184a_0097",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x18585",
+      "value": "FUN_184a_00e5",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x185e3",
+      "value": "FUN_184a_0143",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1873c",
+      "value": "FUN_184a_029c",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1875d",
+      "value": "FUN_184a_02bd",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x18796",
+      "value": "FUN_184a_02f6",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1879d",
+      "value": "FUN_184a_02fd",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x187af",
+      "value": "FUN_184a_030f",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x187d1",
+      "value": "FUN_184a_0331",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x18834",
+      "value": "FUN_184a_0394",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x18917",
+      "value": "FUN_184a_0477",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1891e",
+      "value": "FUN_184a_047e",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x18977",
+      "value": "FUN_184a_04d7",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x18998",
+      "value": "thunk_FUN_184a_060b",
+      "procedure": {
+        "external": false,
+        "thunk": true,
+        "thunk_target": "0x18aab"
+      }
+    },
+    {
+      "address": "0x1899f",
+      "value": "thunk_FUN_184a_060b",
+      "procedure": {
+        "external": false,
+        "thunk": true,
+        "thunk_target": "0x18aab"
+      }
+    },
+    {
+      "address": "0x18aab",
+      "value": "FUN_184a_060b",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x18ac0",
+      "value": "FUN_18ac_0000",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x18ae2",
+      "value": "FUN_18ac_0022",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x18bb4",
+      "value": "FUN_18ac_00f4",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x18e88",
+      "value": "FUN_18ac_03c8",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x18ed7",
+      "value": "FUN_18ac_0417",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x18ee2",
+      "value": "FUN_18ac_0422",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x18fd7",
+      "value": "FUN_18ac_0517",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19054",
+      "value": "FUN_18ac_0594",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1909c",
+      "value": "FUN_18ac_05dc",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x191ed",
+      "value": "FUN_18ac_072d",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19200",
+      "value": "FUN_1920_0000",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x192e2",
+      "value": "FUN_1920_00e2",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x192e9",
+      "value": "FUN_1920_00e9",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x193a5",
+      "value": "FUN_1920_01a5",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x193b3",
+      "value": "FUN_1920_01b3",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x193bf",
+      "value": "FUN_1920_01bf",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x193cd",
+      "value": "FUN_1920_01cd",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x193d4",
+      "value": "FUN_1920_01d4",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x193df",
+      "value": "FUN_1920_01df",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x193e7",
+      "value": "FUN_1920_01e7",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1943f",
+      "value": "FUN_1920_023f",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19454",
+      "value": "FUN_1920_0254",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x194b8",
+      "value": "FUN_1920_02b8",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19508",
+      "value": "FUN_1920_0308",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x195d3",
+      "value": "FUN_1920_03d3",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19632",
+      "value": "FUN_1920_0432",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19691",
+      "value": "FUN_1920_0491",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x196a2",
+      "value": "FUN_1920_04a2",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x196a9",
+      "value": "FUN_1920_04a9",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x196df",
+      "value": "FUN_1920_04df",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x196f7",
+      "value": "FUN_1920_04f7",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19767",
+      "value": "FUN_1920_0567",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1976c",
+      "value": "FUN_1920_056c",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19774",
+      "value": "FUN_1920_0574",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x197c1",
+      "value": "FUN_1920_05c1",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x197fd",
+      "value": "FUN_1920_05fd",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19978",
+      "value": "FUN_1920_0778",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1999c",
+      "value": "FUN_1920_079c",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x199b8",
+      "value": "FUN_1920_07b8",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x199dc",
+      "value": "FUN_1920_07dc",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x199eb",
+      "value": "FUN_1920_07eb",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19a1c",
+      "value": "FUN_1920_081c",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19a4a",
+      "value": "FUN_1920_084a",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19a6e",
+      "value": "FUN_1920_086e",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19a7b",
+      "value": "FUN_1920_087b",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19a98",
+      "value": "FUN_1920_0898",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19ad0",
+      "value": "FUN_1920_08d0",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19b0e",
+      "value": "FUN_1920_090e",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19b2a",
+      "value": "FUN_1920_092a",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19b45",
+      "value": "FUN_1920_0945",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19bda",
+      "value": "FUN_1920_09da",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19bf4",
+      "value": "FUN_1920_09f4",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19c26",
+      "value": "FUN_1920_0a26",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19c67",
+      "value": "FUN_1920_0a67",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19cdf",
+      "value": "FUN_1920_0adf",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19d0a",
+      "value": "FUN_1920_0b0a",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19d37",
+      "value": "FUN_1920_0b37",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19d8b",
+      "value": "FUN_1920_0b8b",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19de1",
+      "value": "FUN_1920_0be1",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19de5",
+      "value": "FUN_1920_0be5",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19ea8",
+      "value": "FUN_1920_0ca8",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19fa6",
+      "value": "FUN_1920_0da6",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19fad",
+      "value": "FUN_1920_0dad",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a024",
+      "value": "FUN_1920_0e24",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a03b",
+      "value": "FUN_1920_0e3b",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a04e",
+      "value": "FUN_1920_0e4e",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a08d",
+      "value": "FUN_1920_0e8d",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a0e9",
+      "value": "FUN_1920_0ee9",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a0fb",
+      "value": "FUN_1920_0efb",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a101",
+      "value": "FUN_1920_0f01",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a10b",
+      "value": "FUN_1920_0f0b",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a10f",
+      "value": "FUN_1920_0f0f",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a113",
+      "value": "FUN_1920_0f13",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a11b",
+      "value": "FUN_1920_0f1b",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a135",
+      "value": "FUN_1920_0f35",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a13f",
+      "value": "FUN_1920_0f3f",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a149",
+      "value": "FUN_1920_0f49",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a153",
+      "value": "FUN_1920_0f53",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a15d",
+      "value": "FUN_1920_0f5d",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a1ae",
+      "value": "FUN_1920_0fae",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a1c2",
+      "value": "FUN_1920_0fc2",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a221",
+      "value": "FUN_1920_1021",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a234",
+      "value": "FUN_1920_1034",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a540",
+      "value": "FUN_1920_1340",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a559",
+      "value": "FUN_1920_1359",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a5a8",
+      "value": "FUN_1920_13a8",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a5f7",
+      "value": "FUN_1920_13f7",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a62f",
+      "value": "FUN_1920_142f",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a63c",
+      "value": "FUN_1920_143c",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a6b6",
+      "value": "FUN_1920_14b6",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a74e",
+      "value": "FUN_1920_154e",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a799",
+      "value": "FUN_1920_1599",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a7ca",
+      "value": "FUN_1920_15ca",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a7f8",
+      "value": "FUN_1920_15f8",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a801",
+      "value": "FUN_1920_1601",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a879",
+      "value": "FUN_1920_1679",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a89e",
+      "value": "FUN_1920_169e",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a8e3",
+      "value": "FUN_1920_16e3",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a8ea",
+      "value": "FUN_1920_16ea",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a94b",
+      "value": "FUN_1920_174b",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a97b",
+      "value": "FUN_1920_177b",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a9c2",
+      "value": "FUN_1920_17c2",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1aa07",
+      "value": "FUN_1920_1807",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    }
+  ],
+  "normalized_result": [
+    {
+      "address": "0x10000",
+      "value": "FUN_1000_0000",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x100a3",
+      "value": "FUN_1000_00a3",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x10139",
+      "value": "FUN_1000_0139",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x101fc",
+      "value": "FUN_1000_01fc",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x102d1",
+      "value": "FUN_1000_02d1",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1030b",
+      "value": "FUN_1000_030b",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x10495",
+      "value": "FUN_1000_0495",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1056b",
+      "value": "FUN_1000_056b",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x10630",
+      "value": "FUN_1000_0630",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x106ab",
+      "value": "FUN_1000_06ab",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x10709",
+      "value": "FUN_1000_0709",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1079d",
+      "value": "FUN_1000_079d",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x107c5",
+      "value": "FUN_1000_07c5",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x107fa",
+      "value": "FUN_1000_07fa",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x10838",
+      "value": "FUN_1000_0838",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x108a5",
+      "value": "FUN_1000_08a5",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x10c33",
+      "value": "FUN_1000_0c33",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x10faa",
+      "value": "FUN_1000_0faa",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x11156",
+      "value": "FUN_1000_1156",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x11174",
+      "value": "FUN_1000_1174",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x111b0",
+      "value": "FUN_1000_11b0",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x11239",
+      "value": "FUN_1000_1239",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x11287",
+      "value": "FUN_1000_1287",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x112db",
+      "value": "FUN_1000_12db",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1136e",
+      "value": "FUN_1000_136e",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1146a",
+      "value": "FUN_1000_146a",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1165a",
+      "value": "FUN_1000_165a",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x116ca",
+      "value": "FUN_1000_16ca",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x11845",
+      "value": "FUN_1000_1845",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x11b14",
+      "value": "FUN_1000_1b14",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x11d61",
+      "value": "FUN_1000_1d61",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x12079",
+      "value": "FUN_1000_2079",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x120ac",
+      "value": "FUN_1000_20ac",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1216c",
+      "value": "FUN_1000_216c",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x12226",
+      "value": "FUN_1000_2226",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x12361",
+      "value": "FUN_1000_2361",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1247f",
+      "value": "FUN_1000_247f",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x12597",
+      "value": "FUN_1000_2597",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x126e8",
+      "value": "FUN_1000_26e8",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x12959",
+      "value": "FUN_1000_2959",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x129db",
+      "value": "FUN_1000_29db",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x12a41",
+      "value": "FUN_1000_2a41",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x12adc",
+      "value": "FUN_1000_2adc",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x12e8d",
+      "value": "FUN_1000_2e8d",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x12efd",
+      "value": "FUN_1000_2efd",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x12f9f",
+      "value": "FUN_1000_2f9f",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x130a3",
+      "value": "FUN_1000_30a3",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1313d",
+      "value": "FUN_1000_313d",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x13184",
+      "value": "FUN_1000_3184",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1326e",
+      "value": "FUN_1000_326e",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x13358",
+      "value": "FUN_1000_3358",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1346b",
+      "value": "FUN_1000_346b",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x13587",
+      "value": "FUN_1000_3587",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1370e",
+      "value": "FUN_1000_370e",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x13a56",
+      "value": "FUN_1000_3a56",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x13a7e",
+      "value": "FUN_1000_3a7e",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x13b18",
+      "value": "FUN_1000_3b18",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x13bb2",
+      "value": "FUN_1000_3bb2",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x13d46",
+      "value": "FUN_1000_3d46",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x13eda",
+      "value": "FUN_1000_3eda",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x13f27",
+      "value": "FUN_1000_3f27",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x13fa6",
+      "value": "FUN_1000_3fa6",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1414a",
+      "value": "FUN_1000_414a",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1432a",
+      "value": "FUN_1000_432a",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1452a",
+      "value": "FUN_1000_452a",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1458d",
+      "value": "FUN_1000_458d",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x145fa",
+      "value": "FUN_1000_45fa",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x14d3c",
+      "value": "FUN_1000_4d3c",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x14dd3",
+      "value": "FUN_1000_4dd3",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x14e48",
+      "value": "FUN_1000_4e48",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x14ee7",
+      "value": "FUN_1000_4ee7",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x14fda",
+      "value": "FUN_1000_4fda",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1508b",
+      "value": "FUN_1000_508b",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x15102",
+      "value": "FUN_1000_5102",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1568a",
+      "value": "FUN_1000_568a",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x156b6",
+      "value": "FUN_1000_56b6",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x15715",
+      "value": "FUN_1000_5715",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x15740",
+      "value": "FUN_1000_5740",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x15872",
+      "value": "FUN_1000_5872",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x15999",
+      "value": "FUN_1000_5999",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x15a75",
+      "value": "FUN_1000_5a75",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x15afd",
+      "value": "FUN_1000_5afd",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x15b86",
+      "value": "FUN_1000_5b86",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x15bcc",
+      "value": "FUN_1000_5bcc",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x15cb0",
+      "value": "FUN_1000_5cb0",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x16053",
+      "value": "FUN_1000_6053",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x17783",
+      "value": "entry",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x182d0",
+      "value": "FUN_182d_0000",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x183e1",
+      "value": "FUN_182d_0111",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x183f0",
+      "value": "FUN_183f_0000",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1842e",
+      "value": "FUN_183f_003e",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x18448",
+      "value": "FUN_183f_0058",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1846b",
+      "value": "FUN_183f_007b",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x18483",
+      "value": "FUN_183f_0093",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x184a0",
+      "value": "FUN_184a_0000",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x184ce",
+      "value": "FUN_184a_002e",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x18537",
+      "value": "FUN_184a_0097",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x18585",
+      "value": "FUN_184a_00e5",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x185e3",
+      "value": "FUN_184a_0143",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1873c",
+      "value": "FUN_184a_029c",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1875d",
+      "value": "FUN_184a_02bd",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x18796",
+      "value": "FUN_184a_02f6",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1879d",
+      "value": "FUN_184a_02fd",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x187af",
+      "value": "FUN_184a_030f",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x187d1",
+      "value": "FUN_184a_0331",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x18834",
+      "value": "FUN_184a_0394",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x18917",
+      "value": "FUN_184a_0477",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1891e",
+      "value": "FUN_184a_047e",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x18977",
+      "value": "FUN_184a_04d7",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x18998",
+      "value": "thunk_FUN_184a_060b",
+      "procedure": {
+        "external": false,
+        "thunk": true,
+        "thunk_target": "0x18aab"
+      }
+    },
+    {
+      "address": "0x1899f",
+      "value": "thunk_FUN_184a_060b",
+      "procedure": {
+        "external": false,
+        "thunk": true,
+        "thunk_target": "0x18aab"
+      }
+    },
+    {
+      "address": "0x18aab",
+      "value": "FUN_184a_060b",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x18ac0",
+      "value": "FUN_18ac_0000",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x18ae2",
+      "value": "FUN_18ac_0022",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x18bb4",
+      "value": "FUN_18ac_00f4",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x18e88",
+      "value": "FUN_18ac_03c8",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x18ed7",
+      "value": "FUN_18ac_0417",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x18ee2",
+      "value": "FUN_18ac_0422",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x18fd7",
+      "value": "FUN_18ac_0517",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19054",
+      "value": "FUN_18ac_0594",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1909c",
+      "value": "FUN_18ac_05dc",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x191ed",
+      "value": "FUN_18ac_072d",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19200",
+      "value": "FUN_1920_0000",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x192e2",
+      "value": "FUN_1920_00e2",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x192e9",
+      "value": "FUN_1920_00e9",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x193a5",
+      "value": "FUN_1920_01a5",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x193b3",
+      "value": "FUN_1920_01b3",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x193bf",
+      "value": "FUN_1920_01bf",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x193cd",
+      "value": "FUN_1920_01cd",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x193d4",
+      "value": "FUN_1920_01d4",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x193df",
+      "value": "FUN_1920_01df",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x193e7",
+      "value": "FUN_1920_01e7",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1943f",
+      "value": "FUN_1920_023f",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19454",
+      "value": "FUN_1920_0254",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x194b8",
+      "value": "FUN_1920_02b8",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19508",
+      "value": "FUN_1920_0308",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x195d3",
+      "value": "FUN_1920_03d3",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19632",
+      "value": "FUN_1920_0432",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19691",
+      "value": "FUN_1920_0491",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x196a2",
+      "value": "FUN_1920_04a2",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x196a9",
+      "value": "FUN_1920_04a9",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x196df",
+      "value": "FUN_1920_04df",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x196f7",
+      "value": "FUN_1920_04f7",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19767",
+      "value": "FUN_1920_0567",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1976c",
+      "value": "FUN_1920_056c",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19774",
+      "value": "FUN_1920_0574",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x197c1",
+      "value": "FUN_1920_05c1",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x197fd",
+      "value": "FUN_1920_05fd",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19978",
+      "value": "FUN_1920_0778",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1999c",
+      "value": "FUN_1920_079c",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x199b8",
+      "value": "FUN_1920_07b8",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x199dc",
+      "value": "FUN_1920_07dc",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x199eb",
+      "value": "FUN_1920_07eb",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19a1c",
+      "value": "FUN_1920_081c",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19a4a",
+      "value": "FUN_1920_084a",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19a6e",
+      "value": "FUN_1920_086e",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19a7b",
+      "value": "FUN_1920_087b",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19a98",
+      "value": "FUN_1920_0898",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19ad0",
+      "value": "FUN_1920_08d0",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19b0e",
+      "value": "FUN_1920_090e",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19b2a",
+      "value": "FUN_1920_092a",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19b45",
+      "value": "FUN_1920_0945",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19bda",
+      "value": "FUN_1920_09da",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19bf4",
+      "value": "FUN_1920_09f4",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19c26",
+      "value": "FUN_1920_0a26",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19c67",
+      "value": "FUN_1920_0a67",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19cdf",
+      "value": "FUN_1920_0adf",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19d0a",
+      "value": "FUN_1920_0b0a",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19d37",
+      "value": "FUN_1920_0b37",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19d8b",
+      "value": "FUN_1920_0b8b",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19de1",
+      "value": "FUN_1920_0be1",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19de5",
+      "value": "FUN_1920_0be5",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19ea8",
+      "value": "FUN_1920_0ca8",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19fa6",
+      "value": "FUN_1920_0da6",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x19fad",
+      "value": "FUN_1920_0dad",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a024",
+      "value": "FUN_1920_0e24",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a03b",
+      "value": "FUN_1920_0e3b",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a04e",
+      "value": "FUN_1920_0e4e",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a08d",
+      "value": "FUN_1920_0e8d",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a0e9",
+      "value": "FUN_1920_0ee9",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a0fb",
+      "value": "FUN_1920_0efb",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a101",
+      "value": "FUN_1920_0f01",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a10b",
+      "value": "FUN_1920_0f0b",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a10f",
+      "value": "FUN_1920_0f0f",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a113",
+      "value": "FUN_1920_0f13",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a11b",
+      "value": "FUN_1920_0f1b",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a135",
+      "value": "FUN_1920_0f35",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a13f",
+      "value": "FUN_1920_0f3f",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a149",
+      "value": "FUN_1920_0f49",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a153",
+      "value": "FUN_1920_0f53",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a15d",
+      "value": "FUN_1920_0f5d",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a1ae",
+      "value": "FUN_1920_0fae",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a1c2",
+      "value": "FUN_1920_0fc2",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a221",
+      "value": "FUN_1920_1021",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a234",
+      "value": "FUN_1920_1034",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a540",
+      "value": "FUN_1920_1340",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a559",
+      "value": "FUN_1920_1359",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a5a8",
+      "value": "FUN_1920_13a8",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a5f7",
+      "value": "FUN_1920_13f7",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a62f",
+      "value": "FUN_1920_142f",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a63c",
+      "value": "FUN_1920_143c",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a6b6",
+      "value": "FUN_1920_14b6",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a74e",
+      "value": "FUN_1920_154e",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a799",
+      "value": "FUN_1920_1599",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a7ca",
+      "value": "FUN_1920_15ca",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a7f8",
+      "value": "FUN_1920_15f8",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a801",
+      "value": "FUN_1920_1601",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a879",
+      "value": "FUN_1920_1679",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a89e",
+      "value": "FUN_1920_169e",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a8e3",
+      "value": "FUN_1920_16e3",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a8ea",
+      "value": "FUN_1920_16ea",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a94b",
+      "value": "FUN_1920_174b",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a97b",
+      "value": "FUN_1920_177b",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1a9c2",
+      "value": "FUN_1920_17c2",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    },
+    {
+      "address": "0x1aa07",
+      "value": "FUN_1920_1807",
+      "procedure": {
+        "external": false,
+        "thunk": false,
+        "thunk_target": null
+      }
+    }
+  ],
+  "confidence": "observed",
+  "authority": "shipped-artifact",
+  "environment": null,
+  "limitations": [
+    "The session serves operations only after Ghidra reports default auto-analysis complete; incomplete analysis does not expose partial results.",
+    "The imported Program and temporary project are ephemeral and deleted on close. Annotation operations edit session database metadata; original executable bytes are never written.",
+    "Cancelling an active Ghidra request terminates its ephemeral database and discards session annotations. The selected target remains open; the next provider query imports the original artifact again.",
+    "Default-space addresses use lowercase 0x-prefixed hexadecimal; other address spaces use <percent-encoded-space>:0x<hex>.",
+    "External functions and local thunks are distinct; procedure metadata identifies both and preserves a thunk target when Ghidra resolves one.",
+    "DOS MZ uses 16-bit x86 real mode with the Ghidra load segment 0x1000. Returned addresses are linear byte coordinates; they do not identify a unique segment:offset alias.",
+    "Static DOS analysis does not emulate BIOS, DOS interrupts, device ports, or self-modifying unpacking code. Packed targets require a separately identified unpacked artifact for original-program analysis; appended overlays are not the initialized load module."
+  ],
+  "locations": [],
+  "evidence_links": []
+}

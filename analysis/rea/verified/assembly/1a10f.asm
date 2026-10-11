@@ -1,0 +1,3 @@
+; 0x1a10f FUN_1920_0f0f
+0x1a10f: CALL 0x1000:a04e
+0x1a112: RETF

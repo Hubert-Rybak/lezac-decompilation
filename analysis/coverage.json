@@ -1,0 +1,31 @@
+{
+  "target_sha256": "7579255148c2cb540b26f70dc8181c50b218b6808d8fa5208c832391bafa53ec",
+  "discovered_procedures": 215,
+  "main_module_procedures": 87,
+  "procedures_by_segment": {
+    "CODE_0": 87,
+    "CODE_1": 2,
+    "CODE_2": 5,
+    "CODE_3": 18,
+    "CODE_4": 10,
+    "CODE_5": 93
+  },
+  "unique_function_body_bytes": 40130,
+  "main_module_function_body_bytes": 32603,
+  "warning_procedures": 5,
+  "warning_addresses": [
+    "0x17783",
+    "0x184ce",
+    "0x18917",
+    "0x192e2",
+    "0x192e9"
+  ],
+  "load_image_status": "verified",
+  "load_image_checks": 94,
+  "all_load_image_checks_matched": true,
+  "coverage_basis": "Union of inclusive Ghidra function-body ranges; not proof of exhaustive code discovery or recovered source ownership.",
+  "known_vector_targets_not_in_inventory": [
+    "0x10fbe",
+    "0x11091"
+  ]
+}

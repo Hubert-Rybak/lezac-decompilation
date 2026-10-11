@@ -1,0 +1,8 @@
+; 0x199dc FUN_1920_07dc
+0x199dc: MOV byte ptr ES:[BX + DI], AL
+0x199df: INC BX
+0x199e0: CMP BX, DX
+0x199e2: JZ 0x1000:99e5
+0x199e4: RET
+0x199e5: MOV DI, SP
+0x199e7: LES DI, SS:[DI + 0x2]
