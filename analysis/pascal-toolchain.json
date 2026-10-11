@@ -1,0 +1,33 @@
+{
+  "compiler": "Free Pascal",
+  "version": "3.2.2",
+  "language_mode": "tp",
+  "native_target": "x86_64-linux",
+  "dos_target": "i8086-msdos",
+  "dos_memory_model": "compact",
+  "dos_options": ["-Mtp", "-Tmsdos", "-WmCompact", "-XX"],
+  "observed_primitive_sizes": {
+    "native": {"Integer": 2, "Word": 2, "LongInt": 4, "Pointer": 8},
+    "dos": {"Integer": 2, "Word": 2, "LongInt": 4, "Pointer": 4}
+  },
+  "archives": [
+    {
+      "role": "native compiler and runtime",
+      "url": "https://downloads.freepascal.org/fpc/dist/3.2.2/x86_64-linux/fpc-3.2.2.x86_64-linux.tar",
+      "bytes": 86978560,
+      "sha256": "5adac308a5534b6a76446d8311fc340747cbb7edeaacfe6b651493ff3fe31e83"
+    },
+    {
+      "role": "i8086-msdos cross compiler and runtime",
+      "url": "https://downloads.freepascal.org/fpc/dist/3.2.2/x86_64-linux/fpc-3.2.2.x86_64-linux.cross.i8086-msdos.tar.xz",
+      "bytes": 168021460,
+      "sha256": "fda88f39548993df9b7345110a6b90e7bd64018e42c1ab51723fa16705b7f671"
+    }
+  ],
+  "limits": [
+    "FPC is a modern reconstruction/testing tool, not the original compiler.",
+    "Archive hashes identify the retrieved bytes; no upstream signature claim is made.",
+    "DOS execution uses Unicorn with limited synthetic INT 21h services, not a full DOS OS.",
+    "No exact Turbo/Borland Pascal version, author source, or bit-identical game rebuild is established."
+  ]
+}

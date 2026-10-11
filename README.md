@@ -4,12 +4,22 @@ Evidence-backed reverse engineering of **Larax & Zaco v1.0 shareware**
 (`LEZAC.EXE`), using [REA](https://github.com/morluto/rea) **6.3.0** and
 Ghidra **12.1.4**.
 
-**Status: complete export of the default 215-procedure discovery, plus six
-compiled and differential-tested C reconstructions. This is NOT a playable game
-port, a bit-identical DOS rebuild, or recovered original source.**
+**Status: 215 default-discovered procedures exported; seven routines reconstructed
+in original-style Pascal, sixteen packed storage layouts, and the prior six C
+reconstructions. Native differential tests and a rebuilt 16-bit DOS computational
+probe pass. This is NOT a playable game, bit-identical rebuild, or the author's
+original source files.**
 
 ## What is here
 
+- [Original-style Pascal recovery](docs/pascal-recovery.md): six core routines
+  plus the legacy RLE decompressor, with **174,777 native Pascal-versus-original
+  comparisons**. A separate compiled i8086 MZ probe executes all seven operations
+  in a limited DOS-service fixture and compares twelve original invocations.
+- [Sixteen packed-record layouts](pascal/LZTYPES.PAS), compiled and measured on
+  native and DOS targets: actors, animation, debris, scores and resource records.
+  Names are inferred; unknown bytes are preserved. Exact author syntax and
+  compiler version are not recovered.
 - **215 function dossiers, 215 C-like pseudocode files and 215 assembly files**
   under [`analysis/rea/verified/`](analysis/rea/verified/). They retain REA Evidence
   IDs, input identity, inclusive body ranges, calls, references and limitations.
@@ -27,12 +37,18 @@ port, a bit-identical DOS rebuild, or recovered original source.**
   are accounted for; uncertain level tails are reported rather than invented.
 - Pinned input provenance, a verified original-file importer, repeatable REA
   exporter, coverage index, tests, and CI.
+- [Byte-decoded assembly audit](analysis/segment-register-audit.json): 23 reversed
+  operand presentations among 65 checked register-direct segment MOVs. The raw
+  REA export is unchanged; original executable bytes take precedence.
 
 Original EXE/ZIP/resource files and generated image previews are **not committed**.
 See [RIGHTS.md](RIGHTS.md); archival availability is not a public-domain claim.
 
 ## Start here
 
+- [Pascal recovery, build targets, verification and limits](docs/pascal-recovery.md)
+- [Pascal core contracts and original calling conventions](docs/pascal-core.md)
+- [Record layouts, static links and compiler/source archaeology](docs/pascal-layouts.md)
 - [Analysis, function roles and limitations](docs/analysis.md)
 - [Reproduction instructions and tool versions](docs/reproduction.md)
 - [Recovered C: original ABI, exact behavior and test domains](docs/recovered-routines.md)
@@ -47,7 +63,10 @@ Ghidra pseudotypes, imperfect signatures and preserved warnings; the separate
 
 ## Quick verification
 
-Requires Python 3.12+, a C99 compiler, make, Node.js compatible with REA, and npm.
+Requires Python 3.12+, a C99 compiler, Free Pascal 3.2.2, make, Node.js compatible
+with REA, and npm. DOS tests additionally need the i8086 cross compiler; see the
+Pascal build instructions above. Missing optional cross tooling is reported as
+a skip, not as a passing DOS validation.
 
 ```sh
 python3 -m venv .venv
@@ -56,6 +75,7 @@ python -m pip install -r requirements-dev.txt
 npm ci
 python tools/fetch_original.py
 make all
+make pascal-native PYTHON=python
 make test PYTHON=python
 LEZAC_CFLAGS='-fsanitize=undefined -fno-sanitize-recover=all' \
   python -m pytest tests/test_recovered.py -q
@@ -64,6 +84,8 @@ LEZAC_CFLAGS='-fsanitize=undefined -fno-sanitize-recover=all' \
 `make all` produces `build/liblezac.a` and `build/liblezac.so`, not a game
 executable. The importer can use `--archive /path/to/lezac.zip` for an offline
 copy; it validates every original file and refuses to overwrite different files.
+With the cross compiler configured, `make pascal-dos PYTHON=python` builds and
+executes `LZPROBE.EXE`. This is a new verification harness, not `LEZAC.EXE`.
 
 To rerun REA after installing Ghidra and a full JDK:
 
@@ -84,8 +106,8 @@ from their exact retained Evidence records, not truncated.
 
 - Recover dynamic targets such as the registered timer and keyboard interrupt
   handlers; **215 discovered routines is not proof of exhaustive code discovery**.
-- Reconstruct full actor/map types, physics, rendering, audio, input and DOS
-  services, then test full-game behavior.
+- Resolve remaining actor/map field meanings and reconstruct complete parent
+  routines, physics, rendering, audio, input and DOS services; then test gameplay.
 - Establish actual heap/buffer state for the missing tails of all fourteen
   compressed level planes. A safe decoder must not silently reproduce the
   original out-of-bounds accesses or fabricate replacement bytes.

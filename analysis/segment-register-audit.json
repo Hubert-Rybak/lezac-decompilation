@@ -1,0 +1,168 @@
+{
+  "original_sha256": "7579255148c2cb540b26f70dc8181c50b218b6808d8fa5208c832391bafa53ec",
+  "scope": "unprefixed 16-bit register-direct 8C/8E segment MOV only",
+  "checked_register_moves": 65,
+  "mismatches": [
+    {
+      "address": "0x107d2",
+      "file_offset": "0xf42",
+      "bytes": "8ec0",
+      "rea_assembly": "MOV AX, ES",
+      "byte_decoded": "mov es, ax"
+    },
+    {
+      "address": "0x15696",
+      "file_offset": "0x5e06",
+      "bytes": "8ec0",
+      "rea_assembly": "MOV AX, ES",
+      "byte_decoded": "mov es, ax"
+    },
+    {
+      "address": "0x18507",
+      "file_offset": "0x8c77",
+      "bytes": "8ec0",
+      "rea_assembly": "MOV AX, ES",
+      "byte_decoded": "mov es, ax"
+    },
+    {
+      "address": "0x1853a",
+      "file_offset": "0x8caa",
+      "bytes": "8ec2",
+      "rea_assembly": "MOV DX, ES",
+      "byte_decoded": "mov es, dx"
+    },
+    {
+      "address": "0x18749",
+      "file_offset": "0x8eb9",
+      "bytes": "8ec0",
+      "rea_assembly": "MOV AX, ES",
+      "byte_decoded": "mov es, ax"
+    },
+    {
+      "address": "0x18e8f",
+      "file_offset": "0x95ff",
+      "bytes": "8ec0",
+      "rea_assembly": "MOV AX, ES",
+      "byte_decoded": "mov es, ax"
+    },
+    {
+      "address": "0x19203",
+      "file_offset": "0x9973",
+      "bytes": "8eda",
+      "rea_assembly": "MOV DX, DS",
+      "byte_decoded": "mov ds, dx"
+    },
+    {
+      "address": "0x192f0",
+      "file_offset": "0x9a60",
+      "bytes": "8eda",
+      "rea_assembly": "MOV DX, DS",
+      "byte_decoded": "mov ds, dx"
+    },
+    {
+      "address": "0x19303",
+      "file_offset": "0x9a73",
+      "bytes": "8ec0",
+      "rea_assembly": "MOV AX, ES",
+      "byte_decoded": "mov es, ax"
+    },
+    {
+      "address": "0x19517",
+      "file_offset": "0x9c87",
+      "bytes": "8ec1",
+      "rea_assembly": "MOV CX, ES",
+      "byte_decoded": "mov es, cx"
+    },
+    {
+      "address": "0x19561",
+      "file_offset": "0x9cd1",
+      "bytes": "8ec2",
+      "rea_assembly": "MOV DX, ES",
+      "byte_decoded": "mov es, dx"
+    },
+    {
+      "address": "0x195a4",
+      "file_offset": "0x9d14",
+      "bytes": "8ec3",
+      "rea_assembly": "MOV BX, ES",
+      "byte_decoded": "mov es, bx"
+    },
+    {
+      "address": "0x195fe",
+      "file_offset": "0x9d6e",
+      "bytes": "8ec3",
+      "rea_assembly": "MOV BX, ES",
+      "byte_decoded": "mov es, bx"
+    },
+    {
+      "address": "0x1960d",
+      "file_offset": "0x9d7d",
+      "bytes": "8ec0",
+      "rea_assembly": "MOV AX, ES",
+      "byte_decoded": "mov es, ax"
+    },
+    {
+      "address": "0x19638",
+      "file_offset": "0x9da8",
+      "bytes": "8ec3",
+      "rea_assembly": "MOV BX, ES",
+      "byte_decoded": "mov es, bx"
+    },
+    {
+      "address": "0x1966c",
+      "file_offset": "0x9ddc",
+      "bytes": "8eda",
+      "rea_assembly": "MOV DX, DS",
+      "byte_decoded": "mov ds, dx"
+    },
+    {
+      "address": "0x199f1",
+      "file_offset": "0xa161",
+      "bytes": "8eda",
+      "rea_assembly": "MOV DX, DS",
+      "byte_decoded": "mov ds, dx"
+    },
+    {
+      "address": "0x19b21",
+      "file_offset": "0xa291",
+      "bytes": "8eda",
+      "rea_assembly": "MOV DX, DS",
+      "byte_decoded": "mov ds, dx"
+    },
+    {
+      "address": "0x19bef",
+      "file_offset": "0xa35f",
+      "bytes": "8eda",
+      "rea_assembly": "MOV DX, DS",
+      "byte_decoded": "mov ds, dx"
+    },
+    {
+      "address": "0x19c13",
+      "file_offset": "0xa383",
+      "bytes": "8eda",
+      "rea_assembly": "MOV DX, DS",
+      "byte_decoded": "mov ds, dx"
+    },
+    {
+      "address": "0x19c62",
+      "file_offset": "0xa3d2",
+      "bytes": "8eda",
+      "rea_assembly": "MOV DX, DS",
+      "byte_decoded": "mov ds, dx"
+    },
+    {
+      "address": "0x19c8e",
+      "file_offset": "0xa3fe",
+      "bytes": "8eda",
+      "rea_assembly": "MOV DX, DS",
+      "byte_decoded": "mov ds, dx"
+    },
+    {
+      "address": "0x19d05",
+      "file_offset": "0xa475",
+      "bytes": "8eda",
+      "rea_assembly": "MOV DX, DS",
+      "byte_decoded": "mov ds, dx"
+    }
+  ]
+}

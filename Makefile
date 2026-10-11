@@ -3,8 +3,18 @@ AR ?= ar
 PYTHON ?= python3
 CFLAGS ?= -std=c99 -O2 -Wall -Wextra -Werror -pedantic
 
-.PHONY: all test verify-evidence original
+.PHONY: all test verify-evidence original pascal-native pascal-dos
 all: build/liblezac.a build/liblezac.so
+
+pascal-native:
+	$(PYTHON) tools/build_pascal.py pascal/LZBRIDGE.PAS build/pascal-native/liblezac_pascal.so
+	$(PYTHON) tools/build_pascal.py pascal/LZRLEBR.PAS build/pascal-native/lzrle.so
+	$(PYTHON) tools/build_pascal.py pascal/LZPROBE.PAS build/pascal-native/lzprobe
+	build/pascal-native/lzprobe
+
+pascal-dos:
+	$(PYTHON) tools/build_pascal.py pascal/LZPROBE.PAS build/pascal-dos/LZPROBE.EXE --target dos
+	$(PYTHON) tools/run_dos_probe.py build/pascal-dos/LZPROBE.EXE
 
 build:
 	mkdir -p build
