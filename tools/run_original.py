@@ -5,6 +5,11 @@ Each run gets a fresh disposable directory populated from hash-verified copies o
 original/game. The analysis inputs are never mounted, and they are verified again
 after the emulator exits. See docs/emulator-baseline.md for the workflow.
 
+`prepare --game-build build/game` makes the run use the source-built LEZAC.EXE of
+tools/build_game.py instead of the original executable (the data files are still
+the authenticated originals); run.json then records the rebuild's hash and
+build manifest. See docs/reconstruction.md.
+
 Subcommands:
   verify                         authenticate original/game against provenance
   check-emulator                 compare the installed DOSBox-X with analysis/emulator.json
@@ -225,8 +230,22 @@ def default_run_dir(label):
     return RUNS_DIR / f'{stamp}-{label}'
 
 
+def load_game_build(directory):
+    """(executable bytes, description) of a tools/build_game.py output directory."""
+    directory = Path(directory)
+    build = load_json(directory / 'manifest.json')
+    if build.get('format') != 'lezac-game-build/1':
+        raise RunError(f'Not a game build directory (manifest.json): {directory}')
+    exe = (directory / 'LEZAC.EXE').read_bytes()
+    if sha256_bytes(exe) != build['outputs']['LEZAC.EXE']['sha256']:
+        raise RunError('LEZAC.EXE does not match its build manifest')
+    return exe, {'kind': 'rebuild', 'sha256': sha256_bytes(exe), 'bytes': len(exe),
+                 'build_source': build['source'], 'build_toolchain': build['toolchain'],
+                 'build_utc': build['built_utc']}
+
+
 def prepare_run(run_dir=None, label='run', original_dir=ORIGINAL_DIR, allow_unpinned=False,
-                identity=None, manifest=None):
+                identity=None, manifest=None, game_build=None):
     if not SAFE_LABEL.fullmatch(label):
         raise RunError('Labels use letters, digits, "-" and "_" (at most 64 characters)')
     run_dir = Path(run_dir) if run_dir else default_run_dir(label)
@@ -237,7 +256,11 @@ def prepare_run(run_dir=None, label='run', original_dir=ORIGINAL_DIR, allow_unpi
     if identity['mismatches'] and not allow_unpinned:
         raise RunError('Installed emulator is not the pinned reference: ' + '; '.join(identity['mismatches']) +
                        ' (pass --allow-unpinned-emulator to record an explicitly unpinned run)')
-    files = read_verified_originals(original_dir, manifest)
+    originals = read_verified_originals(original_dir, manifest)
+    files = dict(originals)
+    game = {'kind': 'original', 'sha256': sha256_bytes(files['LEZAC.EXE']), 'bytes': len(files['LEZAC.EXE'])}
+    if game_build is not None:
+        files['LEZAC.EXE'], game = load_game_build(game_build)
     if run_dir.exists() and (run_dir.is_symlink() or not run_dir.is_dir() or any(run_dir.iterdir())):
         raise RunError(f'Refusing to reuse a non-empty run directory: {run_dir}')
     template = CONFIG_TEMPLATE.read_text()
@@ -258,7 +281,9 @@ def prepare_run(run_dir=None, label='run', original_dir=ORIGINAL_DIR, allow_unpi
         'label': label,
         'source_revision': git_revision(),
         'tool_sha256': sha256_file(Path(__file__).resolve()),
-        'originals': originals_summary(files),
+        'originals': originals_summary(originals),
+        'game_executable': game,
+        'run_files': originals_summary(files),
         'config_template': {'path': str(CONFIG_TEMPLATE.relative_to(ROOT)),
                             'sha256': sha256_bytes(template.encode())},
         'config_sha256': sha256_bytes(config.encode()),
@@ -375,6 +400,7 @@ def summarize_run(run_dir, trace=None):
         'emulator': {key: identity.get(key) for key in ('version_banner', 'binary_sha256', 'packages')},
         'pinned_emulator': manifest['pinned_emulator'] and not identity['mismatches'],
         'originals': manifest['originals'],
+        'game_executable': manifest.get('game_executable', {'kind': 'original'}),
         'session': {key: session.get(key) for key in (
             'mode', 'headless', 'started_utc', 'ended_utc', 'end_reason', 'emulator_returncode',
             'duration_game_ms', 'duration_wall_ms', 'event_count', 'originals_verified_before_launch',
@@ -731,7 +757,8 @@ class EmulatorSession:
                 'checkpoints': self.checkpoints,
                 'duration_wall_ms': round(self.wall_ms(), 3) if self.origin else None,
                 'duration_game_ms': round(self.game_ms(), 3) if self.origin else None,
-                'run_copy_changes': compare_run_copy(self.run_dir, self.manifest['originals']),
+                'run_copy_changes': compare_run_copy(self.run_dir, self.manifest.get('run_files',
+                                                                                     self.manifest['originals'])),
             })
             try:
                 read_verified_originals()
@@ -983,6 +1010,8 @@ def main(argv=None):
     prepare.add_argument('--run-dir', type=Path)
     prepare.add_argument('--label', default='run')
     prepare.add_argument('--allow-unpinned-emulator', action='store_true')
+    prepare.add_argument('--game-build', type=Path,
+                         help='run the source-built LEZAC.EXE from this tools/build_game.py output')
     launch = sub.add_parser('launch')
     launch.add_argument('run_dir', type=Path)
     launch.add_argument('--time-limit', type=int, default=0)
@@ -1019,7 +1048,8 @@ def main(argv=None):
             print(json.dumps(identity, indent=2))
             return 1 if identity['mismatches'] else 0
         elif args.command == 'prepare':
-            print(prepare_run(args.run_dir, args.label, allow_unpinned=args.allow_unpinned_emulator))
+            print(prepare_run(args.run_dir, args.label, allow_unpinned=args.allow_unpinned_emulator,
+                              game_build=args.game_build))
         elif args.command == 'launch':
             session = EmulatorSession(args.run_dir, headless=False, time_limit=args.time_limit, mode='interactive')
             session.start()
