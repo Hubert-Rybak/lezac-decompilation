@@ -260,7 +260,7 @@ begin
         DrawString(Spacing * J + Left, Y, -1, -1, Part[J], ColourHigh - J + 1,
           Shadow, Spacing, FirstGlyph);
       end;
-      Delay(Pause);
+      TPDelay(Pause);
       if TPKeyPressed then
       begin
         Pause := 0;
@@ -481,7 +481,7 @@ begin
       Shutdown(1);
     SpriteSet := 1;
   end;
-  Delay(500);
+  TPDelay(500);
   TmpB := 61;
   SoundRequest := 10;
   RequestSound;
@@ -528,14 +528,14 @@ begin
         RollScoreDigits(GapOfs);
         TmpB := HudOfs;
         DrawScoreDigits(GapOfs);
-        Delay(15);
+        TPDelay(15);
         if TPRandom(4) > 2 then
         begin
           TmpB := 33;
           RequestSound;
         end;
       end;
-      Delay(200);
+      TPDelay(200);
     end;
   LastKey := TPReadKey;
   Inc(Level);

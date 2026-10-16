@@ -35,7 +35,7 @@ begin
     mov al, $F3
     out $60, al
   end;
-  Delay(200);
+  TPDelay(200);
   asm
     mov al, $47
     out $60, al
@@ -166,7 +166,7 @@ begin
     end;
     if Fade = 0 then
       LegacyExpandUnsafe(Source, 22, Dest, 64000);
-    Delay(22);
+    TPDelay(22);
   end;
 end;
 
