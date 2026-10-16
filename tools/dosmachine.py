@@ -50,7 +50,7 @@ KEYS = {
     'KP_Insert': (0x52, 0), '1': (0x02, ord('1')), '2': (0x03, ord('2')),
     'i': (0x17, ord('i')), 'l': (0x26, ord('l')), 'r': (0x13, ord('r')),
     'e': (0x12, ord('e')), 's': (0x1F, ord('s')), 'space': (0x39, 0x20),
-    'Return': (0x1C, 0x0D), 'Escape': (0x01, 0x1B),
+    'Return': (0x1C, 0x0D), 'Escape': (0x01, 0x1B), 'BackSpace': (0x0E, 0x08),
 }
 MAKE_TO_ASCII = {make: ascii_ for make, ascii_ in KEYS.values()}
 
@@ -155,6 +155,7 @@ class Machine:
         self.int_counts = {}
         self.delays = 0
         self.find_state = None
+        self.last_error = 0
 
     # -- loading -----------------------------------------------------------
     def _load_mz(self, data):
@@ -756,6 +757,12 @@ class Machine:
                 self._teletype(ch)
         elif ah == 0x02:
             self._teletype(dx & 0xFF)
+        elif ah == 0x59 and bx == 0:
+            # extended error of the last failing call: class "not found" (8),
+            # action "user" (4), locus "block device" (2)
+            self.reg('ax', self.last_error)
+            self.reg('bx', 0x0804)
+            self.reg('cx', (self.reg('cx') & 0x00FF) | 0x0200)
         else:
             raise MachineError(f'{self.label}: INT 21h AX={ax:04X} BX={bx:04X} unsupported at {self.where()}')
 
@@ -797,6 +804,7 @@ class Machine:
     def dos_error(self, code):
         self.reg('ax', code)
         self.setcf(True)
+        self.last_error = code
 
     def open_handle(self, name, mode):
         handle = self.next_handle

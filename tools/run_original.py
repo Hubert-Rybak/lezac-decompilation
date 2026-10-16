@@ -56,7 +56,7 @@ PLACEHOLDER = re.compile(r'@[A-Z_]+@')
 # hotkeys (F12 combinations) are issued only by the dedicated commands below.
 GAME_KEYS = frozenset([
     'z', 'x', 'c', 'm', 'n', 'Left', 'Right', 'Up', 'Down', '0', 'KP_0', 'KP_Insert',
-    '1', '2', 'i', 'l', 'r', 'e', 's', 'space', 'Return', 'Escape',
+    '1', '2', 'i', 'l', 'r', 'e', 's', 'space', 'Return', 'Escape', 'BackSpace',
 ])
 MAX_TRACE_MS = 4 * 60 * 60 * 1000
 HOST_KEY = 'F12'
