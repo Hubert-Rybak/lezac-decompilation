@@ -1,0 +1,138 @@
+{
+  "checkpoints": [
+    {
+      "frame_sha256": "52edc5fce54c9eea549464840c364e416be9fbde36eda5249748522e83c743ef",
+      "game_ms": 8650.756,
+      "name": "menu"
+    },
+    {
+      "frame_sha256": "2670f76b11443ed5cf3ef401f215d45ed8d4cdd9ec050c04d0223037d109dc94",
+      "game_ms": 12300.474,
+      "name": "prepare-level1"
+    },
+    {
+      "frame_sha256": "9f51a16329fccf49994f5ea365f666778330a8872222f7f41e0d236716eeb484",
+      "game_ms": 12900.649,
+      "name": "level1-start"
+    }
+  ],
+  "config_template": {
+    "path": "emulator/dosbox-x-reference.conf",
+    "sha256": "1c4fb11d92de8a18ce1881f314b007b954aa57dad635e131192d2dc843ead058"
+  },
+  "created_utc": "2026-10-16T05:20:45Z",
+  "emulator": {
+    "binary_sha256": "30a5fdf8fa95abaf7bae1a9e624ccfc9e26e5357a19cc567bf3a2ac659699258",
+    "packages": {
+      "dosbox-x": "2024.03.01+dfsg-1build2",
+      "dosbox-x-data": "2024.03.01+dfsg-1build2",
+      "libsdl2-2.0-0": "2.30.0+dfsg-1ubuntu3.1",
+      "xvfb": "2:21.1.12-1ubuntu1.8"
+    },
+    "version_banner": "DOSBox-X version 2024.03.01 SDL2, copyright 2011-2024 The DOSBox-X Team."
+  },
+  "format": "lezac-original-run-summary/1",
+  "input_trace": {
+    "path": "emulator/traces/boot-smoke.json",
+    "sha256": "76b41a7b97cf2ab454379a20991b326331f78cf2729298aa02a7cee8dbcc7835"
+  },
+  "label": "boot-smoke-e",
+  "originals": [
+    {
+      "name": "BOMOMIMK.SPR",
+      "sha256": "08dfd0e59ba191c52af2529bdfa140fd15a57829f0c6c13bbb78e156769ac0d1",
+      "size": 20168
+    },
+    {
+      "name": "BOMPAL.PAL",
+      "sha256": "f2559164074ca529ba6c275a9831b11c6da9e6317f09b3d9228c299d6f8f8319",
+      "size": 768
+    },
+    {
+      "name": "CARO.CAR",
+      "sha256": "949cce4db6071d6675a291c978d725c6e4ee1730b2c7a428bc1c8a8185cbd8d8",
+      "size": 8450
+    },
+    {
+      "name": "ENGLISH.DOC",
+      "sha256": "e2fd2f2521b0277f2fca0c8f2a265408412542932bb6e977bf1ab3d0aabdfed9",
+      "size": 3522
+    },
+    {
+      "name": "FILE_ID.DIZ",
+      "sha256": "3edad84fcd1777ea883763b005c6c8bcaf55b8204edc10a4d01335b979ed0f7c",
+      "size": 483
+    },
+    {
+      "name": "FONTS.SPR",
+      "sha256": "f65aa9bbba2a66ee69f1b279a32c448e36012feb53441fbbb8e64e31bee87a0e",
+      "size": 5425
+    },
+    {
+      "name": "GRAN.MST",
+      "sha256": "3f0cf17706d557ca863d6e39bfa6641fba777a88815ba3f0a22e5ac89e0e39e2",
+      "size": 399
+    },
+    {
+      "name": "ITALIANO.DOC",
+      "sha256": "5ea7481d3179e60b6f1229aa114dc4b47c95f7c1200c7888ad5c259f161317c1",
+      "size": 4392
+    },
+    {
+      "name": "LEZAC.EXE",
+      "sha256": "7579255148c2cb540b26f70dc8181c50b218b6808d8fa5208c832391bafa53ec",
+      "size": 52384
+    },
+    {
+      "name": "LIVELS.SCH",
+      "sha256": "d8b553871014108515d6af05b0853de8ccc22e4d3e44d63533ba1167fdc8c7b2",
+      "size": 41047
+    },
+    {
+      "name": "PROEFS.SON",
+      "sha256": "b5bc702a27ac85554cc76a62fced07567921b07d5c16f2027a62fbc956df701d",
+      "size": 782
+    },
+    {
+      "name": "PROVA.SPR",
+      "sha256": "d6d6b634f8613251f6e82e9a15c5c68e2be437892bfa25c53eb4bcd9094188b7",
+      "size": 21250
+    },
+    {
+      "name": "RECS.DAT",
+      "sha256": "fbc54d16834666dfd45915ffc0181ad54c635e0b19f59ca2c1aa77984a011a95",
+      "size": 92
+    },
+    {
+      "name": "SFONLEF.ZBG",
+      "sha256": "b1b7cc03122510318c1a3670f151712406e9e3fa60aabd8fb558320766c3835c",
+      "size": 34292
+    }
+  ],
+  "pinned_emulator": true,
+  "session": {
+    "duration_game_ms": 15141.954,
+    "duration_wall_ms": 15141.941,
+    "emulator_returncode": 0,
+    "end_reason": "trace complete",
+    "ended_utc": "2026-10-16T05:21:01Z",
+    "event_count": 11,
+    "headless": true,
+    "mode": "play",
+    "originals_verified_after_exit": true,
+    "originals_verified_before_launch": true,
+    "replayed_trace_sha256": "76b41a7b97cf2ab454379a20991b326331f78cf2729298aa02a7cee8dbcc7835",
+    "run_copy_changes": {
+      "changed": [],
+      "created": [],
+      "removed": []
+    },
+    "started_utc": "2026-10-16T05:20:45Z"
+  },
+  "source_revision": {
+    "commit": "760818a3ecf9e093bcbc33ce67e83aaee385a0cd",
+    "tracked_changes": false,
+    "uncommitted_run_definition": []
+  },
+  "tool_sha256": "ae64c4d2a7c35d4af87f068925dcdba8db39273401c977e3cc58e51c909e8689"
+}

@@ -1,0 +1,166 @@
+{
+  "checkpoints": [
+    {
+      "frame_sha256": "2670f76b11443ed5cf3ef401f215d45ed8d4cdd9ec050c04d0223037d109dc94",
+      "game_ms": 10096.571,
+      "name": "prepare-2p"
+    },
+    {
+      "frame_sha256": "14fd6e8722e4a7bc8e57c82aa529f28410175d590779f03ce2c1b3db472bde66",
+      "game_ms": 10849.407,
+      "name": "level1-2p-start"
+    },
+    {
+      "frame_sha256": "0bf13320d4b5c4126c8b0d1937d3e9e7cb8c4d5361d07db1bce52d71929174dc",
+      "game_ms": 12385.945,
+      "name": "simul1"
+    },
+    {
+      "frame_sha256": "8d9cc28b773e7c95e23ea95475dd95f127f7c0491945d2493e91144d201ec29c",
+      "game_ms": 13460.9,
+      "name": "p2fire1"
+    },
+    {
+      "frame_sha256": "12158bf861dda632391c071ef7447e374c8487838a0e35a5c5384ccb0ac15594",
+      "game_ms": 13994.459,
+      "name": "p2fire2"
+    },
+    {
+      "frame_sha256": "35662f04d7680451873e9a94242b06aeb3d486468b1a29e1312ca60b88a7eb23",
+      "game_ms": 16319.264,
+      "name": "p2after"
+    },
+    {
+      "frame_sha256": "ad2de52acd26a7f14b71f2c214200eba6b54a3e4137546ba7c3df45cd4d38f85",
+      "game_ms": 20143.531,
+      "name": "gameover-2p"
+    },
+    {
+      "frame_sha256": "c1880c22a3e50c555fbe8fb95ba54d23dd88181ec2a116ab9e188f3379af33e0",
+      "game_ms": 24669.545,
+      "name": "menu-2p-after"
+    },
+    {
+      "frame_sha256": "52edc5fce54c9eea549464840c364e416be9fbde36eda5249748522e83c743ef",
+      "game_ms": 42352.762,
+      "name": "before-exit"
+    }
+  ],
+  "config_template": {
+    "path": "emulator/dosbox-x-reference.conf",
+    "sha256": "1c4fb11d92de8a18ce1881f314b007b954aa57dad635e131192d2dc843ead058"
+  },
+  "created_utc": "2026-10-15T22:37:48Z",
+  "emulator": {
+    "binary_sha256": "30a5fdf8fa95abaf7bae1a9e624ccfc9e26e5357a19cc567bf3a2ac659699258",
+    "packages": {
+      "dosbox-x": "2024.03.01+dfsg-1build2",
+      "dosbox-x-data": "2024.03.01+dfsg-1build2",
+      "libsdl2-2.0-0": "2.30.0+dfsg-1ubuntu3.1",
+      "xvfb": "2:21.1.12-1ubuntu1.8"
+    },
+    "version_banner": "DOSBox-X version 2024.03.01 SDL2, copyright 2011-2024 The DOSBox-X Team."
+  },
+  "format": "lezac-original-run-summary/1",
+  "input_trace": {
+    "path": "emulator/traces/two-player-controls.json",
+    "sha256": "41f7da5772433cb6df5be8c7db6c6a83b7f30f6b260323fb048cc9d850f5054b"
+  },
+  "label": "twoplayer",
+  "originals": [
+    {
+      "name": "BOMOMIMK.SPR",
+      "sha256": "08dfd0e59ba191c52af2529bdfa140fd15a57829f0c6c13bbb78e156769ac0d1",
+      "size": 20168
+    },
+    {
+      "name": "BOMPAL.PAL",
+      "sha256": "f2559164074ca529ba6c275a9831b11c6da9e6317f09b3d9228c299d6f8f8319",
+      "size": 768
+    },
+    {
+      "name": "CARO.CAR",
+      "sha256": "949cce4db6071d6675a291c978d725c6e4ee1730b2c7a428bc1c8a8185cbd8d8",
+      "size": 8450
+    },
+    {
+      "name": "ENGLISH.DOC",
+      "sha256": "e2fd2f2521b0277f2fca0c8f2a265408412542932bb6e977bf1ab3d0aabdfed9",
+      "size": 3522
+    },
+    {
+      "name": "FILE_ID.DIZ",
+      "sha256": "3edad84fcd1777ea883763b005c6c8bcaf55b8204edc10a4d01335b979ed0f7c",
+      "size": 483
+    },
+    {
+      "name": "FONTS.SPR",
+      "sha256": "f65aa9bbba2a66ee69f1b279a32c448e36012feb53441fbbb8e64e31bee87a0e",
+      "size": 5425
+    },
+    {
+      "name": "GRAN.MST",
+      "sha256": "3f0cf17706d557ca863d6e39bfa6641fba777a88815ba3f0a22e5ac89e0e39e2",
+      "size": 399
+    },
+    {
+      "name": "ITALIANO.DOC",
+      "sha256": "5ea7481d3179e60b6f1229aa114dc4b47c95f7c1200c7888ad5c259f161317c1",
+      "size": 4392
+    },
+    {
+      "name": "LEZAC.EXE",
+      "sha256": "7579255148c2cb540b26f70dc8181c50b218b6808d8fa5208c832391bafa53ec",
+      "size": 52384
+    },
+    {
+      "name": "LIVELS.SCH",
+      "sha256": "d8b553871014108515d6af05b0853de8ccc22e4d3e44d63533ba1167fdc8c7b2",
+      "size": 41047
+    },
+    {
+      "name": "PROEFS.SON",
+      "sha256": "b5bc702a27ac85554cc76a62fced07567921b07d5c16f2027a62fbc956df701d",
+      "size": 782
+    },
+    {
+      "name": "PROVA.SPR",
+      "sha256": "d6d6b634f8613251f6e82e9a15c5c68e2be437892bfa25c53eb4bcd9094188b7",
+      "size": 21250
+    },
+    {
+      "name": "RECS.DAT",
+      "sha256": "fbc54d16834666dfd45915ffc0181ad54c635e0b19f59ca2c1aa77984a011a95",
+      "size": 92
+    },
+    {
+      "name": "SFONLEF.ZBG",
+      "sha256": "b1b7cc03122510318c1a3670f151712406e9e3fa60aabd8fb558320766c3835c",
+      "size": 34292
+    }
+  ],
+  "pinned_emulator": true,
+  "session": {
+    "duration_game_ms": 58152.62,
+    "duration_wall_ms": 111838.716,
+    "emulator_returncode": 0,
+    "end_reason": "emulator exited",
+    "ended_utc": "2026-10-15T22:39:40Z",
+    "event_count": 47,
+    "headless": true,
+    "mode": "session",
+    "originals_verified_after_exit": true,
+    "originals_verified_before_launch": true,
+    "run_copy_changes": {
+      "changed": [],
+      "created": [],
+      "removed": []
+    },
+    "started_utc": "2026-10-15T22:37:48Z"
+  },
+  "source_revision": {
+    "commit": "6f67bfe6f1445b0ed51409274100a4b6dde30d1d",
+    "tracked_changes": false
+  },
+  "tool_sha256": null
+}

@@ -1,0 +1,686 @@
+{
+  "checkpoints": [
+    {
+      "frame_sha256": "0134d8d9969c18634026b3ec00cabec4aec623e7bc0e69168e41099ee7b14618",
+      "game_ms": 9121.335,
+      "name": "title"
+    },
+    {
+      "frame_sha256": "52edc5fce54c9eea549464840c364e416be9fbde36eda5249748522e83c743ef",
+      "game_ms": 10923.71,
+      "name": "menu-complete"
+    },
+    {
+      "frame_sha256": "2670f76b11443ed5cf3ef401f215d45ed8d4cdd9ec050c04d0223037d109dc94",
+      "game_ms": 13669.42,
+      "name": "prepare-level1"
+    },
+    {
+      "frame_sha256": "3bc4802ca7cbb62f8b6dae7cac76694b8e98fd3043bdf448441e68c36a2f66f3",
+      "game_ms": 14213.895,
+      "name": "level1-start"
+    },
+    {
+      "frame_sha256": "1f54bfeb99097b7c87f471c5bf1ee6eb27d3f8fc90a285634af22679b68c1b04",
+      "game_ms": 16939.761,
+      "name": "walk1"
+    },
+    {
+      "frame_sha256": "f00edb7683b886314d7c5a5f7926a855850c30610d0665dfc637288a66b98cdd",
+      "game_ms": 18475.307,
+      "name": "walkback1"
+    },
+    {
+      "frame_sha256": "1aa419a874ace312eebc42f8032306fe88da74c86d29d1a8e0ef2fd0f20daa8a",
+      "game_ms": 20809.863,
+      "name": "walkback2"
+    },
+    {
+      "frame_sha256": "8708f06f66a5ef14a967aa1acbee524ee0e957dec4ae4ecba1d0a9578c625973",
+      "game_ms": 21844.579,
+      "name": "onplat1"
+    },
+    {
+      "frame_sha256": "0969834f508c5d411362a6c35ea29c34bb86a24c7fe7d2e887ab5442e8b924fe",
+      "game_ms": 23421.004,
+      "name": "jump1"
+    },
+    {
+      "frame_sha256": "b0a07d604e3f6936db1ab162e0098d5e94fc704b835b416b5178fad68ff244d8",
+      "game_ms": 23844.903,
+      "name": "jump1b"
+    },
+    {
+      "frame_sha256": "c0e148bbe7ac627eb2400c8af6a9907984824f77bdb5f963b98cede3e792ae57",
+      "game_ms": 24580.134,
+      "name": "down1"
+    },
+    {
+      "frame_sha256": "788c231bc6a3e075696d0c52108ddbba5feeaba0fe465b596eefbb16065a76af",
+      "game_ms": 25313.7,
+      "name": "down1b"
+    },
+    {
+      "frame_sha256": "5c10e5b3bf4998d0f8d7bc9bd96ab1185388fcc8b7c4b86bc99c4fedb1f9c2e0",
+      "game_ms": 25888.07,
+      "name": "up1"
+    },
+    {
+      "frame_sha256": "24783b6e50e84e8a235c4b83d8bf760f4c959c3878d8b4b3ca278c33eb40f724",
+      "game_ms": 26422.169,
+      "name": "up1b"
+    },
+    {
+      "frame_sha256": "8ef11a2db8ca9d20839c53b5b04cc8c5c3e945c821568bb7c9546c9e2d9d6cba",
+      "game_ms": 27148.346,
+      "name": "down2"
+    },
+    {
+      "frame_sha256": "468984066b58b4c6b7cccf517c2cdbd62225c33e723aaba40a2034f3210b1067",
+      "game_ms": 27982.962,
+      "name": "down2b"
+    },
+    {
+      "frame_sha256": "20d58fd2c4f0488ed0243fcb3ddd0228c475b87136e2e73d0154d44a2b6da202",
+      "game_ms": 29008.18,
+      "name": "up2"
+    },
+    {
+      "frame_sha256": "27fc925be77d8db83d8fb90375946e2a28004e6c706ce535ef7fbfae1c09afea",
+      "game_ms": 29642.811,
+      "name": "up2b"
+    },
+    {
+      "frame_sha256": "ccc8ec2debb8f811618afc552d3c6ba46ab88066d93b03c81fe4ff2c637b6995",
+      "game_ms": 30266.177,
+      "name": "up2c"
+    },
+    {
+      "frame_sha256": "91637be2099fa9245e1c174ae531b2a659957668c264e800f568ba5e37f26fee",
+      "game_ms": 32109.362,
+      "name": "pos1"
+    },
+    {
+      "frame_sha256": "a15c3398a012e6992429e2ab18b212d033c8e22e50d62d93a93ba7e3db9f688d",
+      "game_ms": 33634.445,
+      "name": "pos2"
+    },
+    {
+      "frame_sha256": "c1cf1c438a983fd03b4a13b780ebf00f44c996a7fce63d2e0555cf1e7449420c",
+      "game_ms": 34470.341,
+      "name": "bomb1a"
+    },
+    {
+      "frame_sha256": "88dee2f94189231e17c0f55d68e4640f9afa4ab446eb7eaa4cccb04db22684bd",
+      "game_ms": 35104.094,
+      "name": "bomb1b"
+    },
+    {
+      "frame_sha256": "317d469095762d107deebe24035f7fd847b80f2e04acf382cbdc482daa09deae",
+      "game_ms": 35638.053,
+      "name": "bomb1c"
+    },
+    {
+      "frame_sha256": "27d927e95fec359f5792e6d4634d64d2bc19469d37cb2afac80c46c5dd62b8bc",
+      "game_ms": 36361.838,
+      "name": "bomb1d"
+    },
+    {
+      "frame_sha256": "0fda20302144346c9160c5c8cd2d3f30f1f41b931c9a254f1867857787a9de33",
+      "game_ms": 38486.809,
+      "name": "pos3"
+    },
+    {
+      "frame_sha256": "9164cad001ea10951f45bdf6c4376e34a53b8b804cc91f353cf9e2bb4947c4a1",
+      "game_ms": 39523.085,
+      "name": "bomb2a"
+    },
+    {
+      "frame_sha256": "6bfcff7103c2c8b14390a7981b1ed35bc5b12b9f047349b7abd1a542d5b2cd62",
+      "game_ms": 40057.048,
+      "name": "bomb2b"
+    },
+    {
+      "frame_sha256": "ec3a671b0264e3e804e592f665bf0b126a15b4ef07e60a9e6ea4109bf5b224b5",
+      "game_ms": 40680.115,
+      "name": "bomb2c"
+    },
+    {
+      "frame_sha256": "4cf80c6ade0171edc68c9ee541006dae2c4b355ce7cbc84143f878c7996411d1",
+      "game_ms": 41613.748,
+      "name": "bomb2d"
+    },
+    {
+      "frame_sha256": "e84091cd371435eb5bd73c4dab5ec887e3bfa1a558cd79732974fe951655d83c",
+      "game_ms": 41938.91,
+      "name": "bomb3a"
+    },
+    {
+      "frame_sha256": "f608bbdc9c9a0940e99763e4cc5f19bf773abded82af847ba11bc4208230cd99",
+      "game_ms": 42362.095,
+      "name": "bomb3b"
+    },
+    {
+      "frame_sha256": "7baa86d4c572a8d02e850dd7a792c4e0b47f460f9d3577acfb5ca940f5294859",
+      "game_ms": 44288.962,
+      "name": "bomb4a"
+    },
+    {
+      "frame_sha256": "915c09ac394d4519f68c5d402cd9fb814719a8049a32427fee5d82a9ff390936",
+      "game_ms": 45922.652,
+      "name": "bomb4b"
+    },
+    {
+      "frame_sha256": "4a13f7e33c9711b2c2bcf20ab905170c8462f30b371081dbb91a90734eb12167",
+      "game_ms": 47847.054,
+      "name": "pos4"
+    },
+    {
+      "frame_sha256": "c39e6e2ec06299713cc093ec235d0ea0649265c1f4e00f34b4d2152f2f991481",
+      "game_ms": 48452.876,
+      "name": "snail1a"
+    },
+    {
+      "frame_sha256": "f3bec66d0ef6d66a0e30911ac889e4817a221b440ed7642ea47b49c4c140c8f3",
+      "game_ms": 49186.509,
+      "name": "snail1b"
+    },
+    {
+      "frame_sha256": "6e65207188704c1e7322d8150d8074e5bbc8d24c5bed7d79c466386c3ddcf2f8",
+      "game_ms": 50021.219,
+      "name": "snail1c"
+    },
+    {
+      "frame_sha256": "b6d1a8615666cc49579167b4cd81118eddb7dd456afa7b5b33b122af42d9335a",
+      "game_ms": 51138.267,
+      "name": "pil1a"
+    },
+    {
+      "frame_sha256": "ed7b03ae3fb23c81ca6aad669684045c4133ebca029f6174ec98ba43ec5d51d4",
+      "game_ms": 51771.983,
+      "name": "pil1b"
+    },
+    {
+      "frame_sha256": "7515c2ebbdf9995210c1b26160d3615bc63a0182b53a3f69a60308fee029f186",
+      "game_ms": 52395.451,
+      "name": "pil1c"
+    },
+    {
+      "frame_sha256": "43a03269327d63a19968731eedc36c3d36d0a939f9fe0d5e3a7181cfefd15e51",
+      "game_ms": 53330.101,
+      "name": "pil1d"
+    },
+    {
+      "frame_sha256": "7a62302a903a1dbf4270f5755cdf89c0a69ee4364d62f616cbbc5e49d9451792",
+      "game_ms": 53905.784,
+      "name": "switch1"
+    },
+    {
+      "frame_sha256": "f0d7036ebeb291ce60859081a419d7b26bcd525c1ebff1027cb4292bab840ba7",
+      "game_ms": 54831.3,
+      "name": "switch2"
+    },
+    {
+      "frame_sha256": "e1dca68db91e5cd29635495c6c44c5a91c0d8f5d2e4d8de533dea9bf982f8755",
+      "game_ms": 55866.23,
+      "name": "esc1"
+    },
+    {
+      "frame_sha256": "4cbe2d239f34df7e13cbca2be2e3b637eeb13f147081ce4b82ccc34fde5430a2",
+      "game_ms": 57104.58,
+      "name": "g1a"
+    },
+    {
+      "frame_sha256": "97585f78b7de86ce9e6c7e00b08a2f510acdf79552ee4313331ce43ccb1a3848",
+      "game_ms": 57628.001,
+      "name": "g1b"
+    },
+    {
+      "frame_sha256": "b6288b715e9a5a286f256783c8bbd7a842b39c79ae9f20e90d1fee25d2ce6945",
+      "game_ms": 58151.337,
+      "name": "g1c"
+    },
+    {
+      "frame_sha256": "e49b438e741f782ddafde531904dc68b3386d25a1fa739548131cd7a4f771dc5",
+      "game_ms": 58885.554,
+      "name": "g1d"
+    },
+    {
+      "frame_sha256": "8dea317a10bb2890bca97791015c59e90a103394b8b3faf2d991cc99673c6c0b",
+      "game_ms": 59609.574,
+      "name": "pos5"
+    },
+    {
+      "frame_sha256": "33dffca04478c58947d239854bb32ecdb32058c6f51b41bdaabb78c8456e5c16",
+      "game_ms": 61395.641,
+      "name": "pos6"
+    },
+    {
+      "frame_sha256": "2890186cca89e6dbfb964c06ae6b69016ce85d529926910d58b8e8ec3a58c27a",
+      "game_ms": 61920.076,
+      "name": "pos7"
+    },
+    {
+      "frame_sha256": "92ce1ee0a0bbb05ff5cdc70424edbc1928787f7fbf5f8df24af042f9aaebf392",
+      "game_ms": 63186.699,
+      "name": "g2a"
+    },
+    {
+      "frame_sha256": "efda76022dc641fa6fe713799965e7c0f85fc68de5c49e9de05f683606f9d0f2",
+      "game_ms": 63809.858,
+      "name": "g2b"
+    },
+    {
+      "frame_sha256": "2d4e762d924e8eff9e9f7a1a2596945d667cb5621f2f3e98abf625746e0b09b6",
+      "game_ms": 64443.651,
+      "name": "g2c"
+    },
+    {
+      "frame_sha256": "70d70abd18cb7f16dd7e686789f008e7c3d26502f14bc721f3c9b8bc2e87fc75",
+      "game_ms": 65266.98,
+      "name": "g2d"
+    },
+    {
+      "frame_sha256": "a61a61d6722330b8129142012c4fbb56bb3c73aced6cd07a514eeab78477612b",
+      "game_ms": 66090.919,
+      "name": "after1"
+    },
+    {
+      "frame_sha256": "07ef63c5ef9b674e2f83afca1b547d1642984702dba3e0784035f961b357f7aa",
+      "game_ms": 67214.939,
+      "name": "after2"
+    },
+    {
+      "frame_sha256": "56806af29f72275de9d0bc42a5699a315e1db092043a8ead072639ff38c65e99",
+      "game_ms": 68141.188,
+      "name": "after3"
+    },
+    {
+      "frame_sha256": "1c32b495bd876e199b5d219add022de81a6e2a6c84e2209730eaa1a352656d35",
+      "game_ms": 69765.174,
+      "name": "after4"
+    },
+    {
+      "frame_sha256": "eac4905a2d608ddfc53b123e75601fd162727cab2af1f51519cf0cdcfbb595c5",
+      "game_ms": 70801.13,
+      "name": "pile1"
+    },
+    {
+      "frame_sha256": "06fe59cda77f98fdc42ed25d2f9c25f2a3dc82a4db564065c62f4fc8e8b7c2ca",
+      "game_ms": 72529.725,
+      "name": "switch3"
+    },
+    {
+      "frame_sha256": "c5f154dde466581085f166cdd09e7ea81f89d9406d2f3b45b7f3c14408c179d3",
+      "game_ms": 73495.911,
+      "name": "b1a"
+    },
+    {
+      "frame_sha256": "28dc06279d8c8f37787f34b4c87bee17b81527a63a91174579a431280b2583ae",
+      "game_ms": 74119.042,
+      "name": "b1b"
+    },
+    {
+      "frame_sha256": "e8eb68797a6d9f06911ce0e78f688f719808a334f850970a5d218c8a9b1a647b",
+      "game_ms": 74852.687,
+      "name": "b1c"
+    },
+    {
+      "frame_sha256": "b814e1833016a6ba3a5797214e2e63e92e207ad68e29658815056b7b80c466d5",
+      "game_ms": 75876.013,
+      "name": "b1d"
+    },
+    {
+      "frame_sha256": "e334f56b3dcb3034f0b3869abd70ea6384eb2aaf43b6d82b711d64cf485e07c8",
+      "game_ms": 77211.118,
+      "name": "walk2"
+    },
+    {
+      "frame_sha256": "0f08e4bec8de3b446b5ea52cd1274ddde19b9e2bc1b00ff9a870b6052c342216",
+      "game_ms": 78648.022,
+      "name": "pile2"
+    },
+    {
+      "frame_sha256": "55d967c4119a37559c886336fc92369bfee3fe5f6743ee1e97cc7d8c6b36b153",
+      "game_ms": 79923.436,
+      "name": "pile3"
+    },
+    {
+      "frame_sha256": "9ca223dbb96b5d354c44d7e136790257f9c09049d90fb33e0cbc2a54489826c3",
+      "game_ms": 81259.804,
+      "name": "pile4"
+    },
+    {
+      "frame_sha256": "31388970446761dd6fdf4b9e65a5c560a9a40ce7c687d2499d92b67f684d3cca",
+      "game_ms": 82347.052,
+      "name": "pile5"
+    },
+    {
+      "frame_sha256": "f91f614be71f939b553261a21571d7139192ff1efc8527cce3564def7ae59f2b",
+      "game_ms": 83494.71,
+      "name": "dig1a"
+    },
+    {
+      "frame_sha256": "de1ce3efc1d5a938ca34efe23d76c7a2a7366ff6a4ee6725afccaaf9b7503b5d",
+      "game_ms": 84128.036,
+      "name": "dig1b"
+    },
+    {
+      "frame_sha256": "715baecddfcd1ffdcec2f750d100c6b79e01413daf653d31af307d924be2fe0a",
+      "game_ms": 84751.391,
+      "name": "dig1c"
+    },
+    {
+      "frame_sha256": "a917250e33feed1f3df49e86c00712dd4fd2478dc93ddf70c59c2c2ac20c0e46",
+      "game_ms": 85885.216,
+      "name": "dig1d"
+    },
+    {
+      "frame_sha256": "69390ddf42ac427b729bf947f0edf1135b0340776c6a6e874b75f7c13e1350d1",
+      "game_ms": 87621.539,
+      "name": "climb1"
+    },
+    {
+      "frame_sha256": "926bdc91713cdaf0a4d604331ba382fa2911934d6f2b0026887755ca61393452",
+      "game_ms": 88256.569,
+      "name": "dig2a"
+    },
+    {
+      "frame_sha256": "6bd353621796b4c9d14719cac47426e87847524375a852e801d8f1f8a1930574",
+      "game_ms": 89290.681,
+      "name": "dig2b"
+    },
+    {
+      "frame_sha256": "b08c9e74f51972309f1efe1654ed88371ae9c919bb7241f63b73608a773a14bc",
+      "game_ms": 89913.978,
+      "name": "dig2c"
+    },
+    {
+      "frame_sha256": "a31a358d06e495857fe56ff3ac676ef9406a8e0efee6be2fca96d7e80e243d14",
+      "game_ms": 91047.594,
+      "name": "dig2d"
+    },
+    {
+      "frame_sha256": "9ec16b10ade6a0c098dd74248c7e3b979c99e0df810470a5b2d9ada622bd9f2d",
+      "game_ms": 92773.635,
+      "name": "climb2"
+    },
+    {
+      "frame_sha256": "c46881f34914e82b3d59e857b753e9779f3db1f91433ac085c335cf0f6e53115",
+      "game_ms": 94610.969,
+      "name": "dig3a"
+    },
+    {
+      "frame_sha256": "5a8514bfc094b2b656be3fec56eb34d1c69759deaf652d85f7eb939fb1376681",
+      "game_ms": 95344.359,
+      "name": "dig3b"
+    },
+    {
+      "frame_sha256": "3093d1a2ea8cf513d9e66e3bbab20aa1298f073d8f8dd85c941ceeff612d2514",
+      "game_ms": 96367.691,
+      "name": "dig3c"
+    },
+    {
+      "frame_sha256": "6e8f0cb0420989dca36e5dcb7f5f181c559e3827018521efa74cb6502c9a8894",
+      "game_ms": 99306.835,
+      "name": "cross1"
+    },
+    {
+      "frame_sha256": "019816b5cc087fa24f3b3e2513b15bf9153fb70c690601b3f9bc4f6f1e74f61c",
+      "game_ms": 102043.74,
+      "name": "cross2"
+    },
+    {
+      "frame_sha256": "f164717730db0f8133ee267101644f6662288f0e38e7f34e62ac0a56d8438c07",
+      "game_ms": 103069.789,
+      "name": "sn2a"
+    },
+    {
+      "frame_sha256": "f620c1ae38049131d38124813de0534a589066fa5de20587617611704c48da98",
+      "game_ms": 103902.82,
+      "name": "sn2b"
+    },
+    {
+      "frame_sha256": "50da596fe3329bbd58ae2218a1e530463930dd1b2e1b8c2027bf37fc46fa20cb",
+      "game_ms": 104735.98,
+      "name": "sn2c"
+    },
+    {
+      "frame_sha256": "00350a8f68fb592a3c92dddd6022c4a2b0dda6a130fa6fe64b4704e6c66e749e",
+      "game_ms": 105059.866,
+      "name": "now1"
+    },
+    {
+      "frame_sha256": "dd74fa17eb15206ab78a1eacdd0a8c9775312aca4456fb14a5532427feea0e95",
+      "game_ms": 107896.086,
+      "name": "death0"
+    },
+    {
+      "frame_sha256": "422b063a66a77cd81a9deb4cbd882284bb4b553017433b1d0ca54240e3ae5a38",
+      "game_ms": 111019.497,
+      "name": "death1"
+    },
+    {
+      "frame_sha256": "34a3a7360fc9f06da448a3c690076c6744e80062e0013a0a8756a1b26ac02c6a",
+      "game_ms": 114153.589,
+      "name": "death2"
+    },
+    {
+      "frame_sha256": "8327488fe7af373aabddceb172aac19e20b0a1822c299a3e1c2f5735183d084d",
+      "game_ms": 115338.617,
+      "name": "reenter1"
+    },
+    {
+      "frame_sha256": "f0987c1ff672836ea67f24b7f5cb40c874fb37c9bcf003240ea3c313b6bb30db",
+      "game_ms": 119978.138,
+      "name": "cross3"
+    },
+    {
+      "frame_sha256": "48501aa69c6f88b5168120d31da5330208f30dac9934db7d9840f6d41e8e2e42",
+      "game_ms": 120864.609,
+      "name": "k1a"
+    },
+    {
+      "frame_sha256": "c3c91be37ccf451ec017d77cdc2a1bbd2060da3fc24657c42e9e7fd587dcd171",
+      "game_ms": 121697.893,
+      "name": "k1b"
+    },
+    {
+      "frame_sha256": "bbdaeb8515177cb3c01503f4991b4bed108e599e4cd5b2678a057606ebe35883",
+      "game_ms": 122621.176,
+      "name": "k1c"
+    },
+    {
+      "frame_sha256": "aea2a9a6eb8c42a6a15a609a88ba9cc4865739acb47134ce99dd8d4e0095f8fc",
+      "game_ms": 123655.505,
+      "name": "run1"
+    },
+    {
+      "frame_sha256": "088d500732c51088dbb08e9a508dca832a4dd4b4963349c7117c7b9d9a93ca00",
+      "game_ms": 132655.083,
+      "name": "ball2a"
+    },
+    {
+      "frame_sha256": "c047e891c785f55d974b57f1af2ac0749bcf474277a83073507f76f9b5422eb8",
+      "game_ms": 133578.663,
+      "name": "ball2b"
+    },
+    {
+      "frame_sha256": "5daa890ad5e029ba51d5eeed22098eb1d0e0842148cc288df9a368e3c7c1dfe0",
+      "game_ms": 135203.316,
+      "name": "done1"
+    },
+    {
+      "frame_sha256": "ce9d85b8287c1a60cbfdad2dec14768f426e3d18b40c50988c8e1235956d2cc3",
+      "game_ms": 137827.037,
+      "name": "done2"
+    },
+    {
+      "frame_sha256": "1490c8d249a110f01adfe885705e6044449d786899fa295ca65fc015bfbcf481",
+      "game_ms": 140950.635,
+      "name": "done3"
+    },
+    {
+      "frame_sha256": "11823c05ff0b88f067c30e421f9fcc6188e9407921f29198ba9dd009e896af00",
+      "game_ms": 145074.727,
+      "name": "trans1"
+    },
+    {
+      "frame_sha256": "11823c05ff0b88f067c30e421f9fcc6188e9407921f29198ba9dd009e896af00",
+      "game_ms": 149209.86,
+      "name": "trans2"
+    },
+    {
+      "frame_sha256": "1400efa18e8587949d7b04589cc147fa2792029d66e408ef7c0dbe351f66ad4f",
+      "game_ms": 152095.055,
+      "name": "lvl2a"
+    },
+    {
+      "frame_sha256": "d2a5ec720d7c9233b3bf2cf6a779ed430895922c627dc65d6a3409c6290cc4f7",
+      "game_ms": 153029.745,
+      "name": "lvl2start"
+    },
+    {
+      "frame_sha256": "3013bb777386f01d86731f9fc8d7663868f6108a63ee4742d28c8ae77cd6a933",
+      "game_ms": 154865.172,
+      "name": "esc1"
+    },
+    {
+      "frame_sha256": "fa2d239715ab201bdb27e7a07d8836c7026486baa1e79f0cd293b044c2eddeb1",
+      "game_ms": 157989.132,
+      "name": "esc2"
+    },
+    {
+      "frame_sha256": "fa2d239715ab201bdb27e7a07d8836c7026486baa1e79f0cd293b044c2eddeb1",
+      "game_ms": 162112.201,
+      "name": "esc3"
+    },
+    {
+      "frame_sha256": "4ed3b7abc5109013d35c299c0701cca40fc492c7e1f5323750289c108784e237",
+      "game_ms": 164937.074,
+      "name": "menu-after"
+    },
+    {
+      "frame_sha256": "52edc5fce54c9eea549464840c364e416be9fbde36eda5249748522e83c743ef",
+      "game_ms": 166761.759,
+      "name": "menu-after2"
+    }
+  ],
+  "config_template": {
+    "path": "emulator/dosbox-x-reference.conf",
+    "sha256": "1c4fb11d92de8a18ce1881f314b007b954aa57dad635e131192d2dc843ead058"
+  },
+  "created_utc": "2026-10-15T22:11:13Z",
+  "emulator": {
+    "binary_sha256": "30a5fdf8fa95abaf7bae1a9e624ccfc9e26e5357a19cc567bf3a2ac659699258",
+    "packages": {
+      "dosbox-x": "2024.03.01+dfsg-1build2",
+      "dosbox-x-data": "2024.03.01+dfsg-1build2",
+      "libsdl2-2.0-0": "2.30.0+dfsg-1ubuntu3.1",
+      "xvfb": "2:21.1.12-1ubuntu1.8"
+    },
+    "version_banner": "DOSBox-X version 2024.03.01 SDL2, copyright 2011-2024 The DOSBox-X Team."
+  },
+  "format": "lezac-original-run-summary/1",
+  "input_trace": {
+    "path": "emulator/traces/exploration-level1.json",
+    "sha256": "a3bdbce176e4356afc5c8ada9d2401522338d4f20791c1aa454fd319a4b3af92"
+  },
+  "label": "smoke",
+  "originals": [
+    {
+      "name": "BOMOMIMK.SPR",
+      "sha256": "08dfd0e59ba191c52af2529bdfa140fd15a57829f0c6c13bbb78e156769ac0d1",
+      "size": 20168
+    },
+    {
+      "name": "BOMPAL.PAL",
+      "sha256": "f2559164074ca529ba6c275a9831b11c6da9e6317f09b3d9228c299d6f8f8319",
+      "size": 768
+    },
+    {
+      "name": "CARO.CAR",
+      "sha256": "949cce4db6071d6675a291c978d725c6e4ee1730b2c7a428bc1c8a8185cbd8d8",
+      "size": 8450
+    },
+    {
+      "name": "ENGLISH.DOC",
+      "sha256": "e2fd2f2521b0277f2fca0c8f2a265408412542932bb6e977bf1ab3d0aabdfed9",
+      "size": 3522
+    },
+    {
+      "name": "FILE_ID.DIZ",
+      "sha256": "3edad84fcd1777ea883763b005c6c8bcaf55b8204edc10a4d01335b979ed0f7c",
+      "size": 483
+    },
+    {
+      "name": "FONTS.SPR",
+      "sha256": "f65aa9bbba2a66ee69f1b279a32c448e36012feb53441fbbb8e64e31bee87a0e",
+      "size": 5425
+    },
+    {
+      "name": "GRAN.MST",
+      "sha256": "3f0cf17706d557ca863d6e39bfa6641fba777a88815ba3f0a22e5ac89e0e39e2",
+      "size": 399
+    },
+    {
+      "name": "ITALIANO.DOC",
+      "sha256": "5ea7481d3179e60b6f1229aa114dc4b47c95f7c1200c7888ad5c259f161317c1",
+      "size": 4392
+    },
+    {
+      "name": "LEZAC.EXE",
+      "sha256": "7579255148c2cb540b26f70dc8181c50b218b6808d8fa5208c832391bafa53ec",
+      "size": 52384
+    },
+    {
+      "name": "LIVELS.SCH",
+      "sha256": "d8b553871014108515d6af05b0853de8ccc22e4d3e44d63533ba1167fdc8c7b2",
+      "size": 41047
+    },
+    {
+      "name": "PROEFS.SON",
+      "sha256": "b5bc702a27ac85554cc76a62fced07567921b07d5c16f2027a62fbc956df701d",
+      "size": 782
+    },
+    {
+      "name": "PROVA.SPR",
+      "sha256": "d6d6b634f8613251f6e82e9a15c5c68e2be437892bfa25c53eb4bcd9094188b7",
+      "size": 21250
+    },
+    {
+      "name": "RECS.DAT",
+      "sha256": "fbc54d16834666dfd45915ffc0181ad54c635e0b19f59ca2c1aa77984a011a95",
+      "size": 92
+    },
+    {
+      "name": "SFONLEF.ZBG",
+      "sha256": "b1b7cc03122510318c1a3670f151712406e9e3fa60aabd8fb558320766c3835c",
+      "size": 34292
+    }
+  ],
+  "pinned_emulator": true,
+  "session": {
+    "duration_game_ms": 184305.941,
+    "duration_wall_ms": 1327469.469,
+    "emulator_returncode": 0,
+    "end_reason": "emulator exited",
+    "ended_utc": "2026-10-15T22:33:25Z",
+    "event_count": 429,
+    "headless": true,
+    "mode": "session",
+    "originals_verified_after_exit": true,
+    "originals_verified_before_launch": true,
+    "run_copy_changes": {
+      "changed": [],
+      "created": [],
+      "removed": []
+    },
+    "started_utc": "2026-10-15T22:11:18Z"
+  },
+  "source_revision": {
+    "commit": "6f67bfe6f1445b0ed51409274100a4b6dde30d1d",
+    "tracked_changes": false
+  },
+  "tool_sha256": null
+}

@@ -1,0 +1,834 @@
+{
+  "description": "Recorded closed-loop reference session (2026-10-15): one-player level 1 completed after a level restart, transition to level 2, background/width keys, abandon, info and records screens, exit. Host-timed: replaying it is not expected to reproduce gameplay frames (see docs/emulator-baseline.md).",
+  "events": [
+    {
+      "checkpoint": "title",
+      "t_ms": 7117.6
+    },
+    {
+      "down": "l",
+      "t_ms": 7271.1
+    },
+    {
+      "t_ms": 7421.5,
+      "up": "l"
+    },
+    {
+      "down": "1",
+      "t_ms": 8922.3
+    },
+    {
+      "t_ms": 9072.8,
+      "up": "1"
+    },
+    {
+      "checkpoint": "menu-english",
+      "t_ms": 9873.6
+    },
+    {
+      "down": "1",
+      "t_ms": 9997.0
+    },
+    {
+      "t_ms": 10147.5,
+      "up": "1"
+    },
+    {
+      "checkpoint": "prepare-level1",
+      "t_ms": 12648.4
+    },
+    {
+      "down": "space",
+      "t_ms": 12782.4
+    },
+    {
+      "t_ms": 12983.0,
+      "up": "space"
+    },
+    {
+      "checkpoint": "level1-start",
+      "t_ms": 13483.7
+    },
+    {
+      "down": "x",
+      "t_ms": 13608.2
+    },
+    {
+      "t_ms": 14508.6,
+      "up": "x"
+    },
+    {
+      "checkpoint": "move-right",
+      "t_ms": 15409.4
+    },
+    {
+      "down": "z",
+      "t_ms": 15543.1
+    },
+    {
+      "t_ms": 16193.5,
+      "up": "z"
+    },
+    {
+      "checkpoint": "move-left",
+      "t_ms": 17094.4
+    },
+    {
+      "down": "z",
+      "t_ms": 17217.8
+    },
+    {
+      "down": "x",
+      "t_ms": 17218.1
+    },
+    {
+      "t_ms": 17718.5,
+      "up": "x"
+    },
+    {
+      "t_ms": 17718.8,
+      "up": "z"
+    },
+    {
+      "checkpoint": "green-selected",
+      "t_ms": 18319.5
+    },
+    {
+      "down": "n",
+      "t_ms": 18442.7
+    },
+    {
+      "t_ms": 18643.1,
+      "up": "n"
+    },
+    {
+      "checkpoint": "green-thrown",
+      "t_ms": 18693.8
+    },
+    {
+      "down": "x",
+      "t_ms": 18829.8
+    },
+    {
+      "t_ms": 20330.4,
+      "up": "x"
+    },
+    {
+      "checkpoint": "fled-right",
+      "t_ms": 20631.0
+    },
+    {
+      "checkpoint": "collapse-1",
+      "t_ms": 22254.0
+    },
+    {
+      "checkpoint": "collapse-2",
+      "t_ms": 24377.0
+    },
+    {
+      "checkpoint": "collapse-3",
+      "t_ms": 27011.0
+    },
+    {
+      "down": "z",
+      "t_ms": 27144.8
+    },
+    {
+      "down": "n",
+      "t_ms": 27395.3
+    },
+    {
+      "t_ms": 27595.6,
+      "up": "n"
+    },
+    {
+      "t_ms": 27595.9,
+      "up": "z"
+    },
+    {
+      "down": "x",
+      "t_ms": 27596.2
+    },
+    {
+      "t_ms": 27896.5,
+      "up": "x"
+    },
+    {
+      "checkpoint": "snail-a",
+      "t_ms": 27897.2
+    },
+    {
+      "checkpoint": "snail-b",
+      "t_ms": 28730.9
+    },
+    {
+      "checkpoint": "snail-c",
+      "t_ms": 29754.4
+    },
+    {
+      "down": "x",
+      "t_ms": 29878.2
+    },
+    {
+      "t_ms": 30578.6,
+      "up": "x"
+    },
+    {
+      "checkpoint": "flee2a",
+      "t_ms": 30879.3
+    },
+    {
+      "checkpoint": "flee2b",
+      "t_ms": 31913.2
+    },
+    {
+      "down": "z",
+      "t_ms": 32037.0
+    },
+    {
+      "t_ms": 32837.6,
+      "up": "z"
+    },
+    {
+      "checkpoint": "at-pile",
+      "t_ms": 33538.4
+    },
+    {
+      "down": "z",
+      "t_ms": 33671.9
+    },
+    {
+      "down": "m",
+      "t_ms": 33972.7
+    },
+    {
+      "t_ms": 34223.1,
+      "up": "m"
+    },
+    {
+      "down": "m",
+      "t_ms": 34823.7
+    },
+    {
+      "t_ms": 35074.1,
+      "up": "m"
+    },
+    {
+      "t_ms": 35574.6,
+      "up": "z"
+    },
+    {
+      "checkpoint": "on-pile",
+      "t_ms": 36075.4
+    },
+    {
+      "down": "n",
+      "t_ms": 36599.3
+    },
+    {
+      "t_ms": 36799.7,
+      "up": "n"
+    },
+    {
+      "checkpoint": "self-blast-1",
+      "t_ms": 39300.7
+    },
+    {
+      "checkpoint": "dying-1",
+      "t_ms": 42435.0
+    },
+    {
+      "checkpoint": "dying-2",
+      "t_ms": 45560.2
+    },
+    {
+      "checkpoint": "dying-3",
+      "t_ms": 49694.6
+    },
+    {
+      "checkpoint": "dying-4",
+      "t_ms": 54818.1
+    },
+    {
+      "down": "space",
+      "t_ms": 55038.7
+    },
+    {
+      "t_ms": 55239.0,
+      "up": "space"
+    },
+    {
+      "checkpoint": "level1-restart",
+      "t_ms": 55739.8
+    },
+    {
+      "down": "x",
+      "t_ms": 55863.3
+    },
+    {
+      "t_ms": 56513.8,
+      "up": "x"
+    },
+    {
+      "checkpoint": "r2-pos1",
+      "t_ms": 57414.7
+    },
+    {
+      "down": "z",
+      "t_ms": 57549.7
+    },
+    {
+      "t_ms": 58000.0,
+      "up": "z"
+    },
+    {
+      "checkpoint": "r2-pos2",
+      "t_ms": 58900.9
+    },
+    {
+      "down": "z",
+      "t_ms": 59035.0
+    },
+    {
+      "t_ms": 59285.3,
+      "up": "z"
+    },
+    {
+      "down": "z",
+      "t_ms": 59786.0
+    },
+    {
+      "down": "x",
+      "t_ms": 59786.5
+    },
+    {
+      "t_ms": 60286.9,
+      "up": "x"
+    },
+    {
+      "t_ms": 60287.2,
+      "up": "z"
+    },
+    {
+      "checkpoint": "r2-green",
+      "t_ms": 60988.0
+    },
+    {
+      "down": "n",
+      "t_ms": 61111.7
+    },
+    {
+      "t_ms": 61312.2,
+      "up": "n"
+    },
+    {
+      "down": "x",
+      "t_ms": 61362.9
+    },
+    {
+      "t_ms": 62863.3,
+      "up": "x"
+    },
+    {
+      "checkpoint": "r2-fled",
+      "t_ms": 63164.2
+    },
+    {
+      "checkpoint": "r2-collapse-1",
+      "t_ms": 64797.7
+    },
+    {
+      "checkpoint": "r2-collapse-2",
+      "t_ms": 66921.1
+    },
+    {
+      "checkpoint": "r2-collapse-3",
+      "t_ms": 69544.3
+    },
+    {
+      "down": "z",
+      "t_ms": 69678.0
+    },
+    {
+      "t_ms": 70378.4,
+      "up": "z"
+    },
+    {
+      "checkpoint": "r2-approach1",
+      "t_ms": 70979.3
+    },
+    {
+      "down": "z",
+      "t_ms": 71112.9
+    },
+    {
+      "down": "m",
+      "t_ms": 71263.6
+    },
+    {
+      "t_ms": 71514.1,
+      "up": "m"
+    },
+    {
+      "down": "m",
+      "t_ms": 72014.9
+    },
+    {
+      "t_ms": 72265.4,
+      "up": "m"
+    },
+    {
+      "t_ms": 72665.9,
+      "up": "z"
+    },
+    {
+      "checkpoint": "r2-climb1",
+      "t_ms": 73166.8
+    },
+    {
+      "down": "z",
+      "t_ms": 73302.0
+    },
+    {
+      "down": "n",
+      "t_ms": 73502.8
+    },
+    {
+      "t_ms": 73703.3,
+      "up": "n"
+    },
+    {
+      "t_ms": 73703.5,
+      "up": "z"
+    },
+    {
+      "down": "x",
+      "t_ms": 73703.7
+    },
+    {
+      "t_ms": 74404.2,
+      "up": "x"
+    },
+    {
+      "checkpoint": "r2-blast-a",
+      "t_ms": 74404.7
+    },
+    {
+      "checkpoint": "r2-blast-b",
+      "t_ms": 75428.0
+    },
+    {
+      "checkpoint": "r2-blast-c",
+      "t_ms": 77051.3
+    },
+    {
+      "down": "z",
+      "t_ms": 77184.9
+    },
+    {
+      "down": "m",
+      "t_ms": 77685.4
+    },
+    {
+      "t_ms": 77935.8,
+      "up": "m"
+    },
+    {
+      "down": "m",
+      "t_ms": 78237.2
+    },
+    {
+      "t_ms": 78487.7,
+      "up": "m"
+    },
+    {
+      "down": "m",
+      "t_ms": 78788.7
+    },
+    {
+      "t_ms": 79039.3,
+      "up": "m"
+    },
+    {
+      "t_ms": 79339.8,
+      "up": "z"
+    },
+    {
+      "checkpoint": "r2-climb2",
+      "t_ms": 79740.5
+    },
+    {
+      "down": "z",
+      "t_ms": 80174.5
+    },
+    {
+      "down": "x",
+      "t_ms": 80174.8
+    },
+    {
+      "t_ms": 80675.2,
+      "up": "x"
+    },
+    {
+      "t_ms": 80675.5,
+      "up": "z"
+    },
+    {
+      "down": "z",
+      "t_ms": 81076.0
+    },
+    {
+      "down": "x",
+      "t_ms": 81076.3
+    },
+    {
+      "t_ms": 81576.7,
+      "up": "x"
+    },
+    {
+      "t_ms": 81576.9,
+      "up": "z"
+    },
+    {
+      "checkpoint": "r2-blue",
+      "t_ms": 82077.4
+    },
+    {
+      "down": "x",
+      "t_ms": 82211.0
+    },
+    {
+      "down": "m",
+      "t_ms": 82312.0
+    },
+    {
+      "t_ms": 82562.4,
+      "up": "m"
+    },
+    {
+      "t_ms": 83262.9,
+      "up": "x"
+    },
+    {
+      "checkpoint": "r2-escape",
+      "t_ms": 83563.7
+    },
+    {
+      "down": "z",
+      "t_ms": 83697.4
+    },
+    {
+      "down": "n",
+      "t_ms": 83977.9
+    },
+    {
+      "t_ms": 84178.3,
+      "up": "n"
+    },
+    {
+      "t_ms": 84178.6,
+      "up": "z"
+    },
+    {
+      "down": "x",
+      "t_ms": 84179.1
+    },
+    {
+      "t_ms": 84629.5,
+      "up": "x"
+    },
+    {
+      "checkpoint": "r2-k-a",
+      "t_ms": 84630.0
+    },
+    {
+      "checkpoint": "r2-k-b",
+      "t_ms": 85563.7
+    },
+    {
+      "checkpoint": "r2-k-c",
+      "t_ms": 86587.2
+    },
+    {
+      "down": "z",
+      "t_ms": 86721.0
+    },
+    {
+      "t_ms": 87221.3,
+      "up": "z"
+    },
+    {
+      "checkpoint": "r2-drain-1",
+      "t_ms": 91222.1
+    },
+    {
+      "checkpoint": "r2-drain-2",
+      "t_ms": 95346.0
+    },
+    {
+      "checkpoint": "tally-final",
+      "t_ms": 99470.6
+    },
+    {
+      "down": "n",
+      "t_ms": 99604.4
+    },
+    {
+      "t_ms": 99854.9,
+      "up": "n"
+    },
+    {
+      "checkpoint": "prepare-level2",
+      "t_ms": 102355.8
+    },
+    {
+      "down": "space",
+      "t_ms": 102488.9
+    },
+    {
+      "t_ms": 102689.4,
+      "up": "space"
+    },
+    {
+      "checkpoint": "level2-start",
+      "t_ms": 103290.1
+    },
+    {
+      "down": "s",
+      "t_ms": 103413.5
+    },
+    {
+      "t_ms": 103613.9,
+      "up": "s"
+    },
+    {
+      "checkpoint": "level2-background-off",
+      "t_ms": 104414.7
+    },
+    {
+      "down": "e",
+      "t_ms": 104537.6
+    },
+    {
+      "t_ms": 104738.1,
+      "up": "e"
+    },
+    {
+      "down": "e",
+      "t_ms": 105138.8
+    },
+    {
+      "t_ms": 105339.5,
+      "up": "e"
+    },
+    {
+      "checkpoint": "level2-width-e",
+      "t_ms": 106140.4
+    },
+    {
+      "down": "r",
+      "t_ms": 106264.0
+    },
+    {
+      "t_ms": 106464.4,
+      "up": "r"
+    },
+    {
+      "down": "r",
+      "t_ms": 106865.0
+    },
+    {
+      "t_ms": 107065.5,
+      "up": "r"
+    },
+    {
+      "checkpoint": "level2-width-r",
+      "t_ms": 107866.3
+    },
+    {
+      "down": "s",
+      "t_ms": 108000.3
+    },
+    {
+      "t_ms": 108200.6,
+      "up": "s"
+    },
+    {
+      "down": "Escape",
+      "t_ms": 108501.3
+    },
+    {
+      "t_ms": 108701.7,
+      "up": "Escape"
+    },
+    {
+      "checkpoint": "gameover-final",
+      "t_ms": 112202.5
+    },
+    {
+      "down": "space",
+      "t_ms": 112325.6
+    },
+    {
+      "t_ms": 112526.0,
+      "up": "space"
+    },
+    {
+      "down": "i",
+      "t_ms": 115526.8
+    },
+    {
+      "t_ms": 115677.2,
+      "up": "i"
+    },
+    {
+      "down": "i",
+      "t_ms": 117178.0
+    },
+    {
+      "t_ms": 117329.8,
+      "up": "i"
+    },
+    {
+      "checkpoint": "info-screen",
+      "t_ms": 123330.6
+    },
+    {
+      "down": "i",
+      "t_ms": 123455.6
+    },
+    {
+      "t_ms": 123605.9,
+      "up": "i"
+    },
+    {
+      "checkpoint": "info-1",
+      "t_ms": 131606.9
+    },
+    {
+      "down": "space",
+      "t_ms": 131730.4
+    },
+    {
+      "t_ms": 131880.9,
+      "up": "space"
+    },
+    {
+      "checkpoint": "info-2",
+      "t_ms": 139881.8
+    },
+    {
+      "down": "space",
+      "t_ms": 140006.6
+    },
+    {
+      "t_ms": 140157.0,
+      "up": "space"
+    },
+    {
+      "down": "space",
+      "t_ms": 141657.9
+    },
+    {
+      "t_ms": 141808.5,
+      "up": "space"
+    },
+    {
+      "down": "space",
+      "t_ms": 143309.2
+    },
+    {
+      "t_ms": 143459.8,
+      "up": "space"
+    },
+    {
+      "checkpoint": "after-info",
+      "t_ms": 144960.5
+    },
+    {
+      "checkpoint": "info-3",
+      "t_ms": 165095.5
+    },
+    {
+      "down": "space",
+      "t_ms": 165219.1
+    },
+    {
+      "t_ms": 165369.6,
+      "up": "space"
+    },
+    {
+      "checkpoint": "info-4",
+      "t_ms": 185370.4
+    },
+    {
+      "down": "space",
+      "t_ms": 200504.8
+    },
+    {
+      "t_ms": 200655.2,
+      "up": "space"
+    },
+    {
+      "checkpoint": "info-5",
+      "t_ms": 208656.0
+    },
+    {
+      "down": "r",
+      "t_ms": 208780.1
+    },
+    {
+      "t_ms": 208930.5,
+      "up": "r"
+    },
+    {
+      "down": "r",
+      "t_ms": 210431.4
+    },
+    {
+      "t_ms": 210581.9,
+      "up": "r"
+    },
+    {
+      "checkpoint": "records-1",
+      "t_ms": 218582.7
+    },
+    {
+      "down": "space",
+      "t_ms": 226716.3
+    },
+    {
+      "t_ms": 226866.8,
+      "up": "space"
+    },
+    {
+      "checkpoint": "menu-before-exit",
+      "t_ms": 235868.5
+    },
+    {
+      "down": "Escape",
+      "t_ms": 236002.6
+    },
+    {
+      "t_ms": 236203.2,
+      "up": "Escape"
+    },
+    {
+      "checkpoint": "menu-complete-before-exit",
+      "t_ms": 259239.5
+    },
+    {
+      "down": "Escape",
+      "t_ms": 259373.3
+    },
+    {
+      "t_ms": 259573.7,
+      "up": "Escape"
+    },
+    {
+      "end": true,
+      "t_ms": 263575.6
+    }
+  ],
+  "format": "lezac-input-trace/1"
+}

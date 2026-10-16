@@ -1,0 +1,71 @@
+{
+  "purpose": "Pinned full-DOS emulator for ORIGINAL-game reference runs (issue #3). Not used to build or run reconstructed code.",
+  "emulator": {
+    "name": "DOSBox-X",
+    "version": "2024.03.01",
+    "version_banner": "DOSBox-X version 2024.03.01 SDL2, copyright 2011-2024 The DOSBox-X Team.",
+    "binary": "/usr/bin/dosbox-x",
+    "binary_sha256": "30a5fdf8fa95abaf7bae1a9e624ccfc9e26e5357a19cc567bf3a2ac659699258"
+  },
+  "distribution": {
+    "name": "Ubuntu 24.04 LTS (noble), universe",
+    "apt_install": "apt-get install dosbox-x=2024.03.01+dfsg-1build2 dosbox-x-data=2024.03.01+dfsg-1build2 xvfb",
+    "packages": [
+      {
+        "name": "dosbox-x",
+        "version": "2024.03.01+dfsg-1build2",
+        "filename": "pool/universe/d/dosbox-x/dosbox-x_2024.03.01+dfsg-1build2_amd64.deb",
+        "size": 3908694,
+        "sha256": "1a27eb70d26360a0b82145ab4d1035e2e02d8d844211985758d51f6c854f874b"
+      },
+      {
+        "name": "dosbox-x-data",
+        "version": "2024.03.01+dfsg-1build2",
+        "filename": "pool/universe/d/dosbox-x/dosbox-x-data_2024.03.01+dfsg-1build2_all.deb",
+        "size": 1805616,
+        "sha256": "48f393f48415d246236e4fa4288d0ef234e365bcf4656f38692f7a1add76867f"
+      }
+    ],
+    "upstream_source": {
+      "filename": "dosbox-x_2024.03.01+dfsg.orig.tar.xz",
+      "url": "http://archive.ubuntu.com/ubuntu/pool/universe/d/dosbox-x/dosbox-x_2024.03.01+dfsg.orig.tar.xz",
+      "size": 5993472,
+      "sha256": "b03cdf5fc2806245cf4ec62f722b645478da31c99df156ba97f7c6661f9379e4"
+    }
+  },
+  "config": {
+    "path": "emulator/dosbox-x-reference.conf",
+    "sha256": "1c4fb11d92de8a18ce1881f314b007b954aa57dad635e131192d2dc843ead058",
+    "launch_arguments": ["-conf", "<run>/dosbox-x.conf", "-defaultmapper", "-fastlaunch"],
+    "machine": "vgaonly",
+    "cpu": {"core": "normal", "cputype": "486", "cycles": "fixed 26800"},
+    "memory_mb": 4,
+    "sound": {"pc_speaker": true, "sound_blaster": "none", "gus": false, "midi": "none"},
+    "keyboard": {"dos_layout": "us", "mapper": "built-in defaults (-defaultmapper)"},
+    "dos_clock": "date 04-23-1996, time 12:00:00 immediately before LEZAC.EXE",
+    "headless_display": "private Xvfb, screen 1024x768x24, cookie-authenticated, no TCP"
+  },
+  "default_hotkeys_used": {
+    "host_key": "F12",
+    "pause_toggle": "F12+Pause",
+    "raw_screenshot": "F12+Ctrl+P",
+    "video_capture_toggle": "F12+I",
+    "wave_capture_toggle": "F12+W",
+    "quit": "Ctrl+F9",
+    "source": "src/hardware/hardware.cpp, src/gui/sdlmain.cpp, src/misc/savestates.cpp of the pinned upstream source"
+  },
+  "known_limitations": [
+    {
+      "id": "save-state-abort-with-open-file",
+      "summary": "Saving a state while the game holds a DOS file open aborts this build ('*** buffer overflow detected ***').",
+      "cause": "POD_Save_DOS_Files in src/dos/dos_files.cpp allocates alloca(strlen(name)) and then strcpy()s strlen(name)+1 bytes; the Ubuntu _FORTIFY_SOURCE build detects the one-byte overflow.",
+      "consequence": "Reference checkpoints are exact raw VGA framebuffer captures, not machine-state snapshots. The tool never sends the save-state hotkey."
+    },
+    {
+      "id": "host-clock-input",
+      "summary": "Keyboard input reaches the emulator through X11/SDL in host wall-clock time.",
+      "cause": "DOSBox-X has no emulated-time input scheduler; its AUTOTYPE command also sleeps on a host thread (src/gui/sdl_mapper.cpp, class Typer).",
+      "consequence": "Input traces record host timing; open-loop replays are not guaranteed to be emulated-cycle exact. See docs/emulator-baseline.md."
+    }
+  ]
+}
