@@ -1,0 +1,100 @@
+{
+  "format": "lezac-input-trace/1",
+  "description": "Deterministic-machine trace (virtual milliseconds): no RECS.DAT. At start-up the game creates the default table (seven 'nessuno' entries of 10000) and saves it; the file is compared byte for byte. Then menu keys: the records page and the second information pages ('z').",
+  "files": {
+    "RECS.DAT": null
+  },
+  "steps": [
+    {
+      "wait_ms": 7000
+    },
+    {
+      "tap": "r",
+      "hold_ms": 150,
+      "note": "completes the typewriter menu"
+    },
+    {
+      "wait_ms": 1500
+    },
+    {
+      "tap": "r",
+      "hold_ms": 150,
+      "note": "records page"
+    },
+    {
+      "wait_ms": 7000
+    },
+    {
+      "checkpoint": "records"
+    },
+    {
+      "tap": "space",
+      "hold_ms": 150
+    },
+    {
+      "wait_ms": 2500
+    },
+    {
+      "tap": "r",
+      "hold_ms": 150,
+      "note": "completes the menu typing"
+    },
+    {
+      "wait_ms": 1500
+    },
+    {
+      "tap": "z",
+      "hold_ms": 150,
+      "note": "pages 4..7"
+    },
+    {
+      "wait_ms": 12000
+    },
+    {
+      "tap": "space",
+      "hold_ms": 150
+    },
+    {
+      "wait_ms": 12000
+    },
+    {
+      "tap": "space",
+      "hold_ms": 150
+    },
+    {
+      "wait_ms": 12000
+    },
+    {
+      "tap": "space",
+      "hold_ms": 150
+    },
+    {
+      "wait_ms": 12000
+    },
+    {
+      "tap": "space",
+      "hold_ms": 150
+    },
+    {
+      "wait_ms": 2500
+    },
+    {
+      "tap": "r",
+      "hold_ms": 150,
+      "note": "completes the menu typing"
+    },
+    {
+      "wait_ms": 1500
+    },
+    {
+      "tap": "Escape",
+      "hold_ms": 150
+    },
+    {
+      "wait_ms": 3000
+    },
+    {
+      "end": true
+    }
+  ]
+}
