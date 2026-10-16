@@ -184,7 +184,7 @@ var
   Check: Word;
 
   { 1247F }
-  { Measures the hundredths of a second that Delay(1000) takes and
+  { Measures the hundredths of a second that TPDelay(1000) takes and
     derives the delays from it }
   procedure CalibrateDelays;
   const
@@ -195,7 +195,7 @@ var
   var
     Ticks: Integer;
   begin
-    Delay(500);
+    TPDelay(500);
     repeat
       asm
         mov ax, $2C00
@@ -204,7 +204,7 @@ var
         mov Hundredth1, dl
         mov Minute1, cl
       end ['AX', 'CX', 'DX'];
-      Delay(1000);
+      TPDelay(1000);
       asm
         mov ax, $2C00
         int $21
@@ -273,7 +273,7 @@ begin
   MotionCount := 0;
   { keyboard typematic rate/delay }
   Port[$60] := $F3;
-  Delay(200);
+  TPDelay(200);
   Port[$60] := $67;
   for GI := 0 to 127 do
     SinTable[GI] := RSin(RDiv(RMul(RFromLong(GI), RealSinScale), RealSinSteps));

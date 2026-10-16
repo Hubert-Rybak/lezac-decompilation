@@ -146,9 +146,10 @@ def rebuilt_build(directory):
     directory = Path(directory)
     exe = (directory / 'LEZAC.EXE').read_bytes()
     table = symbol_table(directory / 'LEZAC.MAP', sorted((directory / 'obj').glob('*.o')))
-    delay = table.get('CRT_$$_DELAY$WORD')
+    # the game delays through LZTPRT.TPDelay, the original Crt's Delay loop
+    delay = table.get('LZTPRT_$$_TPDELAY$WORD')
     if delay is None:
-        raise SystemExit('Crt.Delay not found in the rebuild map')
+        raise SystemExit('LZTPRT.TPDelay not found in the rebuild map')
     addresses, missing = {}, []
     for name, owner, _ds, _size, _elem in variables():
         sym = table.get(fpc_symbol(name, owner))

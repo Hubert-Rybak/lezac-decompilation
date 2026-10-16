@@ -10,7 +10,7 @@ program Lezac;
   LZTYPES holds the record layouts; LZTPRT reproduces the Turbo Pascal 6
   runtime behaviour that Free Pascal does not share (6-byte Real arithmetic,
   Random, the Sound/NoSound port sequence, the standard INT 16h keyboard
-  reads of Crt.KeyPressed/ReadKey). }
+  reads of Crt.KeyPressed/ReadKey, the calibrated Crt.Delay loop). }
 {$IFDEF FPC}{$MODE TP}{$ASMMODE INTEL}{$GOTO ON}{$ENDIF}
 {$R-}{$Q-}{$S-}{$I+}{$B-}
 {$M 16384,0,655360}
@@ -114,7 +114,7 @@ LevelStart:
       Hundredth1 := Hundredth2;
       Minute1 := Minute2;
     end;
-    Delay(FrameDelay);
+    TPDelay(FrameDelay);
     if (Percent <> ShownPercent) or (BonusCollected <> BonusShown) then
       UpdateGoalCounters($CB0F); { screen offset 162 * 320 + 143 }
     while TPKeyPressed do

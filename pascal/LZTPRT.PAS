@@ -6,7 +6,10 @@ unit LZTPRT;
   Crt KeyPressed/ReadKey are included as well: Free Pascal's Crt switches to
   the enhanced INT 16h functions (10h/11h) on an enhanced keyboard and so
   also returns keys such as F11/F12, which Turbo Pascal's standard functions
-  (00h/01h) never deliver.
+  (00h/01h) never deliver. So is Crt.Delay with its start-up calibration
+  (a 16-bit loop count over one timer tick): the game measures Delay(1000)
+  with the DOS clock to derive its own delays, so the time a Delay takes is
+  observable, and Free Pascal's loop is calibrated differently.
 
   This is a RUNTIME SUBSTITUTION, not recovered game logic. Each routine is
   written in Pascal from the algorithm of the matching routine in the original
@@ -61,6 +64,7 @@ procedure TPSound(Hz: Word);                    { 18769 }
 procedure TPNoSound;                            { 18796 }
 function TPKeyPressed: Boolean;                 { 1879D }
 function TPReadKey: Char;                       { 187AF }
+procedure TPDelay(MS: Word);                    { 1873C }
 {$ENDIF}
 
 implementation
@@ -69,6 +73,8 @@ implementation
 var
   { Crt's pending scan code of an extended key (DS:7F6D in the original). }
   TPScanCode: Byte;
+  { Crt's DelayCnt (DS:7F68): delay-loop passes per millisecond. }
+  TPDelayCnt: Word;
 {$ENDIF}
 
 { ---- 16-bit helpers modelling ADD/ADC and SUB/SBB with an explicit carry --- }
@@ -931,6 +937,61 @@ begin
   Port[$61] := Port[$61] and $FC;
 end;
 
+{ The delay loop of the original Crt (1875D) runs CX passes, each four
+  DEC/JNE plus a compare with ES:[DI], and stops early if that byte
+  changes. Calibration (184CE..18527) counts the passes during one BIOS
+  timer tick, starting at a tick edge, in a 16-bit counter. }
+procedure CalibrateDelay;
+var
+  Passes: Word;
+begin
+  asm
+    mov ax, $40
+    mov es, ax
+    mov di, $6C
+    mov al, es:[di]
+  @edge:
+    cmp al, es:[di]
+    je @edge
+    mov al, es:[di]
+    mov cx, $FFFF
+  @pass:
+    mov bx, 4
+  @spin:
+    dec bx
+    jne @spin
+    cmp al, es:[di]
+    loope @pass
+    not cx
+    mov Passes, cx
+  end ['AX', 'BX', 'CX', 'DI', 'ES'];
+  TPDelayCnt := Passes div 55;
+end;
+
+procedure TPDelay(MS: Word);
+begin
+  if MS = 0 then
+    Exit;
+  asm
+    mov dx, MS
+    mov ax, $40
+    mov es, ax
+    xor di, di
+    mov al, es:[di]
+  @ms:
+    mov cx, TPDelayCnt
+  @pass:
+    mov bx, 4
+  @spin:
+    dec bx
+    jne @spin
+    cmp al, es:[di]
+    loope @pass
+    dec dx
+    jne @ms
+  end ['AX', 'BX', 'CX', 'DX', 'DI', 'ES'];
+end;
+
 function TPKeyPressed: Boolean;
 var
   Waiting: Boolean;
@@ -981,5 +1042,6 @@ begin
   TPRandSeed := 0;
 {$IFDEF MSDOS}
   TPScanCode := 0;
+  CalibrateDelay;
 {$ENDIF}
 end.
