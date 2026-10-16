@@ -38,7 +38,7 @@ var
         TypeText(9, Y, Name + '    ' + NumStr, 6, 10, 6, 9, 27, TypeDelay, 1);
         Y := Y + 11;
       end;
-    LastKey := ReadKey;
+    LastKey := TPReadKey;
   end;
 
   { 1216C }
@@ -90,7 +90,7 @@ var
         Line := NextLine(Page, CharPos, LastLine);
         if Line = '*' then
         begin
-          LastKey := ReadKey;
+          LastKey := TPReadKey;
           DrawWaveBands;
           LineY := 20;
         end
@@ -107,7 +107,7 @@ var
       Inc(GI);
     end;
     if Paged then
-      LastKey := ReadKey;
+      LastKey := TPReadKey;
   end;
 
 begin
@@ -124,10 +124,10 @@ Restart:
   FadeInPicture('sfonlef.zbg');
   ShowPages(8, 8, 77, False, True);
   Done := False;
-  while KeyPressed do
-    LastKey := ReadKey;
+  while TPKeyPressed do
+    LastKey := TPReadKey;
   repeat
-    LastKey := ReadKey;
+    LastKey := TPReadKey;
     if LastKey = '1' then
     begin
       MenuClick;
@@ -468,7 +468,7 @@ begin
   end;
   TypeText(60, 94, Texts[Language, 9] + LevelStr, 27, 31, 1, 11, 27,
     TypeDelay, 1);
-  LastKey := ReadKey;
+  LastKey := TPReadKey;
   FillBox(0, 0, 320, 200, 0);
   if SpriteSet <> 2 then
   begin

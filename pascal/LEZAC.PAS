@@ -9,7 +9,8 @@ program Lezac;
   (decompressor unit, original segment 182D), as in the original uses order.
   LZTYPES holds the record layouts; LZTPRT reproduces the Turbo Pascal 6
   runtime behaviour that Free Pascal does not share (6-byte Real arithmetic,
-  Random, Sound/NoSound port sequence). }
+  Random, the Sound/NoSound port sequence, the standard INT 16h keyboard
+  reads of Crt.KeyPressed/ReadKey). }
 {$IFDEF FPC}{$MODE TP}{$ASMMODE INTEL}{$GOTO ON}{$ENDIF}
 {$R-}{$Q-}{$S-}{$I+}{$B-}
 {$M 16384,0,655360}
@@ -116,8 +117,8 @@ LevelStart:
     Delay(FrameDelay);
     if (Percent <> ShownPercent) or (BonusCollected <> BonusShown) then
       UpdateGoalCounters($CB0F); { screen offset 162 * 320 + 143 }
-    while KeyPressed do
-      LastKey := ReadKey;
+    while TPKeyPressed do
+      LastKey := TPReadKey;
     if PlayerState[1] <> 0 then
     begin
       SetCamera(RenderEntries[0].XBits, RenderEntries[0].YBits);
