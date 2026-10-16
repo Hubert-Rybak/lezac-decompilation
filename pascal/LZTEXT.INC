@@ -261,10 +261,10 @@ begin
           Shadow, Spacing, FirstGlyph);
       end;
       Delay(Pause);
-      if KeyPressed then
+      if TPKeyPressed then
       begin
         Pause := 0;
-        LastKey := ReadKey;
+        LastKey := TPReadKey;
         TypingKey := 2;
         if LastKey = #27 then
           TypingKey := 1;
@@ -325,7 +325,7 @@ Retry:
     DrawString(10, 100, 1, 1, 'il file dei records', 55, 13, 9, 27);
     DrawString(10, 111, 1, 1, 'enter;riprova   esc;annulla', 55, 13, 9, 27);
     repeat
-      LastKey := ReadKey;
+      LastKey := TPReadKey;
     until (LastKey = #27) or (LastKey = #13);
     if LastKey = #13 then
       goto Retry;
@@ -369,7 +369,7 @@ var
     Cursor := 1;
     repeat
       DrawString(124, 60, 1, 1, NewName, 77, 55, 9, 27);
-      LastKey := ReadKey;
+      LastKey := TPReadKey;
       LastKey := UpCase(LastKey);
       if (((LastKey >= 'A') and (LastKey <= 'Z')) or (LastKey = ' ')) and
          (Cursor < 9) then
@@ -452,7 +452,7 @@ begin
       Inc(Y, 11);
     end;
   end;
-  LastKey := ReadKey;
+  LastKey := TPReadKey;
   for I := 1 to 2 do
     if Scores[I] >= HighScores[7].Score then
       EnterName(Scores[I], I);
@@ -485,8 +485,8 @@ begin
   TmpB := 61;
   SoundRequest := 10;
   RequestSound;
-  while KeyPressed do
-    LastKey := ReadKey;
+  while TPKeyPressed do
+    LastKey := TPReadKey;
   Y := 60;
   SetRGB(255, 31, 31, 31);
   { 16-bit product, zero-extended }
@@ -537,7 +537,7 @@ begin
       end;
       Delay(200);
     end;
-  LastKey := ReadKey;
+  LastKey := TPReadKey;
   Inc(Level);
   for I := 1 to 2 do
     if PlayerState[I] = 2 then

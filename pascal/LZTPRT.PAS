@@ -3,6 +3,11 @@ unit LZTPRT;
   Pascal runtime does not reproduce: the 6-byte software Real arithmetic, the
   Random/Randomize generator and the Crt Sound/NoSound PIT programming.
 
+  Crt KeyPressed/ReadKey are included as well: Free Pascal's Crt switches to
+  the enhanced INT 16h functions (10h/11h) on an enhanced keyboard and so
+  also returns keys such as F11/F12, which Turbo Pascal's standard functions
+  (00h/01h) never deliver.
+
   This is a RUNTIME SUBSTITUTION, not recovered game logic. Each routine is
   written in Pascal from the algorithm of the matching routine in the original
   executable's System/Crt code (REA linear addresses in the comments). The
@@ -54,9 +59,17 @@ function TPRandom(Range: Word): Word;           { 1A5A8 }
 procedure TPRandomize;                          { 1A62F }
 procedure TPSound(Hz: Word);                    { 18769 }
 procedure TPNoSound;                            { 18796 }
+function TPKeyPressed: Boolean;                 { 1879D }
+function TPReadKey: Char;                       { 187AF }
 {$ENDIF}
 
 implementation
+
+{$IFDEF MSDOS}
+var
+  { Crt's pending scan code of an extended key (DS:7F6D in the original). }
+  TPScanCode: Byte;
+{$ENDIF}
 
 { ---- 16-bit helpers modelling ADD/ADC and SUB/SBB with an explicit carry --- }
 
@@ -917,8 +930,56 @@ procedure TPNoSound;
 begin
   Port[$61] := Port[$61] and $FC;
 end;
+
+function TPKeyPressed: Boolean;
+var
+  Waiting: Boolean;
+begin
+  Waiting := True;
+  if TPScanCode = 0 then
+    asm
+      mov ah, 1
+      int $16
+      jnz @key
+      mov Waiting, 0
+    @key:
+    end ['AX'];
+  TPKeyPressed := Waiting;
+end;
+
+function TPReadKey: Char;
+var
+  Key: Word;
+begin
+  if TPScanCode <> 0 then
+  begin
+    TPReadKey := Chr(TPScanCode);
+    TPScanCode := 0;
+    Exit;
+  end;
+  asm
+    xor ah, ah
+    int $16
+    mov Key, ax
+  end ['AX'];
+  if Lo(Key) <> 0 then
+    TPReadKey := Chr(Lo(Key))
+  else
+  begin
+    TPScanCode := Hi(Key);
+    if TPScanCode <> 0 then
+      TPReadKey := #0
+    else
+      { Ctrl-Break (AX = 0) reads as #3; the original then runs Crt's break
+        check, which does nothing once the game has cleared CheckBreak. }
+      TPReadKey := #3;
+  end;
+end;
 {$ENDIF}
 
 begin
   TPRandSeed := 0;
+{$IFDEF MSDOS}
+  TPScanCode := 0;
+{$ENDIF}
 end.

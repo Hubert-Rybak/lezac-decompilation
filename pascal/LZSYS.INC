@@ -145,9 +145,9 @@ begin
   { The original assigns the FOR control variable inside the loop. }
   for Fade := 0 to 63 do
   begin
-    if KeyPressed and (Fade > 2) then
+    if TPKeyPressed and (Fade > 2) then
     begin
-      LastKey := ReadKey;
+      LastKey := TPReadKey;
       Fade := 63;
     end;
     { Index 768 is one past the 768 bytes read (uninitialised). }
