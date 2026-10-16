@@ -58,7 +58,9 @@ def changes(report, name):
 def test_boot_menu_level_start_death_and_continue(game_build):
     report = run(game_build, ROOT / 'emulator/traces/boot-smoke.json', 4000)
     assert changes(report, 'Level')[0][1] == [0, 1]
-    assert [old - new for _step, (old, new) in changes(report, 'Lives[1]')] == [1]
+    # a new game sets 2 spare lives; one death in the trace costs one of them
+    assert [changed for _step, changed in changes(report, 'Lives[1]')] == [[0, 2], [2, 1]]
+    assert [changed for _step, changed in changes(report, 'PlayerState[1]')] == [[0, 1], [1, 2], [2, 1]]
     assert report['final_event'] == ['stalled']
 
 
