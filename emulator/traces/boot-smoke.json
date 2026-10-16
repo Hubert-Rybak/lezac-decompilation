@@ -1,0 +1,17 @@
+{
+  "format": "lezac-input-trace/1",
+  "description": "Boot smoke: completed title menu, one-player level-1 announcement and an early gameplay frame. The first two checkpoints sit on screens that wait for input; the third is taken 400 ms into level 1, before the player or any monster moves, so host input jitter does not change these frames.",
+  "steps": [
+    {"wait_ms": 7000},
+    {"tap": "1", "hold_ms": 150, "note": "the first key only completes the typewriter menu"},
+    {"wait_ms": 1500},
+    {"checkpoint": "menu"},
+    {"tap": "1", "hold_ms": 150},
+    {"wait_ms": 3500, "note": "the level announcement types out for about 2.5 s"},
+    {"checkpoint": "prepare-level1"},
+    {"tap": "space", "hold_ms": 200},
+    {"wait_ms": 400},
+    {"checkpoint": "level1-start"},
+    {"end": true}
+  ]
+}

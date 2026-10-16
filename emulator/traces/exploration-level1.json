@@ -1,0 +1,1230 @@
+{
+  "description": "Recorded closed-loop exploration session (2026-10-15): first one-player level-1 completion, death and fire re-entry, level-2 announcement, abandon and exit. Host-timed: replaying it does not reproduce gameplay frames (see docs/emulator-baseline.md).",
+  "events": [
+    {
+      "checkpoint": "title",
+      "t_ms": 9121.3
+    },
+    {
+      "down": "1",
+      "t_ms": 9300.5
+    },
+    {
+      "t_ms": 9422.9,
+      "up": "1"
+    },
+    {
+      "checkpoint": "menu-complete",
+      "t_ms": 10923.7
+    },
+    {
+      "down": "1",
+      "t_ms": 11048.2
+    },
+    {
+      "t_ms": 11168.6,
+      "up": "1"
+    },
+    {
+      "checkpoint": "prepare-level1",
+      "t_ms": 13669.4
+    },
+    {
+      "down": "space",
+      "t_ms": 13792.6
+    },
+    {
+      "t_ms": 13913.0,
+      "up": "space"
+    },
+    {
+      "checkpoint": "level1-start",
+      "t_ms": 14213.9
+    },
+    {
+      "down": "x",
+      "t_ms": 14338.5
+    },
+    {
+      "t_ms": 16838.9,
+      "up": "x"
+    },
+    {
+      "checkpoint": "walk1",
+      "t_ms": 16939.8
+    },
+    {
+      "down": "z",
+      "t_ms": 17074.3
+    },
+    {
+      "t_ms": 18074.6,
+      "up": "z"
+    },
+    {
+      "checkpoint": "walkback1",
+      "t_ms": 18475.3
+    },
+    {
+      "down": "z",
+      "t_ms": 18608.7
+    },
+    {
+      "t_ms": 20209.0,
+      "up": "z"
+    },
+    {
+      "checkpoint": "walkback2",
+      "t_ms": 20809.9
+    },
+    {
+      "down": "x",
+      "t_ms": 20943.4
+    },
+    {
+      "t_ms": 21443.8,
+      "up": "x"
+    },
+    {
+      "checkpoint": "onplat1",
+      "t_ms": 21844.6
+    },
+    {
+      "down": "x",
+      "t_ms": 21968.3
+    },
+    {
+      "down": "m",
+      "t_ms": 22569.1
+    },
+    {
+      "t_ms": 22719.6,
+      "up": "m"
+    },
+    {
+      "t_ms": 22920.1,
+      "up": "x"
+    },
+    {
+      "checkpoint": "jump1",
+      "t_ms": 23421.0
+    },
+    {
+      "checkpoint": "jump1b",
+      "t_ms": 23844.9
+    },
+    {
+      "down": "c",
+      "t_ms": 23979.0
+    },
+    {
+      "t_ms": 24279.4,
+      "up": "c"
+    },
+    {
+      "checkpoint": "down1",
+      "t_ms": 24580.1
+    },
+    {
+      "checkpoint": "down1b",
+      "t_ms": 25313.7
+    },
+    {
+      "down": "m",
+      "t_ms": 25437.0
+    },
+    {
+      "t_ms": 25637.3,
+      "up": "m"
+    },
+    {
+      "checkpoint": "up1",
+      "t_ms": 25888.1
+    },
+    {
+      "checkpoint": "up1b",
+      "t_ms": 26422.2
+    },
+    {
+      "down": "c",
+      "t_ms": 26546.6
+    },
+    {
+      "t_ms": 26847.4,
+      "up": "c"
+    },
+    {
+      "checkpoint": "down2",
+      "t_ms": 27148.3
+    },
+    {
+      "checkpoint": "down2b",
+      "t_ms": 27983.0
+    },
+    {
+      "down": "m",
+      "t_ms": 28107.0
+    },
+    {
+      "t_ms": 28307.4,
+      "up": "m"
+    },
+    {
+      "checkpoint": "up2",
+      "t_ms": 29008.2
+    },
+    {
+      "down": "m",
+      "t_ms": 29141.7
+    },
+    {
+      "t_ms": 29392.1,
+      "up": "m"
+    },
+    {
+      "checkpoint": "up2b",
+      "t_ms": 29642.8
+    },
+    {
+      "checkpoint": "up2c",
+      "t_ms": 30266.2
+    },
+    {
+      "down": "c",
+      "t_ms": 30400.3
+    },
+    {
+      "t_ms": 30600.7,
+      "up": "c"
+    },
+    {
+      "down": "z",
+      "t_ms": 31105.5
+    },
+    {
+      "t_ms": 31608.2,
+      "up": "z"
+    },
+    {
+      "checkpoint": "pos1",
+      "t_ms": 32109.4
+    },
+    {
+      "down": "z",
+      "t_ms": 32233.1
+    },
+    {
+      "t_ms": 33033.7,
+      "up": "z"
+    },
+    {
+      "checkpoint": "pos2",
+      "t_ms": 33634.4
+    },
+    {
+      "down": "x",
+      "t_ms": 33757.9
+    },
+    {
+      "t_ms": 33818.3,
+      "up": "x"
+    },
+    {
+      "down": "n",
+      "t_ms": 33969.1
+    },
+    {
+      "t_ms": 34069.7,
+      "up": "n"
+    },
+    {
+      "checkpoint": "bomb1a",
+      "t_ms": 34470.3
+    },
+    {
+      "checkpoint": "bomb1b",
+      "t_ms": 35104.1
+    },
+    {
+      "checkpoint": "bomb1c",
+      "t_ms": 35638.1
+    },
+    {
+      "checkpoint": "bomb1d",
+      "t_ms": 36361.8
+    },
+    {
+      "down": "x",
+      "t_ms": 36485.7
+    },
+    {
+      "t_ms": 37786.0,
+      "up": "x"
+    },
+    {
+      "checkpoint": "pos3",
+      "t_ms": 38486.8
+    },
+    {
+      "down": "n",
+      "t_ms": 38620.9
+    },
+    {
+      "t_ms": 38721.5,
+      "up": "n"
+    },
+    {
+      "down": "z",
+      "t_ms": 38822.2
+    },
+    {
+      "t_ms": 39522.6,
+      "up": "z"
+    },
+    {
+      "checkpoint": "bomb2a",
+      "t_ms": 39523.1
+    },
+    {
+      "checkpoint": "bomb2b",
+      "t_ms": 40057.0
+    },
+    {
+      "checkpoint": "bomb2c",
+      "t_ms": 40680.1
+    },
+    {
+      "checkpoint": "bomb2d",
+      "t_ms": 41613.7
+    },
+    {
+      "down": "n",
+      "t_ms": 41737.5
+    },
+    {
+      "t_ms": 41888.0,
+      "up": "n"
+    },
+    {
+      "checkpoint": "bomb3a",
+      "t_ms": 41938.9
+    },
+    {
+      "checkpoint": "bomb3b",
+      "t_ms": 42362.1
+    },
+    {
+      "down": "z",
+      "t_ms": 42485.4
+    },
+    {
+      "t_ms": 43185.8,
+      "up": "z"
+    },
+    {
+      "down": "n",
+      "t_ms": 43987.7
+    },
+    {
+      "t_ms": 44188.1,
+      "up": "n"
+    },
+    {
+      "checkpoint": "bomb4a",
+      "t_ms": 44289.0
+    },
+    {
+      "checkpoint": "bomb4b",
+      "t_ms": 45922.7
+    },
+    {
+      "down": "x",
+      "t_ms": 46046.0
+    },
+    {
+      "t_ms": 47046.3,
+      "up": "x"
+    },
+    {
+      "checkpoint": "pos4",
+      "t_ms": 47847.1
+    },
+    {
+      "down": "z",
+      "t_ms": 47970.8
+    },
+    {
+      "down": "n",
+      "t_ms": 48221.4
+    },
+    {
+      "t_ms": 48301.9,
+      "up": "n"
+    },
+    {
+      "t_ms": 48302.2,
+      "up": "z"
+    },
+    {
+      "checkpoint": "snail1a",
+      "t_ms": 48452.9
+    },
+    {
+      "checkpoint": "snail1b",
+      "t_ms": 49186.5
+    },
+    {
+      "checkpoint": "snail1c",
+      "t_ms": 50021.2
+    },
+    {
+      "down": "n",
+      "t_ms": 50456.1
+    },
+    {
+      "t_ms": 50536.9,
+      "up": "n"
+    },
+    {
+      "down": "z",
+      "t_ms": 50537.3
+    },
+    {
+      "t_ms": 51137.7,
+      "up": "z"
+    },
+    {
+      "checkpoint": "pil1a",
+      "t_ms": 51138.3
+    },
+    {
+      "checkpoint": "pil1b",
+      "t_ms": 51772.0
+    },
+    {
+      "checkpoint": "pil1c",
+      "t_ms": 52395.5
+    },
+    {
+      "checkpoint": "pil1d",
+      "t_ms": 53330.1
+    },
+    {
+      "down": "z",
+      "t_ms": 53453.6
+    },
+    {
+      "down": "x",
+      "t_ms": 53453.8
+    },
+    {
+      "t_ms": 53604.5,
+      "up": "x"
+    },
+    {
+      "t_ms": 53605.0,
+      "up": "z"
+    },
+    {
+      "checkpoint": "switch1",
+      "t_ms": 53905.8
+    },
+    {
+      "down": "z",
+      "t_ms": 54029.8
+    },
+    {
+      "down": "x",
+      "t_ms": 54030.0
+    },
+    {
+      "t_ms": 54530.2,
+      "up": "x"
+    },
+    {
+      "t_ms": 54530.5,
+      "up": "z"
+    },
+    {
+      "checkpoint": "switch2",
+      "t_ms": 54831.3
+    },
+    {
+      "down": "x",
+      "t_ms": 54965.2
+    },
+    {
+      "t_ms": 55665.5,
+      "up": "x"
+    },
+    {
+      "checkpoint": "esc1",
+      "t_ms": 55866.2
+    },
+    {
+      "down": "z",
+      "t_ms": 56000.9
+    },
+    {
+      "t_ms": 56121.3,
+      "up": "z"
+    },
+    {
+      "down": "n",
+      "t_ms": 56222.2
+    },
+    {
+      "t_ms": 56302.5,
+      "up": "n"
+    },
+    {
+      "down": "x",
+      "t_ms": 56302.9
+    },
+    {
+      "t_ms": 57104.0,
+      "up": "x"
+    },
+    {
+      "checkpoint": "g1a",
+      "t_ms": 57104.6
+    },
+    {
+      "checkpoint": "g1b",
+      "t_ms": 57628.0
+    },
+    {
+      "checkpoint": "g1c",
+      "t_ms": 58151.3
+    },
+    {
+      "checkpoint": "g1d",
+      "t_ms": 58885.6
+    },
+    {
+      "checkpoint": "pos5",
+      "t_ms": 59609.6
+    },
+    {
+      "down": "z",
+      "t_ms": 59743.5
+    },
+    {
+      "down": "m",
+      "t_ms": 60443.9
+    },
+    {
+      "t_ms": 60594.4,
+      "up": "m"
+    },
+    {
+      "t_ms": 61094.9,
+      "up": "z"
+    },
+    {
+      "checkpoint": "pos6",
+      "t_ms": 61395.6
+    },
+    {
+      "checkpoint": "pos7",
+      "t_ms": 61920.1
+    },
+    {
+      "down": "n",
+      "t_ms": 62354.3
+    },
+    {
+      "t_ms": 62434.8,
+      "up": "n"
+    },
+    {
+      "down": "z",
+      "t_ms": 62485.6
+    },
+    {
+      "t_ms": 63186.1,
+      "up": "z"
+    },
+    {
+      "checkpoint": "g2a",
+      "t_ms": 63186.7
+    },
+    {
+      "checkpoint": "g2b",
+      "t_ms": 63809.9
+    },
+    {
+      "checkpoint": "g2c",
+      "t_ms": 64443.7
+    },
+    {
+      "checkpoint": "g2d",
+      "t_ms": 65267.0
+    },
+    {
+      "checkpoint": "after1",
+      "t_ms": 66090.9
+    },
+    {
+      "checkpoint": "after2",
+      "t_ms": 67214.9
+    },
+    {
+      "checkpoint": "after3",
+      "t_ms": 68141.2
+    },
+    {
+      "checkpoint": "after4",
+      "t_ms": 69765.2
+    },
+    {
+      "down": "x",
+      "t_ms": 69899.8
+    },
+    {
+      "t_ms": 70500.1,
+      "up": "x"
+    },
+    {
+      "checkpoint": "pile1",
+      "t_ms": 70801.1
+    },
+    {
+      "down": "z",
+      "t_ms": 70926.6
+    },
+    {
+      "down": "x",
+      "t_ms": 70926.7
+    },
+    {
+      "t_ms": 71427.2,
+      "up": "x"
+    },
+    {
+      "t_ms": 71427.5,
+      "up": "z"
+    },
+    {
+      "down": "z",
+      "t_ms": 71728.0
+    },
+    {
+      "down": "x",
+      "t_ms": 71728.4
+    },
+    {
+      "t_ms": 72228.8,
+      "up": "x"
+    },
+    {
+      "t_ms": 72229.1,
+      "up": "z"
+    },
+    {
+      "checkpoint": "switch3",
+      "t_ms": 72529.7
+    },
+    {
+      "down": "x",
+      "t_ms": 72663.4
+    },
+    {
+      "down": "n",
+      "t_ms": 72914.0
+    },
+    {
+      "t_ms": 72994.5,
+      "up": "n"
+    },
+    {
+      "t_ms": 72994.8,
+      "up": "x"
+    },
+    {
+      "down": "z",
+      "t_ms": 72995.0
+    },
+    {
+      "t_ms": 73495.3,
+      "up": "z"
+    },
+    {
+      "checkpoint": "b1a",
+      "t_ms": 73495.9
+    },
+    {
+      "checkpoint": "b1b",
+      "t_ms": 74119.0
+    },
+    {
+      "checkpoint": "b1c",
+      "t_ms": 74852.7
+    },
+    {
+      "checkpoint": "b1d",
+      "t_ms": 75876.0
+    },
+    {
+      "down": "x",
+      "t_ms": 76009.9
+    },
+    {
+      "t_ms": 76910.3,
+      "up": "x"
+    },
+    {
+      "checkpoint": "walk2",
+      "t_ms": 77211.1
+    },
+    {
+      "down": "x",
+      "t_ms": 77345.3
+    },
+    {
+      "down": "m",
+      "t_ms": 77496.0
+    },
+    {
+      "t_ms": 77696.5,
+      "up": "m"
+    },
+    {
+      "t_ms": 78347.1,
+      "up": "x"
+    },
+    {
+      "checkpoint": "pile2",
+      "t_ms": 78648.0
+    },
+    {
+      "down": "x",
+      "t_ms": 78772.2
+    },
+    {
+      "t_ms": 79222.6,
+      "up": "x"
+    },
+    {
+      "checkpoint": "pile3",
+      "t_ms": 79923.4
+    },
+    {
+      "down": "x",
+      "t_ms": 80057.5
+    },
+    {
+      "down": "m",
+      "t_ms": 80158.0
+    },
+    {
+      "t_ms": 80358.5,
+      "up": "m"
+    },
+    {
+      "t_ms": 80659.1,
+      "up": "x"
+    },
+    {
+      "checkpoint": "pile4",
+      "t_ms": 81259.8
+    },
+    {
+      "down": "z",
+      "t_ms": 81393.8
+    },
+    {
+      "t_ms": 81645.5,
+      "up": "z"
+    },
+    {
+      "checkpoint": "pile5",
+      "t_ms": 82347.1
+    },
+    {
+      "down": "n",
+      "t_ms": 82482.6
+    },
+    {
+      "t_ms": 82563.1,
+      "up": "n"
+    },
+    {
+      "down": "z",
+      "t_ms": 82593.9
+    },
+    {
+      "t_ms": 83494.3,
+      "up": "z"
+    },
+    {
+      "checkpoint": "dig1a",
+      "t_ms": 83494.7
+    },
+    {
+      "checkpoint": "dig1b",
+      "t_ms": 84128.0
+    },
+    {
+      "checkpoint": "dig1c",
+      "t_ms": 84751.4
+    },
+    {
+      "checkpoint": "dig1d",
+      "t_ms": 85885.2
+    },
+    {
+      "down": "x",
+      "t_ms": 86019.2
+    },
+    {
+      "down": "m",
+      "t_ms": 86519.9
+    },
+    {
+      "t_ms": 86720.3,
+      "up": "m"
+    },
+    {
+      "t_ms": 87120.9,
+      "up": "x"
+    },
+    {
+      "checkpoint": "climb1",
+      "t_ms": 87621.5
+    },
+    {
+      "down": "n",
+      "t_ms": 88055.8
+    },
+    {
+      "t_ms": 88256.1,
+      "up": "n"
+    },
+    {
+      "checkpoint": "dig2a",
+      "t_ms": 88256.6
+    },
+    {
+      "down": "z",
+      "t_ms": 88389.8
+    },
+    {
+      "t_ms": 89290.2,
+      "up": "z"
+    },
+    {
+      "checkpoint": "dig2b",
+      "t_ms": 89290.7
+    },
+    {
+      "checkpoint": "dig2c",
+      "t_ms": 89914.0
+    },
+    {
+      "checkpoint": "dig2d",
+      "t_ms": 91047.6
+    },
+    {
+      "down": "x",
+      "t_ms": 91171.3
+    },
+    {
+      "down": "m",
+      "t_ms": 91671.8
+    },
+    {
+      "t_ms": 91872.3,
+      "up": "m"
+    },
+    {
+      "t_ms": 92272.9,
+      "up": "x"
+    },
+    {
+      "checkpoint": "climb2",
+      "t_ms": 92773.6
+    },
+    {
+      "down": "x",
+      "t_ms": 93208.0
+    },
+    {
+      "down": "n",
+      "t_ms": 93458.7
+    },
+    {
+      "t_ms": 93659.2,
+      "up": "n"
+    },
+    {
+      "t_ms": 93659.6,
+      "up": "x"
+    },
+    {
+      "down": "z",
+      "t_ms": 93710.0
+    },
+    {
+      "t_ms": 94610.4,
+      "up": "z"
+    },
+    {
+      "checkpoint": "dig3a",
+      "t_ms": 94611.0
+    },
+    {
+      "checkpoint": "dig3b",
+      "t_ms": 95344.4
+    },
+    {
+      "checkpoint": "dig3c",
+      "t_ms": 96367.7
+    },
+    {
+      "down": "x",
+      "t_ms": 96501.6
+    },
+    {
+      "down": "m",
+      "t_ms": 96902.7
+    },
+    {
+      "t_ms": 97103.2,
+      "up": "m"
+    },
+    {
+      "down": "m",
+      "t_ms": 97603.9
+    },
+    {
+      "t_ms": 97804.4,
+      "up": "m"
+    },
+    {
+      "down": "m",
+      "t_ms": 98305.1
+    },
+    {
+      "t_ms": 98505.5,
+      "up": "m"
+    },
+    {
+      "t_ms": 98906.1,
+      "up": "x"
+    },
+    {
+      "checkpoint": "cross1",
+      "t_ms": 99306.8
+    },
+    {
+      "down": "m",
+      "t_ms": 99440.7
+    },
+    {
+      "t_ms": 99691.0,
+      "up": "m"
+    },
+    {
+      "down": "x",
+      "t_ms": 99691.5
+    },
+    {
+      "down": "m",
+      "t_ms": 100592.0
+    },
+    {
+      "t_ms": 100842.5,
+      "up": "m"
+    },
+    {
+      "t_ms": 101543.0,
+      "up": "x"
+    },
+    {
+      "checkpoint": "cross2",
+      "t_ms": 102043.7
+    },
+    {
+      "down": "z",
+      "t_ms": 102167.3
+    },
+    {
+      "down": "n",
+      "t_ms": 102468.0
+    },
+    {
+      "t_ms": 102668.4,
+      "up": "n"
+    },
+    {
+      "t_ms": 102668.6,
+      "up": "z"
+    },
+    {
+      "down": "x",
+      "t_ms": 102668.9
+    },
+    {
+      "t_ms": 103069.3,
+      "up": "x"
+    },
+    {
+      "checkpoint": "sn2a",
+      "t_ms": 103069.8
+    },
+    {
+      "checkpoint": "sn2b",
+      "t_ms": 103902.8
+    },
+    {
+      "checkpoint": "sn2c",
+      "t_ms": 104736.0
+    },
+    {
+      "checkpoint": "now1",
+      "t_ms": 105059.9
+    },
+    {
+      "down": "z",
+      "t_ms": 105195.0
+    },
+    {
+      "t_ms": 106395.3,
+      "up": "z"
+    },
+    {
+      "checkpoint": "death0",
+      "t_ms": 107896.1
+    },
+    {
+      "checkpoint": "death1",
+      "t_ms": 111019.5
+    },
+    {
+      "checkpoint": "death2",
+      "t_ms": 114153.6
+    },
+    {
+      "down": "n",
+      "t_ms": 114287.4
+    },
+    {
+      "t_ms": 114537.8,
+      "up": "n"
+    },
+    {
+      "checkpoint": "reenter1",
+      "t_ms": 115338.6
+    },
+    {
+      "down": "x",
+      "t_ms": 115472.8
+    },
+    {
+      "down": "m",
+      "t_ms": 115873.4
+    },
+    {
+      "t_ms": 116073.8,
+      "up": "m"
+    },
+    {
+      "down": "m",
+      "t_ms": 116574.4
+    },
+    {
+      "t_ms": 116774.8,
+      "up": "m"
+    },
+    {
+      "down": "m",
+      "t_ms": 117375.4
+    },
+    {
+      "t_ms": 117625.8,
+      "up": "m"
+    },
+    {
+      "down": "m",
+      "t_ms": 118526.5
+    },
+    {
+      "t_ms": 118776.8,
+      "up": "m"
+    },
+    {
+      "t_ms": 119477.4,
+      "up": "x"
+    },
+    {
+      "checkpoint": "cross3",
+      "t_ms": 119978.1
+    },
+    {
+      "down": "z",
+      "t_ms": 120111.9
+    },
+    {
+      "down": "n",
+      "t_ms": 120312.7
+    },
+    {
+      "t_ms": 120513.1,
+      "up": "n"
+    },
+    {
+      "t_ms": 120513.5,
+      "up": "z"
+    },
+    {
+      "down": "x",
+      "t_ms": 120513.7
+    },
+    {
+      "t_ms": 120864.0,
+      "up": "x"
+    },
+    {
+      "checkpoint": "k1a",
+      "t_ms": 120864.6
+    },
+    {
+      "checkpoint": "k1b",
+      "t_ms": 121697.9
+    },
+    {
+      "checkpoint": "k1c",
+      "t_ms": 122621.2
+    },
+    {
+      "down": "z",
+      "t_ms": 122755.0
+    },
+    {
+      "checkpoint": "run1",
+      "t_ms": 123655.5
+    },
+    {
+      "t_ms": 123788.8,
+      "up": "z"
+    },
+    {
+      "down": "x",
+      "t_ms": 131054.0
+    },
+    {
+      "t_ms": 132154.4,
+      "up": "x"
+    },
+    {
+      "checkpoint": "ball2a",
+      "t_ms": 132655.1
+    },
+    {
+      "checkpoint": "ball2b",
+      "t_ms": 133578.7
+    },
+    {
+      "checkpoint": "done1",
+      "t_ms": 135203.3
+    },
+    {
+      "checkpoint": "done2",
+      "t_ms": 137827.0
+    },
+    {
+      "checkpoint": "done3",
+      "t_ms": 140950.6
+    },
+    {
+      "checkpoint": "trans1",
+      "t_ms": 145074.7
+    },
+    {
+      "checkpoint": "trans2",
+      "t_ms": 149209.9
+    },
+    {
+      "down": "n",
+      "t_ms": 149343.7
+    },
+    {
+      "t_ms": 149594.1,
+      "up": "n"
+    },
+    {
+      "checkpoint": "lvl2a",
+      "t_ms": 152095.1
+    },
+    {
+      "down": "space",
+      "t_ms": 152228.6
+    },
+    {
+      "t_ms": 152429.0,
+      "up": "space"
+    },
+    {
+      "checkpoint": "lvl2start",
+      "t_ms": 153029.7
+    },
+    {
+      "down": "Escape",
+      "t_ms": 153164.0
+    },
+    {
+      "t_ms": 153364.4,
+      "up": "Escape"
+    },
+    {
+      "checkpoint": "esc1",
+      "t_ms": 154865.2
+    },
+    {
+      "checkpoint": "esc2",
+      "t_ms": 157989.1
+    },
+    {
+      "checkpoint": "esc3",
+      "t_ms": 162112.2
+    },
+    {
+      "down": "space",
+      "t_ms": 162235.8
+    },
+    {
+      "t_ms": 162436.1,
+      "up": "space"
+    },
+    {
+      "checkpoint": "menu-after",
+      "t_ms": 164937.1
+    },
+    {
+      "down": "space",
+      "t_ms": 165060.5
+    },
+    {
+      "t_ms": 165261.0,
+      "up": "space"
+    },
+    {
+      "checkpoint": "menu-after2",
+      "t_ms": 166761.8
+    },
+    {
+      "down": "Escape",
+      "t_ms": 180100.1
+    },
+    {
+      "t_ms": 180300.4,
+      "up": "Escape"
+    },
+    {
+      "end": true,
+      "t_ms": 184302.0
+    }
+  ],
+  "format": "lezac-input-trace/1"
+}

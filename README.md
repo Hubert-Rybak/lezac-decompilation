@@ -7,8 +7,9 @@ Ghidra **12.1.4**.
 **Status: 215 default-discovered procedures exported; seven routines reconstructed
 in original-style Pascal, sixteen packed storage layouts, and the prior six C
 reconstructions. Native differential tests and a rebuilt 16-bit DOS computational
-probe pass. This is NOT a playable game, bit-identical rebuild, or the author's
-original source files.**
+probe pass. The ORIGINAL game has a pinned DOSBox-X reference baseline, with level 1
+completed under it. This is NOT a playable rebuild, a bit-identical rebuild, or the
+author's original source files.**
 
 ## What is here
 
@@ -40,12 +41,19 @@ original source files.**
 - [Byte-decoded assembly audit](analysis/segment-register-audit.json): 23 reversed
   operand presentations among 65 checked register-direct segment MOVs. The raw
   REA export is unchanged; original executable bytes take precedence.
+- [Original-game emulator baseline](docs/emulator-baseline.md): a hash-pinned
+  DOSBox-X 2024.03.01 with a fixed configuration. `tools/run_original.py` runs the
+  authenticated original from disposable copies, records input traces and exact VGA
+  framebuffer checkpoints, and re-verifies the originals after every run. The
+  committed run summaries cover a level-1 completion, death and restart, and
+  two-player controls. Gameplay replays are host-timed, not cycle-exact.
 
 Original EXE/ZIP/resource files and generated image previews are **not committed**.
 See [RIGHTS.md](RIGHTS.md); archival availability is not a public-domain claim.
 
 ## Start here
 
+- [Original-game emulator baseline: setup, observed behavior, level inventory](docs/emulator-baseline.md)
 - [Pascal recovery, build targets, verification and limits](docs/pascal-recovery.md)
 - [Pascal core contracts and original calling conventions](docs/pascal-core.md)
 - [Record layouts, static links and compiler/source archaeology](docs/pascal-layouts.md)
@@ -111,6 +119,10 @@ from their exact retained Evidence records, not truncated.
 - Establish actual heap/buffer state for the missing tails of all fourteen
   compressed level planes. A safe decoder must not silently reproduce the
   original out-of-bounds accesses or fabricate replacement bytes.
+- Make original-game replays cycle-exact and capture machine state. The pinned
+  DOSBox-X delivers input in host time, and its save states abort while the game
+  holds a file open. Both need a separately pinned, patched emulator (see the
+  emulator baseline).
 
 CI checks evidence integrity and the reconstructed subset. It does not make the
 unreconstructed remainder correct, and it does not rerun Ghidra on every push.

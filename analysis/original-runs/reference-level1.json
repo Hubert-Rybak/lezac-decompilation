@@ -1,0 +1,431 @@
+{
+  "checkpoints": [
+    {
+      "frame_sha256": "f9a4cefd3d19e1da214e83482048c7754e43d80e4ccc2359aaafe73e9aabff44",
+      "game_ms": 7117.553,
+      "name": "title"
+    },
+    {
+      "frame_sha256": "118faba4275fd22c13b6c3e66e05dc46155558ab28010a4fe4a7e70b7c3c06b2",
+      "game_ms": 9873.634,
+      "name": "menu-english"
+    },
+    {
+      "frame_sha256": "2670f76b11443ed5cf3ef401f215d45ed8d4cdd9ec050c04d0223037d109dc94",
+      "game_ms": 12648.433,
+      "name": "prepare-level1"
+    },
+    {
+      "frame_sha256": "773897839fea2030db15d9777a564eb83465fb7a589cad6ff4b72b0b2103bbdf",
+      "game_ms": 13483.746,
+      "name": "level1-start"
+    },
+    {
+      "frame_sha256": "1d3a7acb8d797999d831b67e1e66918b1b9e552f2ade3057c0e93f1377eafa4e",
+      "game_ms": 15409.362,
+      "name": "move-right"
+    },
+    {
+      "frame_sha256": "1aa419a874ace312eebc42f8032306fe88da74c86d29d1a8e0ef2fd0f20daa8a",
+      "game_ms": 17094.373,
+      "name": "move-left"
+    },
+    {
+      "frame_sha256": "8f86c10cb2e092ec71a1b2a576a5162caed46d4b884ce90b13fe6019afcde4c3",
+      "game_ms": 18319.45,
+      "name": "green-selected"
+    },
+    {
+      "frame_sha256": "6de85eefcaf158ea56b71b808d1bdff29e93489625be438796bd5e04638d0aa7",
+      "game_ms": 18693.816,
+      "name": "green-thrown"
+    },
+    {
+      "frame_sha256": "176bf32498d5ca45f997f3de759afbd8cda68f80537b3924b54eabec8d9b8689",
+      "game_ms": 20631.05,
+      "name": "fled-right"
+    },
+    {
+      "frame_sha256": "0477d3c54eee868727b1ed7d9acae8bd7a32cce00a3d5d41cd3b04d1fbbdbbbe",
+      "game_ms": 22253.97,
+      "name": "collapse-1"
+    },
+    {
+      "frame_sha256": "7b46081ffa640b32e366b456f9ff7d6a5ff4690606b04b7d3ffdb6c48074cb6e",
+      "game_ms": 24376.994,
+      "name": "collapse-2"
+    },
+    {
+      "frame_sha256": "b94edc7c8b28e21475f8d1c7c091c30068866b5b5dff3ab08e54f229b80e0807",
+      "game_ms": 27011.027,
+      "name": "collapse-3"
+    },
+    {
+      "frame_sha256": "5991e08850687c5ef174c740cd12f511e6976a521a2cfcd721ef707f6d0d647d",
+      "game_ms": 27897.23,
+      "name": "snail-a"
+    },
+    {
+      "frame_sha256": "af56712cd493e12f9483aad5ed022500aab3f8430aaddc73f78d7e38f7124dba",
+      "game_ms": 28730.867,
+      "name": "snail-b"
+    },
+    {
+      "frame_sha256": "92f4afbba6cb28e1fe9ca0083443119a9a14be0dbb23bd5b02d7c6b339680448",
+      "game_ms": 29754.405,
+      "name": "snail-c"
+    },
+    {
+      "frame_sha256": "a35a27c77bb6a8089445152b01d1a6daa890058afd37c6979b876d40a0f136c4",
+      "game_ms": 30879.298,
+      "name": "flee2a"
+    },
+    {
+      "frame_sha256": "714eee5d566617b40eee56b7b6a85caf52d45d32cf89c6fff06821fa09bdd6f1",
+      "game_ms": 31913.178,
+      "name": "flee2b"
+    },
+    {
+      "frame_sha256": "bbcb58085d0c5548fbcf5f7dba3f3f117e2051d6ce44fc568c48cd2010e15562",
+      "game_ms": 33538.411,
+      "name": "at-pile"
+    },
+    {
+      "frame_sha256": "4c72716e51afcba8221af8dc597bbc4f4c723a5d4a49084ef5b1c4ad7d6da5cb",
+      "game_ms": 36075.351,
+      "name": "on-pile"
+    },
+    {
+      "frame_sha256": "4b5f7f3c2609923d58f86530fafb1a2bb96f71cbe33d64885e4708f318cf16a1",
+      "game_ms": 39300.736,
+      "name": "self-blast-1"
+    },
+    {
+      "frame_sha256": "228f1590db004d857b45ed69370392b3fb24900eff3f28395cb49bb7fd6d6df1",
+      "game_ms": 42434.975,
+      "name": "dying-1"
+    },
+    {
+      "frame_sha256": "6000850d94b50d25a7e4607aed8dffbc95b958bf3bccc4b768902557659ab108",
+      "game_ms": 45560.236,
+      "name": "dying-2"
+    },
+    {
+      "frame_sha256": "6000850d94b50d25a7e4607aed8dffbc95b958bf3bccc4b768902557659ab108",
+      "game_ms": 49694.632,
+      "name": "dying-3"
+    },
+    {
+      "frame_sha256": "6000850d94b50d25a7e4607aed8dffbc95b958bf3bccc4b768902557659ab108",
+      "game_ms": 54818.115,
+      "name": "dying-4"
+    },
+    {
+      "frame_sha256": "b3264601b42e4c909e176c5efa690231ae13ceeedf9d600007a41f787b8ca799",
+      "game_ms": 55739.789,
+      "name": "level1-restart"
+    },
+    {
+      "frame_sha256": "815fa59f4749caa909e2635422bb6522882a09ec59513996a4c2dd0021b506b3",
+      "game_ms": 57414.691,
+      "name": "r2-pos1"
+    },
+    {
+      "frame_sha256": "8d8c86b617bff03394dab45ce735b970124692059be5d52e78691e41e553d08d",
+      "game_ms": 58900.941,
+      "name": "r2-pos2"
+    },
+    {
+      "frame_sha256": "f833b70a983870787cb77d287ac4a7c70b92e72e4181a696588a36d9393125c2",
+      "game_ms": 60987.973,
+      "name": "r2-green"
+    },
+    {
+      "frame_sha256": "08c16ef5fa71f6b31f61f535e5cf58577520de8954768899a2e025c31ba904e8",
+      "game_ms": 63164.244,
+      "name": "r2-fled"
+    },
+    {
+      "frame_sha256": "e3f0c13694adb316fd3f8a3bc83c3ac6c86691cb9358f108dd1ec762f00319fa",
+      "game_ms": 64797.689,
+      "name": "r2-collapse-1"
+    },
+    {
+      "frame_sha256": "2a1ff483d092295d0a4a2bde21e9337ea24165be98c836d92cc5cd27c7adcd3e",
+      "game_ms": 66921.082,
+      "name": "r2-collapse-2"
+    },
+    {
+      "frame_sha256": "2f90087f3b9b4cd0365a55673762fbf2a8065ca31ccf94f24582a7b847fadc49",
+      "game_ms": 69544.277,
+      "name": "r2-collapse-3"
+    },
+    {
+      "frame_sha256": "b1b47992ed28b5ab1c2a901270b5549e768f6580ce1594a4687373d1d865b716",
+      "game_ms": 70979.258,
+      "name": "r2-approach1"
+    },
+    {
+      "frame_sha256": "0c45a7d2b2a4d44eb0a47ff4c0987afef236921439982c10b4bcf150fb39ae69",
+      "game_ms": 73166.828,
+      "name": "r2-climb1"
+    },
+    {
+      "frame_sha256": "31603cb9edf9413393b3c2f8ae98fe0e35e5ba844111b7efbd1d1744cf150ba8",
+      "game_ms": 74404.684,
+      "name": "r2-blast-a"
+    },
+    {
+      "frame_sha256": "079d1e4fb1ffe7e31c3889c0752e63fd17584d32af4a94f4bccb7d02134b9cf3",
+      "game_ms": 75428.024,
+      "name": "r2-blast-b"
+    },
+    {
+      "frame_sha256": "753dff518db00404a47c15fb1bac0de36e20300e24fbfe9cb325ca9924253d40",
+      "game_ms": 77051.32,
+      "name": "r2-blast-c"
+    },
+    {
+      "frame_sha256": "ce18e7eaa9641af216e805bceadae3af176602b973f49e32dab2a4aba62d513b",
+      "game_ms": 79740.502,
+      "name": "r2-climb2"
+    },
+    {
+      "frame_sha256": "528fa803ed030ce294bc15e6cf2f92655e41a81e5e9eb72af132113bd0a57835",
+      "game_ms": 82077.443,
+      "name": "r2-blue"
+    },
+    {
+      "frame_sha256": "44f2e8292399029aca1684b9c793422983791443446ee5d864d85bc19c1541b1",
+      "game_ms": 83563.7,
+      "name": "r2-escape"
+    },
+    {
+      "frame_sha256": "052e8960f85c749b907df0effbc9ff2df0fb956a092a7b638d116c809c232ac9",
+      "game_ms": 84630.012,
+      "name": "r2-k-a"
+    },
+    {
+      "frame_sha256": "9ee23fb71df64b2373cc1b3ed56d59332622ba196df89378dab4af4a18c85374",
+      "game_ms": 85563.684,
+      "name": "r2-k-b"
+    },
+    {
+      "frame_sha256": "9555ed3e60aca378f56228a29679107e10c8b570fd71c1fcc26262b9bdf458c2",
+      "game_ms": 86587.179,
+      "name": "r2-k-c"
+    },
+    {
+      "frame_sha256": "b717a7db5d21bf0cfa54528227fa7e3670949bc8dc712888059345b6eeccee8c",
+      "game_ms": 91222.118,
+      "name": "r2-drain-1"
+    },
+    {
+      "frame_sha256": "7a3972facd01c1f1e339d31aeb2b359617f36f6dcdbca4522454800ee229af4c",
+      "game_ms": 95346.044,
+      "name": "r2-drain-2"
+    },
+    {
+      "frame_sha256": "cedaf6d6c8475e0c31e4903f48b60bde75894441bf1abb701d43af40d587f0a5",
+      "game_ms": 99470.635,
+      "name": "tally-final"
+    },
+    {
+      "frame_sha256": "deded7e8a1c3e20e152d91224f7b07d9fef16522a01d576326667e7c27fcb324",
+      "game_ms": 102355.78,
+      "name": "prepare-level2"
+    },
+    {
+      "frame_sha256": "d0b8e32aafc1d32567db1b2f249ae8695470eb88ac0cdd14d33756494fc7e037",
+      "game_ms": 103290.07,
+      "name": "level2-start"
+    },
+    {
+      "frame_sha256": "7cedb1989d5d8dddbdc0b25bccd7c7d7d2a1e64c06b4df88ad745a2ec39fda0d",
+      "game_ms": 104414.718,
+      "name": "level2-background-off"
+    },
+    {
+      "frame_sha256": "eaedf8b7d2d0b3a02e3cd7b4f301a23b3bf94cf64a26270f8056847661b4edd6",
+      "game_ms": 106140.439,
+      "name": "level2-width-e"
+    },
+    {
+      "frame_sha256": "d619f3fa0fcb37a7b7917ebeeb8791dfbd3439d2383a1ebc6519327a8fb1d297",
+      "game_ms": 107866.313,
+      "name": "level2-width-r"
+    },
+    {
+      "frame_sha256": "4459294f2f700edd34ff9591d643229fc5c2e43e576604a1c6033a26ada713ea",
+      "game_ms": 112202.545,
+      "name": "gameover-final"
+    },
+    {
+      "frame_sha256": "52edc5fce54c9eea549464840c364e416be9fbde36eda5249748522e83c743ef",
+      "game_ms": 123330.625,
+      "name": "info-screen"
+    },
+    {
+      "frame_sha256": "47cfdff7c72d0471304e3c4dbae1498bb27326bcfc856e537ff6aecc6f390f56",
+      "game_ms": 131606.889,
+      "name": "info-1"
+    },
+    {
+      "frame_sha256": "9ff20176dfc50904600b0eb906d3af0b46d089acb8c5dc9ba3219b5822cddb22",
+      "game_ms": 139881.789,
+      "name": "info-2"
+    },
+    {
+      "frame_sha256": "95caac3cac01ffb9691dd39c002b3d3f2b4ae7383c1bcde9dd4c7e872dd70638",
+      "game_ms": 144960.533,
+      "name": "after-info"
+    },
+    {
+      "frame_sha256": "1377382962c5fcb81d67aac51c5c462d192fb5a29b7c250c362789678b0a48f2",
+      "game_ms": 165095.471,
+      "name": "info-3"
+    },
+    {
+      "frame_sha256": "17ff85b32d5036ba360e42339150abc2b797d939bd2ceae6dff3706df4c5e30f",
+      "game_ms": 185370.351,
+      "name": "info-4"
+    },
+    {
+      "frame_sha256": "ad35982382d96b45883e0ab1a268da5d6fb8cfe2777ac8e4b0e8a9314bc32fcb",
+      "game_ms": 208656.026,
+      "name": "info-5"
+    },
+    {
+      "frame_sha256": "f70d55f550c94b5ae73222342cc00dbbb03286766294ae3d9a7b709ac277faf8",
+      "game_ms": 218582.745,
+      "name": "records-1"
+    },
+    {
+      "frame_sha256": "dbf332b898f5367b547e8dd417015233c7ce8e604f4bf434486701774ca1d787",
+      "game_ms": 235868.545,
+      "name": "menu-before-exit"
+    },
+    {
+      "frame_sha256": "52edc5fce54c9eea549464840c364e416be9fbde36eda5249748522e83c743ef",
+      "game_ms": 259239.454,
+      "name": "menu-complete-before-exit"
+    }
+  ],
+  "config_template": {
+    "path": "emulator/dosbox-x-reference.conf",
+    "sha256": "1c4fb11d92de8a18ce1881f314b007b954aa57dad635e131192d2dc843ead058"
+  },
+  "created_utc": "2026-10-15T22:40:53Z",
+  "emulator": {
+    "binary_sha256": "30a5fdf8fa95abaf7bae1a9e624ccfc9e26e5357a19cc567bf3a2ac659699258",
+    "packages": {
+      "dosbox-x": "2024.03.01+dfsg-1build2",
+      "dosbox-x-data": "2024.03.01+dfsg-1build2",
+      "libsdl2-2.0-0": "2.30.0+dfsg-1ubuntu3.1",
+      "xvfb": "2:21.1.12-1ubuntu1.8"
+    },
+    "version_banner": "DOSBox-X version 2024.03.01 SDL2, copyright 2011-2024 The DOSBox-X Team."
+  },
+  "format": "lezac-original-run-summary/1",
+  "input_trace": {
+    "path": "emulator/traces/reference-level1.json",
+    "sha256": "daf765009bac5094782d75502214a7e06c676e4374ddc37d14eaec771f056494"
+  },
+  "label": "reference-level1",
+  "originals": [
+    {
+      "name": "BOMOMIMK.SPR",
+      "sha256": "08dfd0e59ba191c52af2529bdfa140fd15a57829f0c6c13bbb78e156769ac0d1",
+      "size": 20168
+    },
+    {
+      "name": "BOMPAL.PAL",
+      "sha256": "f2559164074ca529ba6c275a9831b11c6da9e6317f09b3d9228c299d6f8f8319",
+      "size": 768
+    },
+    {
+      "name": "CARO.CAR",
+      "sha256": "949cce4db6071d6675a291c978d725c6e4ee1730b2c7a428bc1c8a8185cbd8d8",
+      "size": 8450
+    },
+    {
+      "name": "ENGLISH.DOC",
+      "sha256": "e2fd2f2521b0277f2fca0c8f2a265408412542932bb6e977bf1ab3d0aabdfed9",
+      "size": 3522
+    },
+    {
+      "name": "FILE_ID.DIZ",
+      "sha256": "3edad84fcd1777ea883763b005c6c8bcaf55b8204edc10a4d01335b979ed0f7c",
+      "size": 483
+    },
+    {
+      "name": "FONTS.SPR",
+      "sha256": "f65aa9bbba2a66ee69f1b279a32c448e36012feb53441fbbb8e64e31bee87a0e",
+      "size": 5425
+    },
+    {
+      "name": "GRAN.MST",
+      "sha256": "3f0cf17706d557ca863d6e39bfa6641fba777a88815ba3f0a22e5ac89e0e39e2",
+      "size": 399
+    },
+    {
+      "name": "ITALIANO.DOC",
+      "sha256": "5ea7481d3179e60b6f1229aa114dc4b47c95f7c1200c7888ad5c259f161317c1",
+      "size": 4392
+    },
+    {
+      "name": "LEZAC.EXE",
+      "sha256": "7579255148c2cb540b26f70dc8181c50b218b6808d8fa5208c832391bafa53ec",
+      "size": 52384
+    },
+    {
+      "name": "LIVELS.SCH",
+      "sha256": "d8b553871014108515d6af05b0853de8ccc22e4d3e44d63533ba1167fdc8c7b2",
+      "size": 41047
+    },
+    {
+      "name": "PROEFS.SON",
+      "sha256": "b5bc702a27ac85554cc76a62fced07567921b07d5c16f2027a62fbc956df701d",
+      "size": 782
+    },
+    {
+      "name": "PROVA.SPR",
+      "sha256": "d6d6b634f8613251f6e82e9a15c5c68e2be437892bfa25c53eb4bcd9094188b7",
+      "size": 21250
+    },
+    {
+      "name": "RECS.DAT",
+      "sha256": "fbc54d16834666dfd45915ffc0181ad54c635e0b19f59ca2c1aa77984a011a95",
+      "size": 92
+    },
+    {
+      "name": "SFONLEF.ZBG",
+      "sha256": "b1b7cc03122510318c1a3670f151712406e9e3fa60aabd8fb558320766c3835c",
+      "size": 34292
+    }
+  ],
+  "pinned_emulator": true,
+  "session": {
+    "duration_game_ms": 263579.643,
+    "duration_wall_ms": 732107.685,
+    "emulator_returncode": 0,
+    "end_reason": "emulator exited",
+    "ended_utc": "2026-10-15T22:53:05Z",
+    "event_count": 264,
+    "headless": true,
+    "mode": "session",
+    "originals_verified_after_exit": true,
+    "originals_verified_before_launch": true,
+    "run_copy_changes": {
+      "changed": [],
+      "created": [],
+      "removed": []
+    },
+    "started_utc": "2026-10-15T22:40:53Z"
+  },
+  "source_revision": {
+    "commit": "6f67bfe6f1445b0ed51409274100a4b6dde30d1d",
+    "tracked_changes": false
+  },
+  "tool_sha256": null
+}

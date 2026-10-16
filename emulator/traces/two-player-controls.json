@@ -1,0 +1,158 @@
+{
+  "description": "Recorded two-player session (2026-10-15): split-screen level 1, simultaneous Player 1 and Player 2 movement and jumps, Player 2 keypad-0 fire, abandon and exit. Host-timed record, not a replay oracle.",
+  "events": [
+    {
+      "down": "2",
+      "t_ms": 6092.1
+    },
+    {
+      "t_ms": 6244.2,
+      "up": "2"
+    },
+    {
+      "down": "2",
+      "t_ms": 7444.9
+    },
+    {
+      "t_ms": 7595.4,
+      "up": "2"
+    },
+    {
+      "checkpoint": "prepare-2p",
+      "t_ms": 10096.6
+    },
+    {
+      "down": "space",
+      "t_ms": 10248.2
+    },
+    {
+      "t_ms": 10448.6,
+      "up": "space"
+    },
+    {
+      "checkpoint": "level1-2p-start",
+      "t_ms": 10849.4
+    },
+    {
+      "down": "x",
+      "t_ms": 10983.5
+    },
+    {
+      "down": "Left",
+      "t_ms": 10983.7
+    },
+    {
+      "down": "Up",
+      "t_ms": 11684.2
+    },
+    {
+      "t_ms": 11884.7,
+      "up": "Up"
+    },
+    {
+      "t_ms": 12185.2,
+      "up": "Left"
+    },
+    {
+      "t_ms": 12185.4,
+      "up": "x"
+    },
+    {
+      "checkpoint": "simul1",
+      "t_ms": 12385.9
+    },
+    {
+      "down": "KP_0",
+      "t_ms": 13109.7
+    },
+    {
+      "t_ms": 13310.1,
+      "up": "KP_0"
+    },
+    {
+      "checkpoint": "p2fire1",
+      "t_ms": 13460.9
+    },
+    {
+      "checkpoint": "p2fire2",
+      "t_ms": 13994.5
+    },
+    {
+      "down": "Right",
+      "t_ms": 14118.0
+    },
+    {
+      "t_ms": 14818.3,
+      "up": "Right"
+    },
+    {
+      "checkpoint": "p2after",
+      "t_ms": 16319.3
+    },
+    {
+      "down": "Escape",
+      "t_ms": 16442.1
+    },
+    {
+      "t_ms": 16642.6,
+      "up": "Escape"
+    },
+    {
+      "checkpoint": "gameover-2p",
+      "t_ms": 20143.5
+    },
+    {
+      "down": "space",
+      "t_ms": 20267.1
+    },
+    {
+      "t_ms": 20467.8,
+      "up": "space"
+    },
+    {
+      "down": "space",
+      "t_ms": 22968.5
+    },
+    {
+      "t_ms": 23168.8,
+      "up": "space"
+    },
+    {
+      "checkpoint": "menu-2p-after",
+      "t_ms": 24669.5
+    },
+    {
+      "down": "Escape",
+      "t_ms": 24804.3
+    },
+    {
+      "t_ms": 25004.6,
+      "up": "Escape"
+    },
+    {
+      "down": "Escape",
+      "t_ms": 26505.2
+    },
+    {
+      "t_ms": 26705.7,
+      "up": "Escape"
+    },
+    {
+      "checkpoint": "before-exit",
+      "t_ms": 42352.8
+    },
+    {
+      "down": "Escape",
+      "t_ms": 54446.8
+    },
+    {
+      "t_ms": 54647.2,
+      "up": "Escape"
+    },
+    {
+      "end": true,
+      "t_ms": 58148.7
+    }
+  ],
+  "format": "lezac-input-trace/1"
+}
