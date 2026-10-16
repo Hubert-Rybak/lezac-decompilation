@@ -135,10 +135,10 @@ therefore need a patched emulator. That is a follow-up, not part of this pin.
 
 **Reproducible:** screens that wait for input. The [boot smoke trace](../emulator/traces/boot-smoke.json)
 covers the completed menu, the level-1 announcement, and a level-1 frame taken
-400 ms in, before anything moves. With its timing, six consecutive runs produced
-identical digests for all three checkpoints. An earlier variant waited only 2.5 s
-before the announcement checkpoint and differed in 1 of 3 runs, on the unfinished
-final glyph. `tests/test_run_original.py` replays the trace whenever the pinned
+400 ms in, before anything moves. With its timing, every run so far has produced
+identical digests for all three checkpoints: three manual runs, five recorded runs
+and every test-suite execution. An earlier variant waited only 2.5 s before the
+announcement checkpoint and differed in 1 of 3 runs, on the unfinished final glyph. `tests/test_run_original.py` replays the trace whenever the pinned
 emulator, Xvfb and authenticated originals are present, and otherwise reports a
 skip.
 
@@ -208,7 +208,7 @@ ended with emulator status 0, and left the run copy unchanged.
 | `reference-level1.json` | One player, Italian. Collapse (destruction 50 → 00), the ball shatters, death, automatic level restart, a second collapse, bonus objective met (between `r2-k-c` and `r2-drain-1`), level-complete tally, level-2 announcement and start, S/E/R keys, Esc, info and records screens, exit | 263.6 s | 62 |
 | `exploration-level1.json` (run label `smoke`) | The first completion of level 1, plus bomb and control experiments, death with fire re-entry, level 2, Esc, exit | 184.3 s | 113 |
 | `two-player-controls.json` | Two-player split screen, simultaneous P1/P2 movement and jumps, P2 keypad-0 fire, two-player game over | 58.2 s | 9 |
-| `boot-smoke.json` | Reproducible boot frames, recorded after the tool was committed | 15.1 s | 3 |
+| `boot-smoke.json` | Reproducible boot frames, recorded from a clean checkout of the commit that added the tool | 15.1 s | 3 |
 
 The three closed-loop sessions were recorded before the tool's first commit
 (`tool_sha256` is null). The later edits changed session finalization, request
