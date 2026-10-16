@@ -3,7 +3,7 @@ AR ?= ar
 PYTHON ?= python3
 CFLAGS ?= -std=c99 -O2 -Wall -Wextra -Werror -pedantic
 
-.PHONY: all test verify-evidence original pascal-native pascal-dos
+.PHONY: all test verify-evidence original pascal-native pascal-dos game lockstep
 all: build/liblezac.a build/liblezac.so
 
 pascal-native:
@@ -15,6 +15,14 @@ pascal-native:
 pascal-dos:
 	$(PYTHON) tools/build_pascal.py pascal/LZPROBE.PAS build/pascal-dos/LZPROBE.EXE --target dos
 	$(PYTHON) tools/run_dos_probe.py build/pascal-dos/LZPROBE.EXE
+
+# The reconstructed game, compiled from pascal/ only (see docs/reconstruction.md).
+game:
+	$(PYTHON) tools/build_game.py
+
+# Original and rebuild in lockstep under the deterministic machine (needs original/).
+lockstep: game
+	LEZAC_GAMEPLAY_TESTS=1 $(PYTHON) -m pytest tests/test_lockstep.py -q
 
 build:
 	mkdir -p build
