@@ -43,7 +43,7 @@ pinned binary. With `-conf`, DOSBox-X loads no user or system configuration file
 
 | Setting | Value | Why |
 |---|---|---|
-| `machine` | `vgaonly` | The game requires plain VGA (`ENGLISH.DOC`). There are no SVGA extensions to depend on. |
+| `machine` | `vgaonly` | `ENGLISH.DOC` asks for "VGA graphic or better". Plain VGA means the reference cannot come to depend on SVGA extensions. |
 | `cputype`, `core` | `486`, `normal` | "386 or better, 486 recommended". The interpreter core keeps execution simple to reason about. |
 | `cycles` | `fixed 26800` | Roughly a 486DX2-66. The game times 30-frame blocks with DOS GetTime (`0x1247f`, main loop at `0x17919`) and adapts its speed. A fixed rate makes that adaptation repeatable. Other rates are untested. |
 | `memsize` | `4` | About 300 KB of conventional memory is needed; 4 MB is a plausible 1996 machine. |
@@ -138,9 +138,9 @@ covers the completed menu, the level-1 announcement, and a level-1 frame taken
 400 ms in, before anything moves. With its timing, every run so far has produced
 identical digests for all three checkpoints: three manual runs, five recorded runs
 and every test-suite execution. An earlier variant waited only 2.5 s before the
-announcement checkpoint and differed in 1 of 3 runs, on the unfinished final glyph. `tests/test_run_original.py` replays the trace whenever the pinned
-emulator, Xvfb and authenticated originals are present, and otherwise reports a
-skip.
+announcement checkpoint and differed in 1 of 3 runs, on the unfinished final glyph.
+`tests/test_run_original.py` replays the trace whenever the pinned emulator, Xvfb
+and authenticated originals are present, and otherwise reports a skip.
 
 ## Observed behavior of the original
 
@@ -172,17 +172,21 @@ would repeat the key.
   falls back on the thrower. This was observed and costs energy. Blasts push
   structure tiles and debris (`0x13fa6`, `0x145fa`).
 - **Level 1.** The HUD starts at 01 bonus (the yellow ball, tile 108) and 50%
-  destruction. The pillars do not block movement. In three attempts, a green bomb
-  exploding 3–5 tiles right of the left pillar pushed the pillar aside and collapsed
-  the whole building into boulders, and destruction reached 00. When both counters reach 00 the box turns white. Then "LIVELLO
-  COMPLETATO" appears with destruction and bomb bonuses, fire leads to "PREPARATI
-  PER IL LIVELLO 2", and level 2 shows 03 gems and 60%.
-- **How the bonus objective was met.** In both completed runs the counter went
-  01 → 00 only after a bomb exploded near the right wall and a yellow-ball bonus
-  appeared there. That is consistent with `0x145fa` turning certain settled debris
-  into a random bonus in 107–111, a range that includes 108. The original ball was
-  still buried, or had shattered. This is an observation about how level 1 was
-  finished here, not a claim about the intended route.
+  destruction. The pillars do not block movement. In all three attempts, a green
+  bomb exploding 3–5 tiles right of the left pillar collapsed the whole building into
+  boulders, and destruction reached 00. The exploration run shows the left pillar
+  pushed two tiles before the floor fell. When both counters reach 00 the objective
+  box turns white. Then "LIVELLO COMPLETATO" appears with destruction and bomb
+  bonuses, fire leads to "PREPARATI PER IL LIVELLO 2", and level 2 shows 03 gems
+  and 60%.
+- **How the bonus objective was met.** In the exploration run, a yellow-ball bonus
+  appeared in a crater by the right wall after a bomb exploded there, and collecting
+  it moved the counter 01 → 00. In the reference run the counter moved 01 → 00
+  within 4.6 s of a bomb exploding at the same wall, between `r2-k-c` and
+  `r2-drain-1`; the bonus itself was not captured. Both are consistent with
+  `0x145fa` turning certain settled debris into a random bonus in 107–111, a range
+  that includes 108. The original ball was still buried, or had shattered. This
+  describes how level 1 was finished here, not the intended route.
 - **Death.** Energy drops on monster contact and from your own bombs. When it
   runs out a life icon disappears. With the objective ball intact, the player
   reappeared as an outline at the level start, and fire re-entered with the level
@@ -211,8 +215,9 @@ ended with emulator status 0, and left the run copy unchanged.
 | `boot-smoke.json` | Reproducible boot frames, recorded from a clean checkout of the commit that added the tool | 15.1 s | 3 |
 
 The three closed-loop sessions were recorded before the tool's first commit
-(`tool_sha256` is null). The later edits changed session finalization, request
-validation and provenance fields, not how keys or checkpoints are sent. Their
+(`tool_sha256` is null). The later edits changed trace-step notes, session
+finalization, request validation, the interactive launch and provenance fields, not
+how keys or checkpoints are sent. Their
 gameplay frame digests identify local captures. They are not a replay oracle. The
 checkpoint named `menu-english` in the reference run is misleading: the L key only
 completed the typewriter text, and that run stayed in Italian.
@@ -221,7 +226,7 @@ completed the typewriter text, and that run stayed in Italian.
 
 | Level | Size (tiles) | Bonus objective (tile × count) | Destruction % (header byte) | Observed |
 |---|---|---|---|---|
-| 1 | 60×33 | 108 × 1 | 50 | played and completed (2 runs), in 1P and in a 2P start |
+| 1 | 60×33 | 108 × 1 | 50 | completed twice in one-player mode; two-player mode entered, not completed |
 | 2 | 100×53 | 110 × 3 | 60 | announced and entered. HUD matched the header. Not played. |
 | 3 | 150×60 | 108 × 7 | 20 | not observed |
 | 4 | 100×58 | 109 × 3 | 70 | not observed |
@@ -233,8 +238,9 @@ The resource docs keep the header's percentage byte opaque. It matched the HUD
 destruction value in levels 1 and 2. The level counter (DS:79B7) is set to 1 for a
 new game and incremented by the level-complete tally (`0x11d61`). Above 7, the main
 program ends the game through `0x11b14` mode 2. Level 7 loads `PROVA.SPR` and
-`GRAN.MST` instead of `BOMOMIMK.SPR` (`0x12adc`). Tile 69, which the down key
-checks for special platforms and telepods, occurs only in levels 3–6. So all seven
+`GRAN.MST` instead of `BOMOMIMK.SPR` (`0x12adc`). Tile 69 occurs only in levels
+3–6. It is the value the down-key path in `0x16053` compares against, probably the
+special platforms and telepods the help text mentions. So all seven
 stored levels appear reachable in order in this shareware release, but levels 3–7,
 the end-of-game screen and the level-7 special content are **untested**.
 
