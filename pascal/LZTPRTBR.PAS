@@ -72,10 +72,38 @@ begin
   Seed^ := TPRandSeed;
 end;
 
+{ The heap routines work in Memory, a 1 MB address space owned by the caller. }
+procedure lz_heap_init(Memory: Pointer; Origin, Limit: LongInt); cdecl;
+begin
+  HeapMemory := Memory;
+  HeapInit(Origin, Limit);
+end;
+
+function lz_heap_getmem(Size: Word; Block: PLong): Integer; cdecl;
+begin
+  lz_heap_getmem := Ord(HeapGetMem(Size, Block^));
+end;
+
+function lz_heap_freemem(PSeg, POfs, Size: Word): Integer; cdecl;
+begin
+  lz_heap_freemem := Ord(HeapFreeMem(PSeg, POfs, Size));
+end;
+
+function lz_heap_maxavail: LongInt; cdecl;
+begin
+  lz_heap_maxavail := HeapMaxAvail;
+end;
+
+procedure lz_heap_state(HeapPtr, FreeList: PLong); cdecl;
+begin
+  HeapState(HeapPtr^, FreeList^);
+end;
+
 exports
   lz_real_add, lz_real_mul, lz_real_div, lz_real_cmp, lz_real_from_long,
   lz_real_trunc_round, lz_real_int, lz_real_frac, lz_real_sqrt, lz_real_sin,
-  lz_real_cos, lz_random;
+  lz_real_cos, lz_random, lz_heap_init, lz_heap_getmem, lz_heap_freemem,
+  lz_heap_maxavail, lz_heap_state;
 
 begin
 end.

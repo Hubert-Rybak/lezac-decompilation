@@ -58,9 +58,9 @@ var
   Bombs: array[1..2, 1..4] of Byte;             { DS:1B6C bombs per player/kind }
   SelBomb: array[1..2] of Byte;                 { DS:1B74 selected bomb slot }
   BombIconDirty: array[1..2] of Byte;           { DS:1B76 }
-  { DS:1B78 key-down flags set by the keyboard handler:
+  { key-down flags set by the keyboard handler:
     1 M, 2 Z, 3 X, 4 N, 5 C, 6 Up, 7 Left, 8 Right, 9 Ins/KP0, 10 Down }
-  Keys: array[1..10] of Byte;
+  Keys: array[1..10] of Byte;                   { DS:1B78 }
   CurKeys: array[1..5] of Byte;                 { DS:1B82 jump, left, right, fire, down }
   Actors: array[1..32] of TActor38;             { DS:1B88 }
   Around: array[0..15] of Byte;                 { DS:2048 }

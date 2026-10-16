@@ -10,7 +10,8 @@ program Lezac;
   LZTYPES holds the record layouts; LZTPRT reproduces the Turbo Pascal 6
   runtime behaviour that Free Pascal does not share (6-byte Real arithmetic,
   Random, the Sound/NoSound port sequence, the standard INT 16h keyboard
-  reads of Crt.KeyPressed/ReadKey, the calibrated Crt.Delay loop). }
+  reads of Crt.KeyPressed/ReadKey, the calibrated Crt.Delay loop, the heap
+  manager behind GetMem/FreeMem/MaxAvail). }
 {$IFDEF FPC}{$MODE TP}{$ASMMODE INTEL}{$GOTO ON}{$ENDIF}
 {$R-}{$Q-}{$S-}{$I+}{$B-}
 {$M 16384,0,655360}

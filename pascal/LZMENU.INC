@@ -286,30 +286,30 @@ begin
   GetIntVec($1C, OldInt1C);
   SetIntVec($1C, @SoundTimerHandler);
   { the first test compares with the size of the pointer (4), not 792 }
-  if MaxAvail < SizeOf(Sounds) then
+  if TPMaxAvail < SizeOf(Sounds) then
     Shutdown(2)
   else
-    GetMem(Sounds, 792);
-  if MaxAvail < 57000 then
+    TPGetMem(Sounds, 792);
+  if TPMaxAvail < 57000 then
     Shutdown(2)
   else
-    GetMem(Screen, 57000);
+    TPGetMem(Screen, 57000);
   BackSeg := Seg(Screen^);
   BackOfs := Ofs(Screen^);
   TileBase := Ofs(Tiles);
-  if MaxAvail < 21300 then
+  if TPMaxAvail < 21300 then
     Shutdown(2)
   else
-    GetMem(SpriteData, 21300);
+    TPGetMem(SpriteData, 21300);
   MapWidth := 40;
   ViewHeight := 160;
   RenderTableOfs := Ofs(RenderEntries);
   SpriteSeg := Seg(SpriteData^);
-  if MaxAvail < 60000 then
+  if TPMaxAvail < 60000 then
     Shutdown(2)
   else
-    GetMem(Background, 60000);
-  if MaxAvail < 34600 then
+    TPGetMem(Background, 60000);
+  if TPMaxAvail < 34600 then
     Shutdown(2);
   Check := 0;
   AlternatingChecksum(Texts, Check, $1A00);

@@ -445,12 +445,12 @@ begin
     Seek(LevelFile, LevelOffsets[Level]);
   if MapBAlloc <> nil then
   begin
-    FreeMem(MapBAlloc, Word(LevelSize * 2 + 16));
+    TPFreeMem(MapBAlloc, Word(LevelSize * 2 + 16));
     MapBAlloc := nil;
   end;
   if MapAAlloc <> nil then
   begin
-    FreeMem(MapAAlloc, Word(LevelSize + 16));
+    TPFreeMem(MapAAlloc, Word(LevelSize + 16));
     MapAAlloc := nil;
   end;
   {$I-}
@@ -462,14 +462,14 @@ begin
   BlockRead(LevelFile, CountedTile, 1);
   BlockRead(LevelFile, BonusRequired, 2);
   BlockRead(LevelFile, TargetPercent, 1);
-  GetMem(MapA, Word(LevelSize + 16));
+  TPGetMem(MapA, Word(LevelSize + 16));
   MapAAlloc := MapA;
   if Ofs(MapA^) <> 0 then
     if Ofs(MapA^) < 16 then
       MapA := Ptr(Seg(MapA^) + 1, 0)
     else
       Halt(0);
-  GetMem(MapB, Word(LevelSize * 2 + 16));
+  TPGetMem(MapB, Word(LevelSize * 2 + 16));
   MapBAlloc := MapB;
   if Ofs(MapB^) <> 0 then
     if Ofs(MapB^) < 16 then

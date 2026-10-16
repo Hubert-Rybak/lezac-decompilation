@@ -9,7 +9,14 @@ unit LZTPRT;
   (00h/01h) never deliver. So is Crt.Delay with its start-up calibration
   (a 16-bit loop count over one timer tick): the game measures Delay(1000)
   with the DOS clock to derive its own delays, so the time a Delay takes is
-  observable, and Free Pascal's loop is calibrated differently.
+  observable, and Free Pascal's loop is calibrated differently. The
+  initialization also gives Crt.CheckBreak Turbo Pascal's initial value.
+
+  The heap manager is the System unit's as well (GetMem, FreeMem, MaxAvail):
+  Free Pascal's keeps a size header in front of every block, which moves the
+  game's buffers relative to each other, and the game reads past the end of
+  its background buffer and writes past its map planes, so the original
+  heap layout is observable.
 
   This is a RUNTIME SUBSTITUTION, not recovered game logic. Each routine is
   written in Pascal from the algorithm of the matching routine in the original
@@ -58,6 +65,24 @@ function RealDiv(var R: TReal; A, B: TReal): Boolean;
 function RealTruncRound(A: TReal; DoRound: Boolean; var Value: LongInt): Boolean;
 
 function TPRandom(Range: Word): Word;           { 1A5A8 }
+
+{ The Turbo Pascal 6 heap manager over linear addresses (segment * 16 +
+  offset); see the implementation. HeapGetMem is False where the original
+  ends with runtime error 203, HeapFreeMem where it ends with 204. }
+procedure HeapInit(Origin, Limit: LongInt);
+function HeapGetMem(Size: Word; var Block: LongInt): Boolean;   { 19508 }
+function HeapFreeMem(PSeg, POfs, Size: Word): Boolean;          { 195D3 }
+function HeapMaxAvail: LongInt;                                 { 194B8 }
+procedure HeapState(var HeapPtr, FreeList: LongInt);
+
+{$IFNDEF MSDOS}
+type
+  THeapMemory = array[0..$FFFFF] of Byte;
+var
+  { Test builds: the 1 MB address space the heap routines work in. }
+  HeapMemory: ^THeapMemory;
+{$ENDIF}
+
 {$IFDEF MSDOS}
 procedure TPRandomize;                          { 1A62F }
 procedure TPSound(Hz: Word);                    { 18769 }
@@ -65,11 +90,16 @@ procedure TPNoSound;                            { 18796 }
 function TPKeyPressed: Boolean;                 { 1879D }
 function TPReadKey: Char;                       { 187AF }
 procedure TPDelay(MS: Word);                    { 1873C }
+procedure TPGetMem(var P: Pointer; Size: Word);  { 1943F }
+procedure TPFreeMem(var P: Pointer; Size: Word); { 19454 }
+function TPMaxAvail: LongInt;                    { 194B8 }
 {$ENDIF}
 
 implementation
 
 {$IFDEF MSDOS}
+uses Crt;
+
 var
   { Crt's pending scan code of an extended key (DS:7F6D in the original). }
   TPScanCode: Byte;
@@ -1038,10 +1068,274 @@ begin
 end;
 {$ENDIF}
 
+{ ---- Turbo Pascal 6 heap manager ----------------------------------------
+  The original System unit's GetMem (1943F -> 19508), FreeMem (19454 ->
+  195D3) and MaxAvail (194B8 -> 194D8). Blocks are multiples of 8 bytes
+  and carry no header. A free block starts with a free record: the next
+  free block (offset word, segment word) and its size as bytes (0..15) and
+  paragraphs. The list is kept in address order and ends at HeapPtr.
+  GetMem takes the first free block that is large enough, from its low
+  end, or grows the heap at HeapPtr; FreeMem writes the size into the
+  block, then joins it with the next and the previous free block (HeapPtr
+  comes down when the block is the topmost). Heap pointers are normalized
+  (offset 0..15); here they are linear addresses, written to memory in the
+  original's formats. The original calls HeapError(0) after growing the
+  heap; the default HeapError does nothing then. }
+
+const
+  ListHead = -1;            { the FreeList variable, as a list link }
+
+var
+  HeapOrgL, HeapPtrL, HeapEndL, FreeListL: LongInt;
+
+function HeapWord(L: LongInt): Word;
+begin
+{$IFDEF MSDOS}
+  HeapWord := MemW[Word(L shr 4):Word(L and 15)];
+{$ELSE}
+  HeapWord := HeapMemory^[L] or (Word(HeapMemory^[L + 1]) shl 8);
+{$ENDIF}
+end;
+
+procedure SetHeapWord(L: LongInt; W: Word);
+begin
+{$IFDEF MSDOS}
+  MemW[Word(L shr 4):Word(L and 15)] := W;
+{$ELSE}
+  HeapMemory^[L] := Lo(W);
+  HeapMemory^[L + 1] := Hi(W);
+{$ENDIF}
+end;
+
+{ The pointer stored at L (a free record's Next, or FreeList). }
+function HeapLink(L: LongInt): LongInt;
+begin
+  if L = ListHead then
+    HeapLink := FreeListL
+  else
+    HeapLink := LongInt(HeapWord(L + 2)) * 16 + HeapWord(L);
+end;
+
+procedure SetHeapLink(L, Target: LongInt);
+begin
+  if L = ListHead then
+    FreeListL := Target
+  else
+  begin
+    SetHeapWord(L, Word(Target and 15));
+    SetHeapWord(L + 2, Word(Target shr 4));
+  end;
+end;
+
+function HeapSize(L: LongInt): LongInt;
+begin
+  HeapSize := LongInt(HeapWord(L + 6)) * 16 + HeapWord(L + 4);
+end;
+
+procedure SetHeapSize(L, Size: LongInt);
+begin
+  SetHeapWord(L + 4, Word(Size and 15));
+  SetHeapWord(L + 6, Word(Size shr 4));
+end;
+
+{ 19691: the size rounded up to a multiple of 8 (17 bits). }
+function HeapRound(Size: Word): LongInt;
+begin
+  HeapRound := (LongInt(Size) + 7) and not LongInt(7);
+end;
+
+{ Segment:offset comparison, as the original compares pointers. }
+function HeapCompare(ASeg, AOfs: Word; B: LongInt): Integer;
+begin
+  if ASeg <> Word(B shr 4) then
+  begin
+    if ASeg > Word(B shr 4) then
+      HeapCompare := 1
+    else
+      HeapCompare := -1;
+  end
+  else if AOfs <> Word(B and 15) then
+  begin
+    if AOfs > Word(B and 15) then
+      HeapCompare := 1
+    else
+      HeapCompare := -1;
+  end
+  else
+    HeapCompare := 0;
+end;
+
+{ 19632: First (a free record or the list head) is followed in the list by
+  Second. When First ends where Second starts they become one block, or
+  HeapPtr comes down to First when Second is HeapPtr; otherwise First
+  points to Second. The list head (FreeList, with FreeZero as its size)
+  never ends at a heap block. }
+procedure HeapJoin(First, Second: LongInt);
+begin
+  if (First <> ListHead) and (First + HeapSize(First) = Second) then
+  begin
+    if Second = HeapPtrL then
+      HeapPtrL := First
+    else
+    begin
+      SetHeapLink(First, HeapLink(Second));
+      SetHeapSize(First, HeapSize(First) + HeapSize(Second));
+    end;
+  end
+  else
+    SetHeapLink(First, Second);
+end;
+
+procedure HeapInit(Origin, Limit: LongInt);
+begin
+  HeapOrgL := Origin;
+  HeapPtrL := Origin;
+  FreeListL := Origin;
+  HeapEndL := Limit;
+end;
+
+function HeapGetMem(Size: Word; var Block: LongInt): Boolean;
+var
+  Need, Prev, Cur, CurSize, Rest: LongInt;
+begin
+  HeapGetMem := True;
+  Block := 0;
+  if Size = 0 then
+    Exit;
+  Need := HeapRound(Size);
+  Prev := ListHead;
+  Cur := HeapLink(Prev);
+  { the list ends at the block in HeapPtr's segment }
+  while Word(Cur shr 4) <> Word(HeapPtrL shr 4) do
+  begin
+    CurSize := HeapSize(Cur);
+    if CurSize >= Need then
+    begin
+      if CurSize = Need then
+        SetHeapLink(Prev, HeapLink(Cur))
+      else
+      begin
+        Rest := Cur + Need;
+        SetHeapLink(Rest, HeapLink(Cur));
+        SetHeapSize(Rest, CurSize - Need);
+        SetHeapLink(Prev, Rest);
+      end;
+      Block := Cur;
+      Exit;
+    end;
+    Prev := Cur;
+    Cur := HeapLink(Cur);
+  end;
+  if Cur + Need > HeapEndL then
+  begin
+    HeapGetMem := False;
+    Exit;
+  end;
+  HeapPtrL := Cur + Need;
+  SetHeapLink(Prev, HeapPtrL);
+  Block := Cur;
+end;
+
+function HeapFreeMem(PSeg, POfs, Size: Word): Boolean;
+var
+  P, Prev, Cur: LongInt;
+begin
+  HeapFreeMem := True;
+  if Size = 0 then
+    Exit;
+  HeapFreeMem := False;
+  if (POfs and $FFF7) <> 0 then
+    Exit;
+  if (HeapCompare(PSeg, POfs, HeapOrgL) < 0) or (HeapCompare(PSeg, POfs, HeapPtrL) >= 0) then
+    Exit;
+  P := LongInt(PSeg) * 16 + POfs;
+  SetHeapSize(P, HeapRound(Size));
+  Prev := ListHead;
+  Cur := HeapLink(Prev);
+  while HeapCompare(PSeg, POfs, Cur) > 0 do
+  begin
+    Prev := Cur;
+    Cur := HeapLink(Cur);
+  end;
+  if HeapCompare(PSeg, POfs, Cur) = 0 then
+    Exit;
+  HeapJoin(P, Cur);
+  HeapJoin(Prev, P);
+  HeapFreeMem := True;
+end;
+
+function HeapMaxAvail: LongInt;
+var
+  Max, Cur: LongInt;
+begin
+  Max := HeapEndL - HeapPtrL;
+  Cur := FreeListL;
+  while Word(Cur shr 4) <> Word(HeapPtrL shr 4) do
+  begin
+    if HeapSize(Cur) > Max then
+      Max := HeapSize(Cur);
+    Cur := HeapLink(Cur);
+  end;
+  HeapMaxAvail := Max;
+end;
+
+procedure HeapState(var HeapPtr, FreeList: LongInt);
+begin
+  HeapPtr := HeapPtrL;
+  FreeList := FreeListL;
+end;
+
+{$IFDEF MSDOS}
+procedure TPGetMem(var P: Pointer; Size: Word);
+var
+  Block: LongInt;
+begin
+  if not HeapGetMem(Size, Block) then
+    RunError(203);
+  if Block = 0 then
+    P := nil
+  else
+    P := Ptr(Word(Block shr 4), Word(Block and 15));
+end;
+
+procedure TPFreeMem(var P: Pointer; Size: Word);
+begin
+  if not HeapFreeMem(Seg(P^), Ofs(P^), Size) then
+    RunError(204);
+end;
+
+function TPMaxAvail: LongInt;
+begin
+  TPMaxAvail := HeapMaxAvail;
+end;
+
+{ Free Pascal's heap keeps FPCHeapReserve bytes for the runtime's own
+  temporary strings (it converts file names to AnsiStrings); the free space
+  above them becomes the Turbo Pascal heap, from the next paragraph, which
+  holds only the game's blocks, as the original's heap does. }
+const
+  FPCHeapReserve = 4096;
+
+procedure InitTPHeap;
+var
+  Origin, Limit: LongInt;
+begin
+  Origin := LongInt(Seg(System.HeapPtr^)) * 16 + Ofs(System.HeapPtr^) + FPCHeapReserve;
+  Limit := LongInt(Seg(System.HeapEnd^)) * 16 + Ofs(System.HeapEnd^);
+  HeapInit((Origin + 15) and not LongInt(15), Limit and not LongInt(15));
+  System.HeapEnd := Ptr(Word(Origin shr 4), Word(Origin and 15));
+end;
+{$ENDIF}
+
 begin
   TPRandSeed := 0;
 {$IFDEF MSDOS}
+  { The original Crt starts with CheckBreak (DS:7F5C) True, Free Pascal's
+    Crt with False. The game copies the value at start-up (12597) and
+    restores it before Halt. }
+  CheckBreak := True;
   TPScanCode := 0;
   CalibrateDelay;
+  InitTPHeap;
 {$ENDIF}
 end.
