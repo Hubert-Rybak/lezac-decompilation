@@ -1,0 +1,250 @@
+{
+  "format": "lezac-input-trace/1",
+  "description": "Deterministic-machine trace (virtual milliseconds): level 7. The machines set Level to 7 when the new game's first StartLevel begins (trace option start_level, a debugger-style write made identically in both), so the level is compared without completing the levels before it; lives, bombs and score are those of a new game. Scripted movement, jumps, down, bomb switching and throws, the development keys S/E/R, then Escape and exit.",
+  "start_level": 7,
+  "steps": [
+    {
+      "wait_ms": 7000
+    },
+    {
+      "tap": "1",
+      "hold_ms": 150,
+      "note": "completes the typewriter menu"
+    },
+    {
+      "wait_ms": 1500
+    },
+    {
+      "tap": "1",
+      "hold_ms": 150,
+      "note": "one player"
+    },
+    {
+      "wait_ms": 3500
+    },
+    {
+      "tap": "space",
+      "hold_ms": 200,
+      "note": "start level 7 (start_level)"
+    },
+    {
+      "wait_ms": 500
+    },
+    {
+      "checkpoint": "level7-start"
+    },
+    {
+      "tap": "x",
+      "hold_ms": 1200,
+      "note": "right"
+    },
+    {
+      "wait_ms": 300
+    },
+    {
+      "tap": "n",
+      "hold_ms": 200,
+      "note": "throw a bomb"
+    },
+    {
+      "wait_ms": 800
+    },
+    {
+      "tap": "z",
+      "hold_ms": 1500,
+      "note": "left"
+    },
+    {
+      "wait_ms": 300
+    },
+    {
+      "tap": "m",
+      "hold_ms": 200,
+      "note": "jump"
+    },
+    {
+      "wait_ms": 700
+    },
+    {
+      "tap": "c",
+      "hold_ms": 300,
+      "note": "down: door, spring or duck"
+    },
+    {
+      "wait_ms": 500
+    },
+    {
+      "tap": [
+        "z",
+        "x"
+      ],
+      "hold_ms": 500,
+      "note": "next bomb kind"
+    },
+    {
+      "wait_ms": 300
+    },
+    {
+      "tap": "n",
+      "hold_ms": 200
+    },
+    {
+      "wait_ms": 1500
+    },
+    {
+      "tap": "x",
+      "hold_ms": 800
+    },
+    {
+      "wait_ms": 200
+    },
+    {
+      "tap": "m",
+      "hold_ms": 200
+    },
+    {
+      "wait_ms": 700
+    },
+    {
+      "tap": [
+        "z",
+        "x"
+      ],
+      "hold_ms": 500,
+      "note": "next bomb kind"
+    },
+    {
+      "wait_ms": 300
+    },
+    {
+      "tap": "n",
+      "hold_ms": 200
+    },
+    {
+      "wait_ms": 2000
+    },
+    {
+      "tap": [
+        "z",
+        "x"
+      ],
+      "hold_ms": 500,
+      "note": "next bomb kind"
+    },
+    {
+      "wait_ms": 300
+    },
+    {
+      "tap": "n",
+      "hold_ms": 200
+    },
+    {
+      "wait_ms": 2500
+    },
+    {
+      "tap": "s",
+      "hold_ms": 150,
+      "note": "development key: background off"
+    },
+    {
+      "wait_ms": 500
+    },
+    {
+      "tap": "s",
+      "hold_ms": 150,
+      "note": "background on"
+    },
+    {
+      "wait_ms": 500
+    },
+    {
+      "tap": "e",
+      "hold_ms": 150,
+      "note": "development key: narrower view"
+    },
+    {
+      "wait_ms": 500
+    },
+    {
+      "tap": "e",
+      "hold_ms": 150
+    },
+    {
+      "wait_ms": 500
+    },
+    {
+      "tap": "r",
+      "hold_ms": 150,
+      "note": "development key: wider view"
+    },
+    {
+      "wait_ms": 500
+    },
+    {
+      "tap": "z",
+      "hold_ms": 1000
+    },
+    {
+      "wait_ms": 300
+    },
+    {
+      "tap": "c",
+      "hold_ms": 300
+    },
+    {
+      "wait_ms": 300
+    },
+    {
+      "tap": "x",
+      "hold_ms": 2000
+    },
+    {
+      "wait_ms": 300
+    },
+    {
+      "tap": "n",
+      "hold_ms": 200
+    },
+    {
+      "wait_ms": 15000,
+      "note": "monsters, falling structures"
+    },
+    {
+      "checkpoint": "level7-late"
+    },
+    {
+      "tap": "Escape",
+      "hold_ms": 200,
+      "note": "abandon the game"
+    },
+    {
+      "wait_ms": 6000
+    },
+    {
+      "tap": "space",
+      "hold_ms": 200
+    },
+    {
+      "wait_ms": 2500
+    },
+    {
+      "tap": "r",
+      "hold_ms": 150,
+      "note": "completes the menu typing"
+    },
+    {
+      "wait_ms": 1500
+    },
+    {
+      "tap": "Escape",
+      "hold_ms": 150,
+      "note": "leave the program"
+    },
+    {
+      "wait_ms": 3000
+    },
+    {
+      "end": true
+    }
+  ]
+}
